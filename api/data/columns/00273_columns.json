@@ -1,0 +1,122 @@
+{
+  "report_id": "00273",
+  "report_name": "지역의무공동 공사 계약 실적통계",
+  "official_id": "UI-ADOXFA-116R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 4,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 3,
+    "metrics": [
+      "계약총액(입찰X)(B)",
+      "지역의무공동계약총액(C)",
+      "비율(%)(C/A)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 4,
+    "dimensions": [
+      "마감연도",
+      "마감월",
+      "공사계약총액(A+B)",
+      "계약총액(입찰O)(A)"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "마감연도",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "2026",
+        "합계"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "마감월",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "01",
+        "8,155,914,539,433"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "공사계약총액(A+B)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "8,155,914,539,433",
+        "5,741,376,101,066"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "계약총액(입찰O)(A)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "5,741,376,101,066",
+        "2,414,538,438,367"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "계약총액(입찰X)(B)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "2,414,538,438,367",
+        "1,906,747,930,603",
+        "2,414,538,438,367"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "지역의무공동계약총액(C)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1,906,747,930,603",
+        "33.21",
+        "1,906,747,930,603"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "비율(%)(C/A)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "33.21",
+        "33.21"
+      ]
+    }
+  ]
+}

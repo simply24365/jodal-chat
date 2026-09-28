@@ -1,0 +1,8157 @@
+{
+  "00118": {
+    "납품요구번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "납품요구 건을 식별하는 고유 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "납품요구변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "납품요구의 변경 이력 및 차수를 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "물품순번": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "납품요구 내 개별 물품 행을 식별하는 순번",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "수요기관을 식별하는 고유 기관 코드",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명으로 필터 및 그룹 집계의 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "납품요구일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "납품요구가 발생한 일자",
+      "prev": "date",
+      "batch": "batch_000"
+    },
+    "납품요구명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "납품요구 건의 명칭으로 그룹 및 필터 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "업체사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "납품 업체를 식별하는 고유 등록번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공급업체 명칭으로 필터 및 그룹 집계의 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "물품 표준 분류를 식별하는 코드 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품의 일반 명칭으로 필터 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "세부 물품을 식별하는 표준 코드 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "세부 물품 명칭으로 필터 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "개별 물품을 유일하게 식별하는 고유 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품 규격 및 상세 명칭으로 필터 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_000"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "납품이 완료되어야 하는 일자 기한",
+      "prev": "date",
+      "batch": "batch_000"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "계약의 유형 및 방식을 나타내는 구분값",
+      "prev": "flag",
+      "batch": "batch_000"
+    },
+    "계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "조달 계약 건을 식별하는 고유 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "계약의 변경 이력 및 차수를 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_000"
+    },
+    "MAS여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "다수공급자계약 여부를 나타내는 여부값",
+      "prev": "flag",
+      "batch": "batch_000"
+    },
+    "직접구매대상여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "우수제품여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "물품인증유형목록": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "인증 유형을 나열한 것으로 필터링 기준이 됨",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "구매방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "구매 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_001"
+    },
+    "최종납품요구여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관의 성격을 분류하는 기준임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 필터링 기준임",
+      "prev": "dimension",
+      "batch": "batch_001"
+    },
+    "기업구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기업의 유형을 분류하는 기준임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "계약시점 업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 필터링 기준임",
+      "prev": "dimension",
+      "batch": "batch_001"
+    },
+    "계약시점 여성기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "계약시점 장애인기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "계약시점 사회적기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 여부 값임",
+      "prev": "flag",
+      "batch": "batch_001"
+    },
+    "지청": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달청 소속 기관 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_001"
+    },
+    "계약단가": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "납품단가": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "단위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "수량의 단위를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_001"
+    },
+    "납품수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "납품금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "납품증감수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량 증감 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "납품증감금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 증감 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_001"
+    },
+    "합계납품증감수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량의 증감을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_002"
+    },
+    "합계납품증감금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 증감을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_002"
+    }
+  },
+  "00606": {
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 성격을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_002"
+    },
+    "계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_002"
+    },
+    "계약변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "변경 이력을 식별하는 순번임",
+      "prev": "identifier",
+      "batch": "batch_002"
+    },
+    "물품순번": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "물품을 나열하기 위한 순서 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "최종계약여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "최종 여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_002"
+    },
+    "계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_002"
+    },
+    "최초계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_002"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_002"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관명으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "낙찰방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "낙찰 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "적용 법령을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "신규장기구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "신규/장기 여부를 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_002"
+    },
+    "장기초년도계약여부": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "여부를 나타내는 상태값임",
+      "prev": "date",
+      "batch": "batch_002"
+    },
+    "장기계약차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "장기계약의 차수를 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_002"
+    },
+    "공공조달분류": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달 분류 체계의 기준임",
+      "prev": "dimension",
+      "batch": "batch_002"
+    },
+    "공공조달대분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "공공조달중분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_003"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부 품명을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_003"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "개별 물품을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_003"
+    },
+    "품목": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "물품의 상세 사양을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_003"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기관/업체 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하기 위한 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_003"
+    },
+    "계약시점기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_003"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "소관 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_003"
+    },
+    "MAS여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_003"
+    },
+    "우수제품여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_003"
+    },
+    "중기간경쟁물품여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 구분값임",
+      "prev": "date",
+      "batch": "batch_003"
+    },
+    "단가": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_003"
+    },
+    "단위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "수량의 단위를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_003"
+    },
+    "수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 계산 대상이 되는 수량임",
+      "prev": "metric",
+      "batch": "batch_003"
+    },
+    "증감수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "계산 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_003"
+    },
+    "금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액은 합산 및 평균 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_004"
+    },
+    "증감금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 변동분을 나타내는 수치로 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_004"
+    }
+  },
+  "00604": {
+    "MAS여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "다수공급자계약 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 분류하는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약납품통합번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하기 위한 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_004"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 내용을 설명하는 텍스트로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "계약변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약의 변경 이력을 식별하는 순번임",
+      "prev": "identifier",
+      "batch": "batch_004"
+    },
+    "계약수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량은 합산 및 평균 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_004"
+    },
+    "계약시점 기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약시점 사회적기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약시점 업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 정보를 나타내는 필터링 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "계약시점 여성기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약시점 장애인기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_004"
+    },
+    "계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 흐름을 나타내는 날짜 정보임",
+      "prev": "date",
+      "batch": "batch_004"
+    },
+    "계약증감수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량의 변동분을 나타내는 계산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_004"
+    },
+    "공공조달대분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "공공조달분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "공공조달중분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "공동도급방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 방식을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "낙찰방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "낙찰 방식을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_004"
+    },
+    "대표물품분류명": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "품목 분류를 나타내는 텍스트이며 집계·평균 대상이 아니다",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "대표물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "분류를 구분하는 고유 번호이므로 행 식별용 코드에 해당",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "대표물품식별명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "품목을 구분하는 이름으로 그룹 기준에 사용되지만 코드가 아니다",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "대표물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "품목을 구별하는 고유 번호이므로 식별용 코드",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "대표세부품명": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "세부 품목의 명칭으로 필터·그룹 기준에 해당",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "대표세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "세부 품목을 구분하는 고유 번호",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "대표업체여부": {
+      "verdict": "flag",
+      "confidence": 0.97,
+      "reason": "업체 여부(예/아니오)와 같은 구분값",
+      "prev": "flag",
+      "batch": "batch_005"
+    },
+    "대표자명": {
+      "verdict": "dimension",
+      "confidence": 0.92,
+      "reason": "대표자의 이름은 그룹화 기준이지만 식별 코드가 아니다",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "사업자를 고유하게 식별하는 등록 번호",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "소관 부서·구분과 같은 여부·유형 값",
+      "prev": "flag",
+      "batch": "batch_005"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "수요기관 명칭은 필터·그룹 기준에 해당",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "기관이 위치한 시·군·구 정보로 그룹화 기준",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "수요기관을 식별하는 고유 코드",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "신규장기구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "신규·장기 여부와 같은 구분값",
+      "prev": "flag",
+      "batch": "batch_005"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "업무 유형·구분을 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_005"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "업체 이름은 그룹·필터 기준이지만 코드가 아니다",
+      "prev": "dimension",
+      "batch": "batch_005"
+    },
+    "우수제품여부": {
+      "verdict": "flag",
+      "confidence": 0.97,
+      "reason": "우수 제품 여부(예/아니오)와 같은 플래그",
+      "prev": "flag",
+      "batch": "batch_005"
+    },
+    "입찰공고번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "입찰 공고를 고유하게 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "입찰공고차수": {
+      "verdict": "identifier",
+      "confidence": 0.97,
+      "reason": "같은 공고의 차수를 구분하는 번호",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "장기계속차수": {
+      "verdict": "identifier",
+      "confidence": 0.97,
+      "reason": "장기 계약의 연속 차수를 나타내는 식별 번호",
+      "prev": "identifier",
+      "batch": "batch_005"
+    },
+    "장기초년도계약여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Yes/No)를 나타내는 상태값임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 법적 근거를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 조항의 상세 내용을 설명하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "초년도계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하기 위한 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_006"
+    },
+    "총납품기한": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "납품이 완료되어야 하는 특정 일자임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "최종계약여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "최종 여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_006"
+    },
+    "최초계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "계약이 시작된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "표준계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 방법의 표준 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "공사현장": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공사가 수행되는 장소라는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "공종": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공사의 종류를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "완수일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "업무가 완료된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "착수일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "업무가 시작된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "총완수일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "전체 업무가 완료된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "준공일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "공사가 준공된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "착공일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "공사가 시작된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "총준공일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "전체 공사가 준공된 날짜임",
+      "prev": "date",
+      "batch": "batch_006"
+    },
+    "계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하기 위한 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_006"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "대표품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_006"
+    },
+    "대표품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    }
+  },
+  "00010": {
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체를 식별하고 그룹화하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_007"
+    },
+    "업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "본사지사구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "본사/지사 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "업체기본팩스번호": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "연락처 정보로 식별자의 성격을 가짐",
+      "prev": "identifier",
+      "batch": "batch_007"
+    },
+    "업체국가": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "국가별 그룹화 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "면허업종": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업종별 그룹화 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "대표면허여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "대표 여부를 나타내는 Y/N 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "나라장터 등록일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_007"
+    },
+    "여성기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "장애인기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "사회적기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "시공능력평가금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_007"
+    }
+  },
+  "00112": {
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 방식에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "납품의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_007"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "수요기관을 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_007"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "수요기관별 그룹화 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_007"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "계약 및 납품요구가 발생한 일자 데이터",
+      "prev": "date",
+      "batch": "batch_008"
+    },
+    "신규변경구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "계약의 신규 또는 변경 상태를 나타내는 구분값",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "계약(납품요구)번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "계약 건을 고유하게 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "동일 계약 내 변경 이력을 식별하는 차수 번호",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "물품순번": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "계약 내 물품 행을 식별하기 위한 순번",
+      "prev": "metric",
+      "batch": "batch_008"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "물품 표준 분류를 식별하는 코드 번호",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "물품의 표준 명칭으로 분석 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "세부품명을 고유하게 식별하는 분류 코드",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "세부품명 명칭으로 분석 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "개별 물품을 고유하게 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "규격 및 모델을 포함한 품목의 상세 명칭",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "계약 상대자 상호명으로 분석 및 필터 기준",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "기업을 고유하게 식별하는 등록번호",
+      "prev": "identifier",
+      "batch": "batch_008"
+    },
+    "계약시점 기업구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약 당시 기업의 규모 및 유형 구분값",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "계약 건의 명칭으로 텍스트 분석 및 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "수의계약, 일반경쟁 등 계약 체결 방식을 나타내는 그룹 기준",
+      "prev": "dimension",
+      "batch": "batch_008"
+    },
+    "NET인증여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "신기술(NET) 인증 보유 여부 플래그",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "NEP인증여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "신제품(NEP) 인증 보유 여부 플래그",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "GS인증여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "GS인증 보유 여부 플래그",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "GS인증1등급여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "GS인증 1등급 해당 여부 플래그",
+      "prev": "flag",
+      "batch": "batch_008"
+    },
+    "성능인증제품여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "인증 여부를 Y/N으로 나타내는 이진 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "우수조달물품여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "우수조달물품 지정 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "우수조달공동상표여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "공동상표 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "기술혁신지원사업여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "지원사업 해당 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "녹색기술제품여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "녹색기술제품 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "혁신제품여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "혁신제품 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "지역 분류를 나타내는 그룹화 속성",
+      "prev": "dimension",
+      "batch": "batch_009"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 소관 분류 및 구분을 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "계약시점 업체대표자명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "인명 정보를 나타내는 그룹 기준 차원 속성",
+      "prev": "dimension",
+      "batch": "batch_009"
+    },
+    "계약지청": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 및 지청명을 나타내는 차원 속성",
+      "prev": "dimension",
+      "batch": "batch_009"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "납품 기한을 나타내는 날짜 데이터",
+      "prev": "date",
+      "batch": "batch_009"
+    },
+    "계약시점 여성기업인증여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "여성기업 인증 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "공급금액": {
+      "verdict": "metric",
+      "confidence": 0.99,
+      "reason": "합산 및 연산 대상이 되는 통화 금액 데이터",
+      "prev": "metric",
+      "batch": "batch_009"
+    },
+    "공급증감금액": {
+      "verdict": "metric",
+      "confidence": 0.99,
+      "reason": "합산 및 증감 연산 대상이 되는 금액 데이터",
+      "prev": "metric",
+      "batch": "batch_009"
+    }
+  },
+  "00607": {
+    "조달방식": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "조달 유형 및 방식을 나타내는 구분 플래그",
+      "prev": "dimension",
+      "batch": "batch_009"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "업무 유형(공사, 용역 등)을 나타내는 구분 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "입찰방법": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "입찰 진행 방식 및 유형을 나타내는 플래그",
+      "prev": "dimension",
+      "batch": "batch_009"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약 방식 및 형태를 나타내는 구분 플래그",
+      "prev": "flag",
+      "batch": "batch_009"
+    },
+    "입찰공고번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "입찰공고를 고유하게 식별하는 식별자",
+      "prev": "identifier",
+      "batch": "batch_009"
+    },
+    "입찰공고차수": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "공고의 회차 및 순번을 식별하기 위한 식별자",
+      "prev": "identifier",
+      "batch": "batch_009"
+    },
+    "입찰분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "입찰공고의 분류 및 회차를 식별하는 번호",
+      "prev": "identifier",
+      "batch": "batch_010"
+    },
+    "공고명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "입찰 건을 나타내는 텍스트 명칭으로 그룹/필터 기준",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "공고일자": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "입찰공고가 등록된 YYYYMMDD 형태의 일자 데이터",
+      "prev": "date",
+      "batch": "batch_010"
+    },
+    "공고기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "공고기관을 식별하기 위한 고유 기관코드",
+      "prev": "identifier",
+      "batch": "batch_010"
+    },
+    "공고기관": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "공고를 낸 기관의 명칭으로 집계·필터 기준",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "수요기관을 식별하기 위한 고유 기관코드",
+      "prev": "identifier",
+      "batch": "batch_010"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "실제 수요기관의 명칭으로 집계·필터 기준",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "계약방법": {
+      "verdict": "flag",
+      "confidence": 0.85,
+      "reason": "수의계약, 일반경쟁 등 계약 체결 방식을 나타내는 유형/구분값",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "국제입찰사유": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "국제입찰 대상/비대상 사유를 설명하는 텍스트",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "국제입찰구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "국내입찰/국제입찰 여부를 구분하는 상태값",
+      "prev": "flag",
+      "batch": "batch_010"
+    },
+    "낙찰방법": {
+      "verdict": "flag",
+      "confidence": 0.85,
+      "reason": "수의시담, 적격심사 등 낙찰자 결정 유형을 나타내는 구분값",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "국가계약법, 지방계약법 등 적용 법률 분류 기준",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "계약 근거 법령 조항의 상세 설명 텍스트",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "개찰일자": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "입찰서 개찰이 이루어지는 YYYYMMDD 형태의 일자 데이터",
+      "prev": "date",
+      "batch": "batch_010"
+    },
+    "개찰장소": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "개찰이 진행되는 장소 및 시스템 명칭",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "공공조달분류": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "조달 품목 및 공사 종류를 구분하는 분류 체계",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "공동도급구성방식": {
+      "verdict": "flag",
+      "confidence": 0.85,
+      "reason": "공동이행, 분담이행 등 공동도급 구성 형태/유형",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "면허업종제한목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "입찰 참가에 요구되는 면허업종 조건 목록",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "세부품명번호목록": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "조달 품목을 식별하는 세부품명 고유 번호 목록",
+      "prev": "identifier",
+      "batch": "batch_010"
+    },
+    "제한지역목록": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "입찰 참가 자격이 제한되는 지역 명칭 목록",
+      "prev": "dimension",
+      "batch": "batch_010"
+    },
+    "공동도급지역목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "지역 정보를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_011"
+    },
+    "공사현장": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "공사 위치를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_011"
+    },
+    "정보화사업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "PQ심사대상여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "긴급공고여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "지역제한여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "업종제한여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "제조물품제한여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "지역의무공동도급여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "최초공고여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "최종공고여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "공고상태값": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "공고의 진행 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 유형을 분류하는 구분값임",
+      "prev": "flag",
+      "batch": "batch_011"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 정보를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_011"
+    },
+    "지역의무공동도급비율": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비율 수치로 계산 대상이 되는 값임",
+      "prev": "metric",
+      "batch": "batch_011"
+    },
+    "배정예산": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액을 나타내는 수치로 계산 대상임",
+      "prev": "dimension",
+      "batch": "batch_011"
+    },
+    "추정가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치로 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_011"
+    },
+    "관급금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치로 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_011"
+    },
+    "낙찰하한율": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율을 나타내는 수치로 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_011"
+    },
+    "예정가격결정방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "방식의 유형을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_011"
+    },
+    "입찰진행상태값": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "입찰의 현재 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_012"
+    },
+    "기초금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_012"
+    },
+    "예정가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_012"
+    },
+    "낙찰업체": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "업체명은 분석의 그룹 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "낙찰자투찰금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_012"
+    },
+    "낙찰자투찰율": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_012"
+    },
+    "입찰자수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수 합산의 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_012"
+    }
+  },
+  "00087": {
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_025"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_025"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 필터링 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "업체사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_025"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 상태나 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_025"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_025"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 건을 식별하거나 분류하는 명칭임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "계약방법": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 나타내는 구분값임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "적용계약법": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "적용되는 법령의 유형 구분임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "조항호": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "법적 근거를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "혁신제품지정증서번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "증서를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_025"
+    },
+    "지정일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_025"
+    },
+    "혁신상품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "상품의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_025"
+    },
+    "혁신업체인증목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "업체 인증 여부를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "기업인증명목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기업 인증 유형을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "혁신제품인명목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "제품 관련 인증 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "단위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "수량의 단위를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_025"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "조달 방식은 분류 기준이 되는 카테고리이므로 차원",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "계약 구분은 유형·구분을 나타내는 플래그에 해당",
+      "prev": "flag",
+      "batch": "batch_048"
+    },
+    "계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 나타내는 필드임",
+      "prev": "date",
+      "batch": "batch_049"
+    },
+    "계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약 변경 이력을 구분하는 순번 성격의 코드임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "최종계약여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N으로 상태를 구분하는 플래그임",
+      "prev": "flag",
+      "batch": "batch_049"
+    },
+    "물품순번": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터 내에서 물품을 그룹화하거나 정렬하는 순번임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "물품을 분류하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 명칭임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "세부 품목을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 세부 명칭임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "단가": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_052"
+    },
+    "수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_052"
+    },
+    "계약금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_052"
+    },
+    "혁신장터가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_052"
+    }
+  },
+  "00017": {
+    "시행규칙76조별표2명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "제재 사유를 나타내는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "제재시작일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_027"
+    },
+    "제재종료일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_027"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "업무의 유형을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_027"
+    },
+    "처분상태": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "처분의 현재 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_027"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "법령 기준을 분류하는 항목임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "제재기간월수": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기간의 길이를 나타내는 수치로 합산/평균 계산이 가능함",
+      "prev": "date",
+      "batch": "batch_027"
+    },
+    "제재기간일수": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기간의 길이를 나타내는 수치로 합산/평균 계산이 가능함",
+      "prev": "date",
+      "batch": "batch_027"
+    },
+    "제재입력일시": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜와 시간 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_053"
+    },
+    "기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기관의 유형을 분류하는 속성임",
+      "prev": "flag",
+      "batch": "batch_053"
+    },
+    "제재근거법률": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "법률명은 데이터를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    },
+    "조항호": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "고유한 코드 체계가 포함되어 있어 식별자로 분류함",
+      "prev": "dimension",
+      "batch": "batch_053"
+    },
+    "조문명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "위반 사유를 나타내는 분류 항목임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    },
+    "시행규칙76조별표2": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "별표 항목에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    }
+  },
+  "00028": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "정보가 없어 기본값으로 분류함",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "컬럼2": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "상태나 유형을 나타내는 텍스트임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "정보가 없어 기본값으로 분류함",
+      "prev": "dimension",
+      "batch": "batch_027"
+    }
+  },
+  "00090": {
+    "법정동": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "지번주소": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "주소 정보는 식별자나 수치가 아닌 위치 정보임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "지목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "토지의 용도를 나타내는 분류 항목임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "면적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치형 데이터로 합산 및 평균 계산의 대상임",
+      "prev": "metric",
+      "batch": "batch_027"
+    },
+    "중앙관서명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    }
+  },
+  "00065": {
+    "공고일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_027"
+    },
+    "판매공고번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "행을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_027"
+    },
+    "판매공고차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "공고의 순번을 나타내는 식별자임",
+      "prev": "identifier",
+      "batch": "batch_027"
+    },
+    "물품분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품을 구분하는 코드 체계임",
+      "prev": "dimension",
+      "batch": "batch_027"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "물품식별": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_028"
+    },
+    "상품거래단위명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "거래 단위를 나타내는 속성 정보임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "판매시작일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 형식의 데이터임",
+      "prev": "date",
+      "batch": "batch_028"
+    },
+    "판매종료일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 형식의 데이터임",
+      "prev": "date",
+      "batch": "batch_028"
+    },
+    "대금납부방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "거래 유형을 구분하는 속성임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "판매지청목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "지역별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "판매금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 계산이 가능한 금액 데이터임",
+      "prev": "metric",
+      "batch": "batch_028"
+    },
+    "업체기준판매한도량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_028"
+    },
+    "주간판매한도량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_028"
+    }
+  },
+  "00071": {
+    "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "데이터가 없는 오류 메시지성 컬럼임",
+      "prev": "date",
+      "batch": "batch_028"
+    }
+  },
+  "00588": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "데이터 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "업체수": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 계산 대상임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    }
+  },
+  "00168": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "데이터 없음",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "국가기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 유형 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    }
+  },
+  "00175": {
+    "수요기관시도명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "소재지 실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "실적 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_028"
+    },
+    "전체실적 대비 비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값임",
+      "prev": "metric",
+      "batch": "batch_028"
+    }
+  },
+  "00178": {
+    "물품": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "사업 유형 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    },
+    "17,073억": {
+      "verdict": "metric",
+      "confidence": 0.8,
+      "reason": "금액 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_028"
+    }
+  },
+  "00227": {
+    "지역업체 실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 또는 수량을 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "해당 지역 전체실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 또는 수량을 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비율 계산 결과값으로 통계적 분석 대상임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "수요기관소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_065"
+    }
+  },
+  "00228": {
+    "업체시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "해당지역업체실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 또는 수량을 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "전체실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 또는 수량을 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비율 계산 결과값으로 통계적 분석 대상임",
+      "prev": "metric",
+      "batch": "batch_033"
+    }
+  },
+  "00230": {
+    "업체소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "창업기업 현황": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "기업 수를 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비율 계산 결과값으로 통계적 분석 대상임",
+      "prev": "metric",
+      "batch": "batch_033"
+    }
+  },
+  "00243": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "데이터의 분류 기준이나 항목명을 나타냄",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "금액(원)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 합산 대상 수치임",
+      "prev": "metric",
+      "batch": "batch_033"
+    }
+  },
+  "00248": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.8,
+      "reason": "데이터의 성격이나 유형을 구분하는 항목임",
+      "prev": "flag",
+      "batch": "batch_033"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치들의 총합을 나타내는 계산 결과값임",
+      "prev": "metric",
+      "batch": "batch_033"
+    },
+    "국가기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관 유형별 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "지방정부": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관 유형별 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "교육기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관 유형별 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "공기업": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관 유형별 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "준정부기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관 유형별 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_033"
+    },
+    "기타공공기관": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "지방공기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "지방의료원": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "지자체출연연구원": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "특수법인": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    }
+  },
+  "00256": {
+    "기타공공기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 분류를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "지방공기업": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 분류를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "지방의료원": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 분류를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "지자체출연연구원": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 분류를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "특수법인": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관 분류를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "데이터의 기준이 되는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 소관을 나타내는 분류 유형임",
+      "prev": "flag",
+      "batch": "batch_073"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치들의 총합을 나타내는 계산 결과값임",
+      "prev": "metric",
+      "batch": "batch_073"
+    },
+    "국가기관": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 유형별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    },
+    "지방정부": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 유형별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    },
+    "교육기관": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 유형별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    },
+    "공기업": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 유형별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    },
+    "준정부기관": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "기관 유형별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_073"
+    }
+  },
+  "00257": {
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 성격이나 상태를 구분하는 항목임",
+      "prev": "flag",
+      "batch": "batch_037"
+    },
+    "계약방법": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 나타내는 구분값임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "전년도(동기)": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 시점임",
+      "prev": "date",
+      "batch": "batch_037"
+    },
+    "금년도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 시점임",
+      "prev": "date",
+      "batch": "batch_037"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "계산된 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_037"
+    }
+  },
+  "00258": {
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_037"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치들의 총합을 나타내는 계산값임",
+      "prev": "metric",
+      "batch": "batch_037"
+    },
+    "대기업": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기업 규모별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "중견기업": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기업 규모별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "중소기업": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기업 규모별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "외국기업": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기업 규모별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "비영리법인등기타": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기업 규모별 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "미분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "분류되지 않은 항목을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_037"
+    }
+  },
+  "00259": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "정보 부족으로 기본값인 dimension으로 분류",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "컬럼2": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "정보 부족으로 기본값인 dimension으로 분류",
+      "prev": "dimension",
+      "batch": "batch_037"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터의 그룹화 기준이 되는 항목으로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_038"
+    }
+  },
+  "00260": {
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 구분하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수나 금액의 총합을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_038"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_038"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "수기등록": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    }
+  },
+  "00261": {
+    "연계시스템구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "시스템의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_038"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 합산값임",
+      "prev": "metric",
+      "batch": "batch_038"
+    },
+    "전자계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "비전자계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 금액이나 건수를 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    }
+  },
+  "00262": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "전년도(동기)": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_038"
+    },
+    "금년도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_038"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "계산된 비율 수치임",
+      "prev": "metric",
+      "batch": "batch_038"
+    }
+  },
+  "00263": {
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "순번은 계산 대상이 아닌 식별/정렬 기준임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_038"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기관의 성격을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_038"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 지표임",
+      "prev": "metric",
+      "batch": "batch_039"
+    }
+  },
+  "00266": {
+    "조달업무영역": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 분류하는 기준 항목임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 지표임",
+      "prev": "metric",
+      "batch": "batch_039"
+    },
+    "물품": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 대상 품목을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "용역 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "date",
+      "batch": "batch_039"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기술용역 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "공사 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    }
+  },
+  "00267": {
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 구분하는 속성임",
+      "prev": "flag",
+      "batch": "batch_039"
+    },
+    "전년도(동기)": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_039"
+    },
+    "금년도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_039"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "변동폭을 계산한 수치 지표임",
+      "prev": "metric",
+      "batch": "batch_039"
+    }
+  },
+  "00268": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 구분하는 속성임",
+      "prev": "flag",
+      "batch": "batch_039"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 지표임",
+      "prev": "metric",
+      "batch": "batch_039"
+    },
+    "대기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "대기업 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "중견기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "중견기업 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "중소기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "중소기업 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "외국기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "외국기업 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "비영리법인등기타": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기타 법인 관련 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "미분류 항목의 수치(건수/금액)를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_039"
+    }
+  },
+  "00272": {
+    "업체": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관이나 기업명은 분석의 그룹 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수량이나 금액의 총합을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_041"
+    },
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터의 정렬 순서를 나타내는 식별자 성격임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화를 위한 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    }
+  },
+  "00273": {
+    "마감연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 범위를 나타내는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "마감월": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 범위를 나타내는 월 정보임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "공사계약총액(A+B)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "계약총액(입찰O)(A)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "계약총액(입찰X)(B)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_041"
+    },
+    "지역의무공동계약총액(C)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_041"
+    },
+    "비율(%)(C/A)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계산된 결과값인 비율 수치임",
+      "prev": "metric",
+      "batch": "batch_041"
+    }
+  },
+  "00274": {
+    "기준년월": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "데이터의 기준 시점을 나타냄",
+      "prev": "date",
+      "batch": "batch_041"
+    },
+    "계약총액(A+B)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "계약총액(입찰O)(A)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "계약총액(입찰X)(B)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "지역제한총액(C)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 합산 대상이 되는 수치임",
+      "prev": "metric",
+      "batch": "batch_041"
+    },
+    "비율(%)(C/A)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계산된 결과값인 비율 수치임",
+      "prev": "metric",
+      "batch": "batch_041"
+    }
+  },
+  "00275": {
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 분류하는 유형 기준임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수나 금액의 합산 대상임",
+      "prev": "metric",
+      "batch": "batch_041"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "경쟁 방식에 따른 금액/건수 수치임",
+      "prev": "date",
+      "batch": "batch_041"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "경쟁 방식에 따른 금액/건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "경쟁 방식에 따른 금액/건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_041"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    }
+  },
+  "00282": {
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "date",
+      "batch": "batch_044"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "시스템유형": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "시스템을 구분하는 범주형 데이터",
+      "prev": "flag",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "조달업무영역": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달 업무 영역을 분류하는 데이터",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "데이터의 총합을 나타내는 측정값",
+      "prev": "metric",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    }
+  },
+  "00283": {
+    "시스템유형": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타냄",
+      "prev": "metric",
+      "batch": "batch_044"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "date",
+      "batch": "batch_044"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "수기등록": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    }
+  },
+  "00284": {
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "전년도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_044"
+    },
+    "금년도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_044"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동폭을 나타내는 계산된 수치임",
+      "prev": "metric",
+      "batch": "batch_044"
+    }
+  },
+  "00285": {
+    "구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "데이터의 유형이나 상태를 나타내는 분류임",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "전체실적": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "실적 수치를 나타내는 계산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "창업기업실적": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "실적 수치를 나타내는 계산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 수량 데이터가 포함되어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액(원) 데이터가 포함된 양적 수치",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 데이터가 포함된 양적 수치",
+      "prev": "date",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액(원) 데이터가 포함된 양적 수치",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    }
+  },
+  "00590": {
+    "FF_구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 유형이나 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "계약(납품요구)명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 설명하는 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "계약(납품요구)번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "개별 계약을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_046"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "계약이 발생한 시점의 날짜임",
+      "prev": "date",
+      "batch": "batch_046"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 성격을 나타내는 분류값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "납품 방식의 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체 정보를 나타내는 속성임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약 변경 이력을 식별하는 순번임",
+      "prev": "identifier",
+      "batch": "batch_046"
+    },
+    "사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_046"
+    },
+    "실수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "업무의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 업체명임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준이 되는 정보임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "여성기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Yes/No)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "장애인기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Yes/No)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "적용되는 법령에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달 체계에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "법적 근거 조항을 나타내는 분류 정보임",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "조항호명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조항을 나타내는 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "중소기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "유형을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_047"
+    }
+  },
+  "00592": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "일반적인 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "상태나 처리 단계를 나타내는 값임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "일반적인 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    }
+  },
+  "00617": {
+    "대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "인적 속성으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "순번은 계산 대상이 아닌 정렬/분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체를 나타내는 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "계약(납풍요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_047"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "구분을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "계약납품통합번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "계약변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "변경 이력을 식별하는 차수 번호임",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "계약유형": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "물품순번": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품 내 순번은 식별/분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부품명을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_048"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기관 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "실수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기관 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "업체소재시": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 필터링을 위한 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 법령에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 유형에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "조항호": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "법령 조항에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조항호에 대한 설명적 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_048"
+    }
+  },
+  "00618": {
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기관 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "수요기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_048"
+    },
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터의 정렬 순서를 나타내는 지표로 계산 대상이 아님",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_048"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약과 납품을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_048"
+    },
+    "계약납품변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "변경 이력을 식별하는 차수 정보임",
+      "prev": "identifier",
+      "batch": "batch_048"
+    },
+    "계약납품통합번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_048"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 건을 설명하는 명칭으로 필터 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 방식에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_048"
+    },
+    "계약유형": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 성격을 구분하는 분류값임",
+      "prev": "flag",
+      "batch": "batch_049"
+    },
+    "대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체 정보를 나타내는 속성값임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "물품순번": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터 내 순서를 나타내는 코드성 정보임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "사업자를 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부품명을 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "실수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 법적 근거를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "조달방식구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "조달 방식을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_049"
+    },
+    "조항호": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "법령의 조항을 나타내는 코드성 정보임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조항의 상세 내용을 설명하는 속성임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    }
+  },
+  "00593": {
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_049"
+    },
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터의 정렬 순서를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_049"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 일자임",
+      "prev": "date",
+      "batch": "batch_049"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 상태나 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_050"
+    },
+    "계약납품변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약의 변경 이력을 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_050"
+    },
+    "계약납품통합번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_050"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 내용을 설명하는 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 방식을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "계약유형": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 성격을 나타내는 유형 구분임",
+      "prev": "flag",
+      "batch": "batch_050"
+    },
+    "대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체 정보를 나타내는 속성임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "물품순번": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품 목록 내의 순서를 나타내는 코드성 데이터임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_050"
+    },
+    "사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_050"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부품명을 고유하게 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_050"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관별 통계를 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "실수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "실제 수요처를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체별 통계를 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 통계를 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 법적 근거를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "조달방식구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "조달 방식의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_050"
+    },
+    "조항호": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "법령의 조항을 나타내는 코드성 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조항호에 대한 상세 설명으로 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_050"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하거나 필터링하는 기준이 되는 명칭임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    }
+  },
+  "00616": {
+    "FF_계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약과 납품을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_051"
+    },
+    "FF_계약납품번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "행을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_051"
+    },
+    "FF_계약납품일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 정보를 나타내는 일자 데이터임",
+      "prev": "date",
+      "batch": "batch_051"
+    },
+    "FF_계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 명칭으로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_계약변경차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약의 변경 이력을 식별하는 순번임",
+      "prev": "identifier",
+      "batch": "batch_051"
+    },
+    "FF_계약유형": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 성격을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_051"
+    },
+    "FF_대표업체": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체명으로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "인적 정보를 나타내는 속성임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_물품순번": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품 내역을 식별하기 위한 순번임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_051"
+    },
+    "FF_세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 세분화하여 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부품명을 식별하는 코드임",
+      "prev": "identifier",
+      "batch": "batch_051"
+    },
+    "FF_수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관별로 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "데이터 행을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_051"
+    },
+    "FF_업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별로 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_051"
+    },
+    "FF_여성기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Yes/No)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_051"
+    },
+    "FF_장애인기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Yes/No)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_051"
+    },
+    "FF_조달방식구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "조달 방식을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_051"
+    },
+    "FF_조항호내용": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조항의 상세 내용을 설명하는 텍스트 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "FF_조항호명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조항의 명칭을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "FF_중소기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "중소기업 해당 여부를 나타내는 이분법적 구분값임",
+      "prev": "flag",
+      "batch": "batch_052"
+    },
+    "FF_품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "실수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약법 유형을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 방식을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 방법을 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_052"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "납품의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_052"
+    },
+    "계약(납품요구)번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_052"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약 변경 이력을 식별하는 순번임",
+      "prev": "identifier",
+      "batch": "batch_052"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "계약이 발생한 날짜 정보임",
+      "prev": "date",
+      "batch": "batch_052"
+    },
+    "계약(납품요구)명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 건의 명칭으로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "사업자번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_052"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체를 분류하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "대표자": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체 정보를 보조하는 속성 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "업체소재지": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 분류를 위한 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "중소기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "중소기업 해당 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_052"
+    },
+    "여성기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부 구분값임",
+      "prev": "flag",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "장애인기업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부 구분값임",
+      "prev": "flag",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    }
+  },
+  "00001": {
+    "국가기관": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "지방정부": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "교육기관": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "공기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "준정부기관": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "기타공공기관": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "지방공기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "지방의료원": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "지자체출연연구원": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "특수법인": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "기관 수를 나타내는 수치 데이터로 합산 및 통계 대상임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "구분이나 유형을 나타내므로 flag에 해당함",
+      "prev": "flag",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수치값의 합계로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    }
+  },
+  "00622": {
+    "구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 유형이나 상태를 나타내는 분류 항목임",
+      "prev": "flag",
+      "batch": "batch_055"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액의 총합을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    },
+    "납품요구(조달청 단가계약)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "납품요구 금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    },
+    "총액(경쟁)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "경쟁 계약의 총액을 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "총액(수의)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수의 계약의 총액을 나타내는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "납품요구(기관자체 단가계약)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "납품요구 금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    }
+  },
+  "00040": {
+    "수요기관소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화를 위한 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_055"
+    },
+    "지역제한 건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수를 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    },
+    "입찰공고건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수를 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율을 나타내는 계산된 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_055"
+    }
+  },
+  "00608": {
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달 유형에 따른 그룹 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "업무의 성격을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_012"
+    },
+    "입찰방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "입찰 방식에 따른 그룹 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 형태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_012"
+    },
+    "입찰공고번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "행을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_012"
+    },
+    "입찰공고차수": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "공고의 차수를 나타내는 식별자임",
+      "prev": "identifier",
+      "batch": "batch_012"
+    },
+    "입찰분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "분류를 위한 코드성 번호임",
+      "prev": "identifier",
+      "batch": "batch_012"
+    },
+    "공고명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "공고별 분석을 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "공고일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_012"
+    },
+    "공고기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_012"
+    },
+    "공고기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관별 분석을 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_012"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관별 분석을 위한 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_012"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 분류하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "낙찰방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "낙찰 방식을 분류하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "적용되는 법령을 분류하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 근거 조항을 설명하는 텍스트로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "개찰일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함하고 있음",
+      "prev": "date",
+      "batch": "batch_013"
+    },
+    "공공조달분류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 업무의 성격을 분류하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "공동도급구성방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "공동도급의 형태를 구분하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "면허업종제한목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "제한 업종을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "세부품명번호목록": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "품목을 식별하기 위한 고유 코드와 명칭의 조합임",
+      "prev": "identifier",
+      "batch": "batch_013"
+    },
+    "제한지역목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "지역적 제한 조건을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "공동도급지역목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "공동도급 지역을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "공사현장": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "공사 위치를 나타내는 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "정보화사업여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_013"
+    },
+    "긴급공고여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_013"
+    },
+    "지역의무공동도급여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_013"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 소관 유형을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_013"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준이 되는 지리적 정보임",
+      "prev": "dimension",
+      "batch": "batch_013"
+    },
+    "배정예산": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터로 합산/평균 대상임",
+      "prev": "metric",
+      "batch": "batch_013"
+    },
+    "추정가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터로 합산/평균 대상임",
+      "prev": "metric",
+      "batch": "batch_013"
+    },
+    "유찰여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_013"
+    },
+    "기초금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "예정가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "개찰순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "순위는 계산 대상이 아닌 분류 기준에 해당함",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "낙찰자선정여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 상태 구분값임",
+      "prev": "flag",
+      "batch": "batch_014"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준 정보임",
+      "prev": "dimension",
+      "batch": "batch_014"
+    },
+    "업체사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_014"
+    },
+    "투찰일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_014"
+    },
+    "투찰금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "투찰율": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 대상이 되는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "부적격여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "Y/N 형태의 상태 구분값임",
+      "prev": "flag",
+      "batch": "batch_014"
+    },
+    "입찰부적격사유": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "상태에 대한 상세 분류 정보임",
+      "prev": "dimension",
+      "batch": "batch_014"
+    },
+    "업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_014"
+    },
+    "계약번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_014"
+    },
+    "계약일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_014"
+    },
+    "계약시점기업구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기업의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_014"
+    },
+    "신규장기구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_014"
+    },
+    "금차계약금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    },
+    "총계약금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_014"
+    }
+  },
+  "00609": {
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "업무의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_014"
+    },
+    "입찰방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "입찰 방식에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_014"
+    },
+    "입찰공고번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "입찰 공고를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_015"
+    },
+    "입찰공고차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "공고의 회차를 나타내는 식별자임",
+      "prev": "identifier",
+      "batch": "batch_015"
+    },
+    "공고명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공고의 내용을 설명하는 텍스트 정보임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "공고일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "공고가 게시된 날짜 정보임",
+      "prev": "date",
+      "batch": "batch_015"
+    },
+    "공고기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공고를 주관하는 기관명으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품이나 서비스를 수요하는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "입찰계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "입찰의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "입찰서접수시작일시": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간을 포함한 일자 정보임",
+      "prev": "date",
+      "batch": "batch_015"
+    },
+    "입찰서접수마감일시": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간을 포함한 일자 정보임",
+      "prev": "date",
+      "batch": "batch_015"
+    },
+    "낙찰방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "낙찰을 결정하는 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "개찰일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "개찰이 이루어진 날짜 정보임",
+      "prev": "date",
+      "batch": "batch_015"
+    },
+    "개찰장소": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "개찰이 진행되는 장소 정보임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "공동도급여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_015"
+    },
+    "재입찰허용여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_015"
+    },
+    "연계기관공고링크URL": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "참조용 링크 정보로 필터링이나 그룹화에 사용될 수 있음",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "공고기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "추정가격": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 합산 및 평균 계산이 가능한 수치임",
+      "prev": "metric",
+      "batch": "batch_015"
+    }
+  },
+  "00030": {
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 구분하는 상태값임",
+      "prev": "flag",
+      "batch": "batch_015"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_015"
+    },
+    "국제입찰여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_015"
+    },
+    "낙찰방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 방식의 유형을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "납품이 완료되어야 하는 특정 일자임",
+      "prev": "date",
+      "batch": "batch_016"
+    },
+    "단위": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "수량의 측정 기준이 되는 분류 항목임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "물품순번": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "데이터 내에서 물품을 구분하기 위한 순번임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "세부물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "세부 물품을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품의 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 계산이 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_016"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기관을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "신규장기구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "신규/장기 여부를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_016"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "업무의 유형을 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_016"
+    },
+    "요청명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "요청 건을 식별하거나 분류하는 명칭임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "요청접수번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "요청 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "장기계약차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약의 회차를 나타내는 식별 정보임",
+      "prev": "identifier",
+      "batch": "batch_016"
+    },
+    "적용계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "적용되는 법령에 따른 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "접수기관담당부서": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "부서별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_016"
+    },
+    "접수일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "접수가 이루어진 일자임",
+      "prev": "date",
+      "batch": "batch_016"
+    },
+    "접수지청": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관의 소속을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "진행상태": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "업무의 처리 단계를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_017"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "품목": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "PQ심사대상여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 묻는 상태값임",
+      "prev": "flag",
+      "batch": "batch_017"
+    },
+    "공동이행방식의공동도급적영여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 묻는 상태값임",
+      "prev": "flag",
+      "batch": "batch_017"
+    },
+    "금차용역기간(일)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "기간의 길이를 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_017"
+    },
+    "용역종류": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "용역의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "용역현장": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "장소를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "장기계속차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약의 순번을 나타내는 식별자임",
+      "prev": "identifier",
+      "batch": "batch_017"
+    },
+    "적격심사대상여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 묻는 상태값임",
+      "prev": "flag",
+      "batch": "batch_017"
+    },
+    "지역업체참여도 (지역가점)": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "가점 기준을 나타내는 분류 항목임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "지역제한여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부를 묻는 상태값임",
+      "prev": "flag",
+      "batch": "batch_017"
+    },
+    "총용역기간(일)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "기간의 길이를 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_017"
+    },
+    "공사현장": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "장소를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    }
+  },
+  "00610": {
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 통계 대상이 되는 수량임",
+      "prev": "metric",
+      "batch": "batch_017"
+    },
+    "금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 통계 대상이 되는 금액임",
+      "prev": "metric",
+      "batch": "batch_017"
+    }
+  },
+  "00008": {
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_017"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "기업을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_018"
+    },
+    "업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하거나 필터링하는 지역 기준임",
+      "prev": "dimension",
+      "batch": "batch_018"
+    },
+    "본사지사구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "본사 또는 지사라는 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "업체국가": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 국가 기준임",
+      "prev": "dimension",
+      "batch": "batch_018"
+    },
+    "기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 분류값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "대표업종": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업종별로 데이터를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_018"
+    },
+    "제조업체여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "제조업체인지 여부를 나타내는 Y/N 값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "대표세부품명번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "품명을 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_018"
+    },
+    "대표세부품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품명별로 데이터를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_018"
+    },
+    "나라장터등록일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 담고 있음",
+      "prev": "date",
+      "batch": "batch_018"
+    },
+    "여성기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "장애인기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "사회적기업인증여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "인증 여부를 나타내는 Y/N 값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    }
+  },
+  "00343": {
+    "요청접수일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 담고 있음",
+      "prev": "date",
+      "batch": "batch_018"
+    },
+    "요청접수번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "접수 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_018"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약인지 납품인지 상태를 나타내는 구분값임",
+      "prev": "flag",
+      "batch": "batch_018"
+    },
+    "우수조달지정요청분야목록": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "분야별로 데이터를 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_018"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 담고 있음",
+      "prev": "date",
+      "batch": "batch_018"
+    },
+    "계약(납품요구)번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_018"
+    },
+    "변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약의 변경 이력을 나타내는 순번임",
+      "prev": "identifier",
+      "batch": "batch_018"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약의 명칭으로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품의 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품의 상세 명칭으로 그룹화 기준이 됨",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "종결일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 정보를 포함함",
+      "prev": "date",
+      "batch": "batch_019"
+    },
+    "단가계약번호": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약을 식별하기 위한 고유 코드임",
+      "prev": "metric",
+      "batch": "batch_019"
+    },
+    "단가계약변경차수": {
+      "verdict": "identifier",
+      "confidence": 0.9,
+      "reason": "계약의 이력을 구분하는 순번임",
+      "prev": "metric",
+      "batch": "batch_019"
+    },
+    "직불대지급구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "지급 방식에 대한 상태값임",
+      "prev": "flag",
+      "batch": "batch_019"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "업체를 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_019"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업체별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "지청": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달청 관할 지역 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "기업구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_019"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기관의 소관 유형을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_019"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "수요기관을 식별하는 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_019"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "수요기관별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "업체소재시군구": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역별 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_019"
+    },
+    "본품옵션구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "물품의 유형을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_019"
+    },
+    "계약납품수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량 합산이 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_019"
+    },
+    "계약납품금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 합산이 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_019"
+    },
+    "종결물품금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 합산이 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_019"
+    },
+    "종결물품수량": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량은 합산 및 평균 계산이 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_020"
+    }
+  },
+  "00612": {
+    "혁신지정구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "혁신지정 여부나 유형을 나타내는 분류값임",
+      "prev": "flag",
+      "batch": "batch_020"
+    },
+    "혁신지정기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하거나 필터링하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "인증번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "특정 인증을 식별하기 위한 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_020"
+    },
+    "지정시작일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 형식을 가진 시간 정보임",
+      "prev": "date",
+      "batch": "batch_020"
+    },
+    "지정종료일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 형식을 가진 시간 정보임",
+      "prev": "date",
+      "batch": "batch_020"
+    },
+    "계약납품구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약과 납품이라는 상태를 구분하는 값임",
+      "prev": "flag",
+      "batch": "batch_020"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "조달 업무의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "계약구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "계약의 유형을 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_020"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 체결 방식을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "계약(납품요구)번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "계약 건을 식별하는 고유 번호임",
+      "prev": "identifier",
+      "batch": "batch_020"
+    },
+    "계약(납품요구)일자": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "날짜 형식을 가진 시간 정보임",
+      "prev": "date",
+      "batch": "batch_020"
+    },
+    "계약명": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약 건을 설명하는 텍스트로 그룹화 기준이 될 수 있음",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "MAS여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_020"
+    },
+    "우수제품여부": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "여부(Y/N)를 나타내는 상태값임",
+      "prev": "flag",
+      "batch": "batch_020"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 식별하기 위한 코드 번호임",
+      "prev": "identifier",
+      "batch": "batch_020"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "물품을 분류하는 기준이 되는 명칭임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "물품식별번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "물품을 고유하게 식별하는 번호임",
+      "prev": "identifier",
+      "batch": "batch_020"
+    },
+    "품목명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "품목을 분류하거나 상세 설명하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_020"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "사업자등록번호는 기업을 구별하는 고유 식별자이다",
+      "prev": "identifier",
+      "batch": "batch_042"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 0.99,
+      "reason": "업체명은 그룹화·필터링에 쓰이는 범주형 데이터이다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    },
+    "납품기한": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "납품기한은 특정 일자를 나타내는 날짜 필드이다",
+      "prev": "date",
+      "batch": "batch_042"
+    },
+    "계약(납품요구)금액": {
+      "verdict": "metric",
+      "confidence": 0.99,
+      "reason": "금액은 합산·평균 등 수치 연산의 대상이 되는 메트릭이다",
+      "prev": "metric",
+      "batch": "batch_042"
+    }
+  },
+  "00082": {
+    "석회질비료": {
+      "verdict": "dimension",
+      "confidence": 0.98,
+      "reason": "제품명은 그룹 기준이 되는 차원이다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    },
+    "10171611": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "숫자 형태이지만 코드·차수로 사용되는 차원이다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    },
+    "1017161101": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "숫자 코드이며 차원으로 활용된다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    },
+    "20130101": {
+      "verdict": "date",
+      "confidence": 0.97,
+      "reason": "YYYYMMDD 형태의 값은 날짜를 나타낸다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    },
+    "20281231": {
+      "verdict": "date",
+      "confidence": 0.97,
+      "reason": "YYYYMMDD 형태의 값은 날짜를 나타낸다",
+      "prev": "dimension",
+      "batch": "batch_042"
+    }
+  },
+  "00033": {
+    "조달방식": {
+      "verdict": "flag",
+      "confidence": 0.94,
+      "reason": "조달방식은 자체조달·공동조달 등 여부·구분을 나타내는 유형이므로 flag에 해당",
+      "prev": "dimension",
+      "batch": "batch_043"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.96,
+      "reason": "업무구분은 공사·용역 등 업무 유형을 구분하므로 flag",
+      "prev": "flag",
+      "batch": "batch_043"
+    },
+    "사전공개등록번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "고유한 등록번호로 행을 식별하는 코드이므로 identifier",
+      "prev": "identifier",
+      "batch": "batch_043"
+    },
+    "사전공개사업명": {
+      "verdict": "dimension",
+      "confidence": 0.93,
+      "reason": "사업명을 기준으로 그룹화·필터링에 사용되는 텍스트이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_043"
+    },
+    "사전공개일자": {
+      "verdict": "date",
+      "confidence": 0.98,
+      "reason": "연도·월·일 형태의 일자를 나타내므로 date",
+      "prev": "date",
+      "batch": "batch_043"
+    },
+    "의견등록마감일자": {
+      "verdict": "date",
+      "confidence": 0.98,
+      "reason": "마감일자를 나타내는 일자 형식이므로 date",
+      "prev": "date",
+      "batch": "batch_043"
+    },
+    "의견등록수": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "등록된 의견의 건수를 합산·평균·순위 계산 대상으로 사용되는 수치이므로 metric",
+      "prev": "dimension",
+      "batch": "batch_043"
+    },
+    "공고기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "기관을 고유하게 식별하는 코드이므로 identifier",
+      "prev": "identifier",
+      "batch": "batch_043"
+    },
+    "공고기관": {
+      "verdict": "dimension",
+      "confidence": 0.94,
+      "reason": "기관명을 기준으로 그룹화·필터링에 사용되는 텍스트이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_043"
+    },
+    "수요기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "수요기관을 고유하게 식별하는 코드이므로 identifier",
+      "prev": "identifier",
+      "batch": "batch_043"
+    },
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 0.98,
+      "reason": "기관명을 기준으로 그룹화",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "세부품명목록": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "품명 목록은 필터·그룹 기준에 해당",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "배정예산": {
+      "verdict": "metric",
+      "confidence": 0.99,
+      "reason": "금액은 합산·평균·순위 계산 대상",
+      "prev": "metric",
+      "batch": "batch_044"
+    },
+    "SW사업대상여부": {
+      "verdict": "flag",
+      "confidence": 0.97,
+      "reason": "여부·구분을 나타내는 값",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "안전관리물품대상여부": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "대상 여부를 표시하는 플래그",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "수의계약대상여부": {
+      "verdict": "flag",
+      "confidence": 0.97,
+      "reason": "계약 대상 여부를 나타내는 플래그",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "발주계획번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "행을 식별하는 고유 코드",
+      "prev": "identifier",
+      "batch": "batch_044"
+    },
+    "수요기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 0.98,
+      "reason": "지역을 기준으로 그룹화하는 필터",
+      "prev": "dimension",
+      "batch": "batch_044"
+    },
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.96,
+      "reason": "구분·유형을 나타내는 값",
+      "prev": "flag",
+      "batch": "batch_044"
+    },
+    "납품(완수)기한": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "일자를 나타내는 날짜 필드",
+      "prev": "date",
+      "batch": "batch_044"
+    },
+    "납품일수": {
+      "verdict": "metric",
+      "confidence": 0.96,
+      "reason": "납품일수는 일수라는 수치형 값으로 합산·평균·순위 계산에 사용됨",
+      "prev": "date",
+      "batch": "batch_045"
+    }
+  },
+  "00027": {
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.98,
+      "reason": "계약방법은 유형·구분을 나타내는 카테고리이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_045"
+    },
+    "국제입찰대상여부": {
+      "verdict": "flag",
+      "confidence": 0.99,
+      "reason": "여부를 나타내는 Yes/No 형태이므로 flag",
+      "prev": "flag",
+      "batch": "batch_045"
+    },
+    "단위": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "단위는 품목을 구분하는 카테고리이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_045"
+    },
+    "물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "코드 형태의 고유 식별자이므로 identifier",
+      "prev": "identifier",
+      "batch": "batch_045"
+    },
+    "물품수량": {
+      "verdict": "metric",
+      "confidence": 0.99,
+      "reason": "수량은 합산·평균·순위 계산 대상인 양이므로 metric",
+      "prev": "metric",
+      "batch": "batch_045"
+    },
+    "발주계획번호": {
+      "verdict": "identifier",
+      "confidence": 0.99,
+      "reason": "고유 번호 형태의 식별자이므로 identifier",
+      "prev": "identifier",
+      "batch": "batch_045"
+    },
+    "발주기관": {
+      "verdict": "dimension",
+      "confidence": 0.98,
+      "reason": "기관명은 그룹 기준 필터이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_045"
+    },
+    "발주기관담당부서": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "부서는 조직 구분 기준이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_045"
+    },
+    "발주기관소재시군구": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "지역명은 필터·그룹 기준이므로 dimension",
+      "prev": "dimension",
+      "batch": "batch_045"
+    },
+    "발주기관코드": {
+      "verdict": "identifier",
+      "confidence": 0.95,
+      "reason": "조직을 식별하는 코드",
+      "prev": "identifier",
+      "batch": "batch_046"
+    },
+    "발주시기": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "구매 시점을 나타내는 일자",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "사업명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "프로젝트를 구분하는 명칭",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "세부물품분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.96,
+      "reason": "품목을 구분하는 코드",
+      "prev": "identifier",
+      "batch": "batch_046"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 0.94,
+      "reason": "품목의 상세 명칭",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "신규장기구분": {
+      "verdict": "flag",
+      "confidence": 0.93,
+      "reason": "신규·장기 여부를 표시",
+      "prev": "flag",
+      "batch": "batch_046"
+    },
+    "용도": {
+      "verdict": "dimension",
+      "confidence": 0.92,
+      "reason": "사용 목적을 나타내는 분류",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "조달방식": {
+      "verdict": "dimension",
+      "confidence": 0.92,
+      "reason": "조달 방법을 구분하는 기준",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "주요규격": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "주요 사양을 나타내는 필터",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "품명": {
+      "verdict": "dimension",
+      "confidence": 0.94,
+      "reason": "상품명을 구분하는 기준",
+      "prev": "dimension",
+      "batch": "batch_046"
+    },
+    "협정구분": {
+      "verdict": "flag",
+      "confidence": 0.96,
+      "reason": "협정 구분은 계약 형태를 나타내는 구분값으로 여부·구분에 해당",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "업무구분": {
+      "verdict": "flag",
+      "confidence": 0.96,
+      "reason": "업무 구분은 업무 유형을 표시하는 구분값으로 flag에 해당",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "공사지역": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "지역명은 필터·그룹 기준이며 dimension에 해당",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "공종구분": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "공종 구분은 작업 종류를 나타내는 구분값으로 flag에 해당",
+      "prev": "flag",
+      "batch": "batch_047"
+    },
+    "낙찰방법": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "낙찰 방법은 유형을 나타내는 구분값으로 flag에 해당",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "수의계약사유": {
+      "verdict": "flag",
+      "confidence": 0.95,
+      "reason": "수의계약 사유는 구분·유형 값이므로 flag에 해당",
+      "prev": "dimension",
+      "batch": "batch_047"
+    }
+  },
+  "00083": {
+    "물품분류": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "숫자 형태이지만 코드·분류값이므로 dimension에 해당",
+      "prev": "metric",
+      "batch": "batch_047"
+    },
+    "세부품명": {
+      "verdict": "dimension",
+      "confidence": 0.97,
+      "reason": "제품 상세명은 그룹·필터 기준이므로 dimension에 해당",
+      "prev": "dimension",
+      "batch": "batch_047"
+    },
+    "물품식별": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "고유한 제품 코드를 나타내는 식별값으로 identifier에 해당",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "인증번호": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "인증 번호는 행을 식별하는 고유 코드이므로 identifier에 해당",
+      "prev": "identifier",
+      "batch": "batch_047"
+    },
+    "인증구분": {
+      "verdict": "dimension",
+      "confidence": 0.96,
+      "reason": "인증 종류는 코드 형태이지만 행 식별이 아니라 분류 기준이므로 차원으로 분류",
+      "prev": "metric",
+      "batch": "batch_048"
+    },
+    "유효기간시작일자": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "시작일자는 일자 정보를 담고 있어 날짜로 판정",
+      "prev": "date",
+      "batch": "batch_048"
+    },
+    "유효기간종료일자": {
+      "verdict": "date",
+      "confidence": 0.99,
+      "reason": "종료일자 역시 일자 정보를 담고 있어 날짜로 판정",
+      "prev": "date",
+      "batch": "batch_048"
+    },
+    "현재인증유효여부": {
+      "verdict": "flag",
+      "confidence": 0.97,
+      "reason": "인증 유효 여부는 상태·구분을 나타내는 플래그에 해당",
+      "prev": "flag",
+      "batch": "batch_048"
+    },
+    "사업자등록번호": {
+      "verdict": "identifier",
+      "confidence": 0.98,
+      "reason": "사업자등록번호는 행을 식별하는 고유 코드이므로 식별자",
+      "prev": "identifier",
+      "batch": "batch_048"
+    },
+    "업체명": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "업체명은 그룹·필터 기준이 되는 차원 데이터",
+      "prev": "metric",
+      "batch": "batch_048"
+    }
+  },
+  "00099": {
+    "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "위와 동일하게 조회 상태 설명 텍스트로 차원에 해당",
+      "prev": "date",
+      "batch": "batch_048"
+    }
+  },
+  "00100": {
+    "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "위와 동일하게 조회 상태 설명 텍스트로 차원에 해당",
+      "prev": "date",
+      "batch": "batch_048"
+    }
+  },
+  "00088": {
+    "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.": {
+      "verdict": "flag",
+      "confidence": 0.5,
+      "reason": "데이터 없음 상태를 나타내는 메시지임",
+      "prev": "date",
+      "batch": "batch_052"
+    }
+  },
+  "00086": {
+    "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.": {
+      "verdict": "flag",
+      "confidence": 0.5,
+      "reason": "데이터 없음 상태를 나타내는 메시지임",
+      "prev": "date",
+      "batch": "batch_052"
+    }
+  },
+  "00024": {
+    "업종분류": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "숫자 형태이나 업종을 구분하는 코드임",
+      "prev": "metric",
+      "batch": "batch_052"
+    },
+    "업종": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업종을 나타내는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "근거법령": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "법령을 구분하는 코드임",
+      "prev": "metric",
+      "batch": "batch_052"
+    },
+    "관련규정내용": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "규정 내용을 설명하는 범주형 데이터임",
+      "prev": "dimension",
+      "batch": "batch_052"
+    },
+    "사용여부": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "법률 조항을 기준으로 한 상태나 유형을 나타냄",
+      "prev": "flag",
+      "batch": "batch_053"
+    },
+    "제한업종": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "제한되는 업종의 범위를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    },
+    "허용업종": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "Y/N 형태의 여부를 나타내는 값임",
+      "prev": "dimension",
+      "batch": "batch_053"
+    }
+  },
+  "00179": {
+    "컬럼1": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "행 식별을 위한 일반적인 컬럼명으로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_058"
+    },
+    "공사": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 분류하는 범주형 항목임",
+      "prev": "dimension",
+      "batch": "batch_058"
+    }
+  },
+  "00181": {
+    "컬럼1": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "행 식별을 위한 일반적인 컬럼명으로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_058"
+    },
+    "물품": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 분류하는 범주형 항목임",
+      "prev": "dimension",
+      "batch": "batch_058"
+    }
+  },
+  "00182": {
+    "수요기관소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 정보를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_058"
+    },
+    "지역의무 공동계약 실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치화된 실적 데이터로 합산 및 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_058"
+    },
+    "공사계약실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치화된 실적 데이터로 합산 및 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_058"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_058"
+    }
+  },
+  "00183": {
+    "수요기관소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 정보를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_058"
+    },
+    "지역제한실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치화된 실적 데이터로 합산 및 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_058"
+    },
+    "지역전체실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액이나 수량 등 합산 가능한 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_059"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율을 나타내는 계산된 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_059"
+    }
+  },
+  "00193": {
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 유형이나 상태를 구분하는 분류값임",
+      "prev": "flag",
+      "batch": "batch_059"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "연도별 실적 금액을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_059"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "연도별 실적 금액을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_059"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "전년 대비 변화량을 나타내는 계산된 수치임",
+      "prev": "metric",
+      "batch": "batch_059"
+    }
+  },
+  "00194": {
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "데이터의 유형이나 상태를 구분하는 분류값임",
+      "prev": "flag",
+      "batch": "batch_059"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "연도별 실적 금액을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_059"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "연도별 실적 금액을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_059"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "전년 대비 변화량을 나타내는 계산된 수치임",
+      "prev": "metric",
+      "batch": "batch_059"
+    }
+  },
+  "00195": {
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관의 소속을 나타내는 분류 기준임",
+      "prev": "flag",
+      "batch": "batch_060"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "금액이나 수량을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_060"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "금액이나 수량을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_060"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동폭을 나타내는 계산된 수치임",
+      "prev": "metric",
+      "batch": "batch_060"
+    }
+  },
+  "00196": {
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관의 소속을 나타내는 분류 기준임",
+      "prev": "flag",
+      "batch": "batch_060"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "금액이나 수량을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_060"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "금액이나 수량을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_060"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동폭을 나타내는 계산된 수치임",
+      "prev": "metric",
+      "batch": "batch_060"
+    }
+  },
+  "00197": {
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "기관의 소속을 나타내는 분류 기준임",
+      "prev": "flag",
+      "batch": "batch_060"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "금액이나 수량을 나타내는 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_060"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터로 합산 및 비교의 대상임",
+      "prev": "date",
+      "batch": "batch_061"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동폭을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_061"
+    }
+  },
+  "00198": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "분류 기준이 되는 일반적인 속성임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.8,
+      "reason": "상태나 유형을 나타내는 값임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "분류 기준이 되는 일반적인 속성임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    }
+  },
+  "00200": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "분류 기준이 되는 일반적인 속성임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.8,
+      "reason": "상태나 유형을 나타내는 값임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.8,
+      "reason": "분류 기준이 되는 일반적인 속성임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    }
+  },
+  "00201": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 그룹화의 기준이 되는 차원임",
+      "prev": "dimension",
+      "batch": "batch_061"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터로 합산 및 비교의 대상임",
+      "prev": "date",
+      "batch": "batch_061"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 건수와 같은 수치 데이터를 포함하고 있음",
+      "prev": "date",
+      "batch": "batch_062"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 합산 및 평균의 대상이 됨",
+      "prev": "metric",
+      "batch": "batch_062"
+    }
+  },
+  "00204": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_062"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비교 대상이 되는 과거 시점의 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_062"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 건수와 같은 수치 데이터를 포함하고 있음",
+      "prev": "date",
+      "batch": "batch_062"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 합산 및 평균의 대상이 됨",
+      "prev": "metric",
+      "batch": "batch_062"
+    }
+  },
+  "00205": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 기관명임",
+      "prev": "dimension",
+      "batch": "batch_062"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비교 대상이 되는 과거 시점의 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_062"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 건수와 같은 수치 데이터를 포함하고 있음",
+      "prev": "date",
+      "batch": "batch_062"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 합산 및 평균의 대상이 됨",
+      "prev": "metric",
+      "batch": "batch_062"
+    }
+  },
+  "00206": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_063"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 수량 등 계산 대상이 되는 수치임",
+      "prev": "date",
+      "batch": "batch_063"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 수량 등 계산 대상이 되는 수치임",
+      "prev": "date",
+      "batch": "batch_063"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_063"
+    }
+  },
+  "00207": {
+    "수요기관": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기관명은 데이터를 그룹화하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_063"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 수량 등 계산 대상이 되는 수치임",
+      "prev": "date",
+      "batch": "batch_063"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액이나 수량 등 계산 대상이 되는 수치임",
+      "prev": "date",
+      "batch": "batch_063"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_063"
+    }
+  },
+  "00216": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "정보가 부족하나 일반적인 분류 기준 컬럼으로 추정",
+      "prev": "dimension",
+      "batch": "batch_063"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.7,
+      "reason": "상태나 유형을 나타내는 텍스트로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_063"
+    },
+    "컬럼3": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "데이터의 행을 식별하는 번호나 코드일 가능성이 높음",
+      "prev": "dimension",
+      "batch": "batch_064"
+    }
+  },
+  "00218": {
+    "수요기관소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_064"
+    },
+    "조달업무영역": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "업무의 범위를 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_064"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타냄",
+      "prev": "metric",
+      "batch": "batch_064"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액/수량 형태의 수치이므로 metric으로 판단",
+      "prev": "dimension",
+      "batch": "batch_064"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액/수량 형태의 수치이므로 metric으로 판단",
+      "prev": "date",
+      "batch": "batch_064"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액/수량 형태의 수치이므로 metric으로 판단",
+      "prev": "dimension",
+      "batch": "batch_064"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액/수량 형태의 수치이므로 metric으로 판단",
+      "prev": "dimension",
+      "batch": "batch_064"
+    }
+  },
+  "00219": {
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기관의 소관을 나타내는 유형 구분임",
+      "prev": "flag",
+      "batch": "batch_064"
+    },
+    "전년도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 항목임",
+      "prev": "date",
+      "batch": "batch_064"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터이므로 합산 및 계산 대상임",
+      "prev": "date",
+      "batch": "batch_065"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동 수치를 나타내는 계산된 값임",
+      "prev": "metric",
+      "batch": "batch_065"
+    }
+  },
+  "00222": {
+    "소관구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기관의 유형을 나타내는 분류값임",
+      "prev": "flag",
+      "batch": "batch_065"
+    },
+    "전년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터이므로 합산 및 계산 대상임",
+      "prev": "date",
+      "batch": "batch_065"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터이므로 합산 및 계산 대상임",
+      "prev": "date",
+      "batch": "batch_065"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "변동 수치를 나타내는 계산된 값임",
+      "prev": "metric",
+      "batch": "batch_065"
+    }
+  },
+  "00225": {
+    "업체시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역을 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_065"
+    },
+    "해당지역업체실적": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "실적 수치이므로 계산 대상임",
+      "prev": "metric",
+      "batch": "batch_065"
+    },
+    "전체실적 대비 비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율을 나타내는 계산된 값임",
+      "prev": "metric",
+      "batch": "batch_065"
+    }
+  },
+  "00249": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기업의 유형을 분류하는 범주형 데이터임",
+      "prev": "flag",
+      "batch": "batch_068"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 컬럼임",
+      "prev": "metric",
+      "batch": "batch_068"
+    },
+    "대기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "중견기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액과 수치로 구성되어 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_068"
+    },
+    "중소기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "외국기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "비영리법인등기타": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    }
+  },
+  "00250": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 1.0,
+      "reason": "시간적 기준을 나타내는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "조달업무영역": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 업무 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타냄",
+      "prev": "metric",
+      "batch": "batch_069"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "date",
+      "batch": "batch_069"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 및 건수 합산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_069"
+    },
+    "공사": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "공사 유형을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    }
+  },
+  "00251": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.95,
+      "reason": "시간적 기준을 나타내는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.95,
+      "reason": "계약 방식의 유형을 나타내는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수치 데이터의 총합을 나타내는 지표임",
+      "prev": "metric",
+      "batch": "batch_070"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "일반경쟁 방식의 금액 또는 건수 수치임",
+      "prev": "date",
+      "batch": "batch_070"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "지명경쟁 방식의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "제한경쟁 방식의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수의계약 방식의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "미분류 항목의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    },
+    "수기계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수기계약 방식의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_070"
+    }
+  },
+  "00252": {
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형이나 소관을 나타내는 분류 항목임",
+      "prev": "flag",
+      "batch": "batch_071"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수나 금액의 총합을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_071"
+    },
+    "대기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "대기업에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    },
+    "중견기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "중견기업에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    },
+    "중소기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "중소기업에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    },
+    "외국기업": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "외국기업에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    },
+    "비영리법인등기타": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비영리법인 등에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "미분류 항목에 해당하는 금액이나 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_071"
+    }
+  },
+  "00253": {
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 1.0,
+      "reason": "기업의 유형이나 소관을 나타내는 분류 항목임",
+      "prev": "flag",
+      "batch": "batch_071"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수나 금액의 총합을 나타내는 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_071"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액을 나타내고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_072"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 건수를 나타내고 있어 합산 대상임",
+      "prev": "date",
+      "batch": "batch_072"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액을 나타내고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_072"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 건수를 나타내고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_072"
+    }
+  },
+  "00254": {
+    "연계시스템구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 기준 항목임",
+      "prev": "flag",
+      "batch": "batch_072"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.8,
+      "reason": "데이터의 총합을 나타내는 항목임",
+      "prev": "metric",
+      "batch": "batch_072"
+    },
+    "전자계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 금액을 나타내고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_072"
+    },
+    "비전자계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "샘플 데이터가 건수를 나타내고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_072"
+    }
+  },
+  "00255": {
+    "소관구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 분류하는 기준 항목임",
+      "prev": "flag",
+      "batch": "batch_072"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비교를 위한 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_072"
+    },
+    "금년도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "연도를 나타내는 시간 정보임",
+      "prev": "date",
+      "batch": "batch_073"
+    },
+    "증감": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수치 변화량을 나타내는 계산 대상 값임",
+      "prev": "metric",
+      "batch": "batch_073"
+    }
+  },
+  "00269": {
+    "조달업무영역": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 업무의 범위를 나타내는 분류 기준입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 지표입니다.",
+      "prev": "metric",
+      "batch": "batch_080"
+    },
+    "물품": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "조달 대상 품목을 구분하는 분류 기준입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    },
+    "일반용역": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "용역의 유형을 나타내는 분류 기준입니다.",
+      "prev": "date",
+      "batch": "batch_080"
+    },
+    "기술용역": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "기술 서비스의 유형을 나타내는 분류 기준입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    },
+    "공사": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공사 업무의 유형을 나타내는 분류 기준입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    }
+  },
+  "00270": {
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "계약 체결 방식을 나타내는 분류 기준입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 지표입니다.",
+      "prev": "metric",
+      "batch": "batch_080"
+    },
+    "일반경쟁": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약 방식의 유형을 나타내는 구분값입니다.",
+      "prev": "date",
+      "batch": "batch_080"
+    },
+    "제한경쟁": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "계약 방식의 유형을 나타내는 구분값입니다.",
+      "prev": "dimension",
+      "batch": "batch_080"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액과 수량을 포함하는 계산 대상 데이터임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 등 합산 대상이 되는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 합산 대상이 되는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    },
+    "수기등록": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 합산 대상이 되는 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    }
+  },
+  "00271": {
+    "조달업체": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하는 기준이 되는 업체명임",
+      "prev": "dimension",
+      "batch": "batch_081"
+    },
+    "전년도(동기)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "비교를 위한 금액 및 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_081"
+    },
+    "금년도": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "현재 시점의 금액 및 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_081"
+    },
+    "증감률(%)": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 계산 결과값으로 분석 대상임",
+      "prev": "metric",
+      "batch": "batch_081"
+    }
+  },
+  "00276": {
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 연도 정보임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터를 그룹화하는 분류 기준임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수치 데이터의 총합을 나타냄",
+      "prev": "metric",
+      "batch": "batch_084"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터를 포함하고 있어 합산 대상임",
+      "prev": "date",
+      "batch": "batch_084"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 데이터를 포함하고 있어 합산 대상임",
+      "prev": "dimension",
+      "batch": "batch_084"
+    },
+    "수기등록": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "수기 등록 여부를 나타내는 구분값으로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_085"
+    }
+  },
+  "00277": {
+    "공공조달분류번호": {
+      "verdict": "identifier",
+      "confidence": 1.0,
+      "reason": "분류를 식별하기 위한 고유 코드임",
+      "prev": "identifier",
+      "batch": "batch_085"
+    },
+    "계약방법": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "계약의 유형을 분류하는 기준임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액이나 수량의 총합을 나타내는 수치임",
+      "prev": "metric",
+      "batch": "batch_085"
+    },
+    "일반경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "일반경쟁 계약의 금액 또는 건수 수치임",
+      "prev": "date",
+      "batch": "batch_085"
+    },
+    "지명경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "지명경쟁 계약의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    },
+    "제한경쟁": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "제한경쟁 계약의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    },
+    "수의계약": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "수의계약의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "분류되지 않은 항목의 금액 또는 건수 수치임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    }
+  },
+  "00278": {
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "데이터의 정렬 순서를 나타내는 지표임",
+      "prev": "dimension",
+      "batch": "batch_085"
+    },
+    "공공조달분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "문맥상 동일한 분류 체계의 식별자로 판단됨",
+      "prev": "identifier",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "공공조달분류명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "공공 조달 분류의 명칭으로 그룹화 기준임",
+      "prev": "dimension",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 측정값임",
+      "prev": "metric",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    }
+  },
+  "00279": {
+    "공공조달분류번호": {
+      "verdict": "identifier",
+      "confidence": 0.8,
+      "reason": "문맥상 동일한 분류 체계의 식별자로 판단됨",
+      "prev": "identifier",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "기준연도": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "시간적 기준을 나타내는 날짜 관련 정보임",
+      "prev": "dimension",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 측정값임",
+      "prev": "metric",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "2026": {
+      "verdict": "date",
+      "confidence": 0.9,
+      "reason": "특정 연도를 나타내는 시간적 정보임",
+      "prev": "dimension",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    }
+  },
+  "00281": {
+    "시스템유형": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "시스템을 구분하기 위한 카테고리성 정보임",
+      "prev": "flag",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "기업형태구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "기업의 형태를 구분하는 유형 정보임",
+      "prev": "flag",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수치 데이터의 총합을 나타내는 측정값임",
+      "prev": "metric",
+      "batch": "batch_086",
+      "via": "gemini-cli"
+    },
+    "대기업": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "중견기업": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "중소기업": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "외국기업": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "비영리법인등기타": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    },
+    "미분류": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "샘플이 금액과 건수로 구성된 측정값임",
+      "prev": "dimension",
+      "batch": "batch_087",
+      "via": "gemini-cli"
+    }
+  },
+  "00287": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "분류 기준 데이터로 추정",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.7,
+      "reason": "상태나 유형을 나타내는 정보",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "분류 기준 데이터로 추정",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    }
+  },
+  "00288": {
+    "구분": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "행의 그룹이나 카테고리를 구분하는 데이터",
+      "prev": "flag",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "전체실적": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "실적 건수 데이터를 포함하는 양적 수치",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "장애인표준사업장실적": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "실적 금액 데이터를 포함하는 양적 수치",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "물품": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "건수 데이터를 포함하는 양적 수치",
+      "prev": "dimension",
+      "batch": "batch_090",
+      "via": "gemini-cli"
+    },
+    "공사": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 정보를 포함한 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "기술용역": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수 정보를 포함한 수치 데이터임",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "일반용역": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "금액 정보를 포함한 수치 데이터임",
+      "prev": "date",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    }
+  },
+  "00289": {
+    "업체소재시도": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "지역 정보를 나타내는 그룹 기준임",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "사회적약자기업건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "전체건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "건수 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "비중": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "비율 수치 데이터임",
+      "prev": "metric",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    }
+  },
+  "00589": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "분류 미확인, 기본값으로 설정",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "컬럼2": {
+      "verdict": "flag",
+      "confidence": 0.8,
+      "reason": "상태나 유형 정보를 나타내는 값으로 판단됨",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    },
+    "컬럼3": {
+      "verdict": "dimension",
+      "confidence": 0.5,
+      "reason": "분류 미확인, 기본값으로 설정",
+      "prev": "dimension",
+      "batch": "batch_091",
+      "via": "gemini-cli"
+    }
+  },
+  "00598": {
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "그룹화 기준 항목",
+      "prev": "dimension",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "총구매금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 가능한 금액",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "지방기업구매금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 가능한 금액",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "지방기업구매비율": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계산된 수치 비율",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    }
+  },
+  "00619": {
+    "수요기관명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "그룹화 기준 항목",
+      "prev": "dimension",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "총구매금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 가능한 금액",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "지방기업구매금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 가능한 금액",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    },
+    "지방기업구매비율": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계산된 수치 비율",
+      "prev": "metric",
+      "batch": "batch_106",
+      "via": "gemini-cli"
+    }
+  },
+  "00599": {
+    "순위": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "순위는 순위 계산의 결과값으로 metric에 해당함",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "적용 계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하거나 필터링하는 범주형 정보",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "조항호명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "해당 항목을 구분하는 명칭",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "상세 내용을 설명하는 범주형 정보",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "집계 가능한 수량 데이터",
+      "prev": "metric",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "집계 가능한 금액 데이터",
+      "prev": "metric",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    }
+  },
+  "00620": {
+    "순위": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "순위는 순위 계산의 결과값으로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "적용 계약법": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "데이터를 그룹화하거나 필터링하는 범주형 정보",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "조항호명": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "해당 항목을 구분하는 명칭",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "조항호내용": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "상세 내용을 설명하는 범주형 정보",
+      "prev": "dimension",
+      "batch": "batch_107",
+      "via": "gemini-cli"
+    },
+    "건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "집계 가능한 건수 데이터",
+      "prev": "metric",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "금액": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "합산 및 평균 계산이 가능한 금액 데이터",
+      "prev": "metric",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    }
+  },
+  "00621": {
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "정렬 기준을 나타내는 분류용 항목",
+      "prev": "dimension",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "납품요구(조달청 단가계약)": {
+      "verdict": "metric",
+      "confidence": 0.8,
+      "reason": "금액 정보를 포함한 집계 대상 항목",
+      "prev": "metric",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "총액(경쟁)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 총액으로 합산 가능한 metric",
+      "prev": "dimension",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "총액(수의)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 총액으로 합산 가능한 metric",
+      "prev": "dimension",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "단가(기관 자체)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "산술 연산이 가능한 기관 단가",
+      "prev": "metric",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    }
+  },
+  "00600": {
+    "순위": {
+      "verdict": "dimension",
+      "confidence": 0.9,
+      "reason": "정렬 기준을 나타내는 분류용 항목",
+      "prev": "dimension",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "납품요구(조달청 단가계약)": {
+      "verdict": "metric",
+      "confidence": 0.8,
+      "reason": "금액 정보를 포함한 집계 대상 항목",
+      "prev": "metric",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "총액(경쟁)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "계약 총액으로 합산 가능한 metric",
+      "prev": "dimension",
+      "batch": "batch_108",
+      "via": "gemini-cli"
+    },
+    "총액(수의)": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수의계약 금액 합산으로 metric에 해당함",
+      "prev": "dimension",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "단가(기관 자체)": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "기관 자체 단가 금액으로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    }
+  },
+  "00601": {
+    "구분": {
+      "verdict": "flag",
+      "confidence": 0.9,
+      "reason": "유형이나 범주를 나타내므로 flag에 해당함",
+      "prev": "flag",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "합계": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수치값의 합계로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "납품요구(조달청 단가계약)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 또는 수량 계산 대상이므로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "총액(경쟁)": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "경쟁계약 금액 합산으로 metric에 해당함",
+      "prev": "dimension",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "총액(수의)": {
+      "verdict": "metric",
+      "confidence": 0.95,
+      "reason": "수의계약 금액 합산으로 metric에 해당함",
+      "prev": "dimension",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    },
+    "납품요구(기관자체 단가계약)": {
+      "verdict": "metric",
+      "confidence": 0.9,
+      "reason": "금액 또는 수량 계산 대상이므로 metric에 해당함",
+      "prev": "metric",
+      "batch": "batch_109",
+      "via": "gemini-cli"
+    }
+  },
+  "00036": {
+    "컬럼1": {
+      "verdict": "dimension",
+      "confidence": 1.0,
+      "reason": "통계 분류 기준이 되는 범주형 데이터임.",
+      "prev": "dimension",
+      "batch": "batch_112",
+      "via": "gemini-cli"
+    },
+    "건수": {
+      "verdict": "metric",
+      "confidence": 1.0,
+      "reason": "수량이나 건수를 나타내는 수치형 데이터임.",
+      "prev": "metric",
+      "batch": "batch_112",
+      "via": "gemini-cli"
+    }
+  }
+}

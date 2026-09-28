@@ -1,0 +1,200 @@
+{
+  "report_id": "00256",
+  "report_name": "소관구분별 월별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-099R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 4,
+  "total_columns": 13,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 11,
+    "dimensions": [
+      "기준연도",
+      "국가기관",
+      "지방정부",
+      "교육기관",
+      "공기업",
+      "준정부기관",
+      "기타공공기관",
+      "지방공기업",
+      "지방의료원",
+      "지자체출연연구원",
+      "특수법인"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "기준연도",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "기준월",
+        "합계",
+        "2026"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "합계",
+        "533,590"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "533,590",
+        "533,590"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "국가기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "19,154,460,335,268",
+        "19,154,460,335,268"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "지방정부",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "51,473",
+        "51,473"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "교육기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "3,883,237,237,499",
+        "3,883,237,237,499"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "공기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "112,522",
+        "112,522"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "준정부기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "5,580,157,796,082",
+        "5,580,157,796,082"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "기타공공기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "324,654",
+        "324,654"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "지방공기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "1,693,000,883,558",
+        "1,693,000,883,558"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "지방의료원",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "10,553",
+        "10,553"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "지자체출연연구원",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "3,830,059,517,223",
+        "3,830,059,517,223"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "특수법인",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "10,819",
+        "10,819"
+      ]
+    }
+  ]
+}

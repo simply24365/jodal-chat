@@ -1,0 +1,122 @@
+{
+  "report_id": "00288",
+  "report_name": "수요기관별 장애인표준사업장 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-131R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 5,
+    "dimensions": [
+      "전체실적",
+      "장애인표준사업장실적",
+      "물품",
+      "공사",
+      "기술용역"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반용역"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수요기관",
+        "합계",
+        "가축위생방역지원본부"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "전체실적",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "544,358",
+        "248"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "장애인표준사업장실적",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,154,460,335,339",
+        "72,292,670"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "물품",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "5,197",
+        "0"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "공사",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "73,250,162,200",
+        "0"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "기술용역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "4,525",
+        "0"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "일반용역",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "53,656,289,232",
+        "0"
+      ]
+    }
+  ]
+}

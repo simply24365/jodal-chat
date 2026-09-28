@@ -1,0 +1,58 @@
+{
+  "report_id": "00243",
+  "report_name": "연계시스템별 계약납품요구 실적통계 시각화",
+  "official_id": "UI-ADOXFA-086R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 14,
+  "total_columns": 2,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "금액(원)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 1,
+    "dimensions": [
+      "컬럼1"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "컬럼1",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "기준월",
+        "합계",
+        "01"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "금액(원)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "2026",
+        "19,154,460,335,268",
+        "19,154,460,335,268"
+      ]
+    }
+  ]
+}

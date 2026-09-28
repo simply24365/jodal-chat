@@ -1,0 +1,71 @@
+{
+  "report_id": "00230",
+  "report_name": "지역별 창업기업수 통계 시각화",
+  "official_id": "UI-ADOXFA-072R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 18,
+  "total_columns": 3,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 2,
+    "metrics": [
+      "창업기업 현황",
+      "비중"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 1,
+    "dimensions": [
+      "업체소재시도"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업체소재시도",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "강원특별자치도",
+        "경기도",
+        "경상남도"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "창업기업 현황",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "273",
+        "1,181",
+        "390"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "비중",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "5.21%",
+        "22.53%",
+        "7.44%"
+      ]
+    }
+  ]
+}

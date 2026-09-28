@@ -1,0 +1,154 @@
+{
+  "reverts": [
+    {
+      "report_id": "00282",
+      "name": "시스템유형",
+      "prev": "flag",
+      "verdict": "dimension",
+      "final": "flag"
+    },
+    {
+      "report_id": "00288",
+      "name": "구분",
+      "prev": "flag",
+      "verdict": "dimension",
+      "final": "flag"
+    },
+    {
+      "report_id": "00599",
+      "name": "순위",
+      "prev": "dimension",
+      "verdict": "metric",
+      "final": "dimension"
+    }
+  ],
+  "quarantined": [
+    {
+      "report_id": "00028",
+      "name": "컬럼2",
+      "final": "dimension"
+    },
+    {
+      "report_id": "00198",
+      "name": "컬럼2",
+      "final": "flag"
+    },
+    {
+      "report_id": "00200",
+      "name": "컬럼2",
+      "final": "flag"
+    },
+    {
+      "report_id": "00216",
+      "name": "컬럼2",
+      "final": "flag"
+    },
+    {
+      "report_id": "00259",
+      "name": "컬럼2",
+      "final": "dimension"
+    },
+    {
+      "report_id": "00287",
+      "name": "컬럼2",
+      "final": "flag"
+    },
+    {
+      "report_id": "00589",
+      "name": "컬럼2",
+      "final": "flag"
+    },
+    {
+      "report_id": "00592",
+      "name": "컬럼2",
+      "final": "flag"
+    }
+  ],
+  "needs_review": [
+    {
+      "report_id": "00088",
+      "name": "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.",
+      "final": "flag",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00086",
+      "name": "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.",
+      "final": "flag",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00028",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00028",
+      "name": "컬럼3",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00071",
+      "name": "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00168",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00216",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00259",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00259",
+      "name": "컬럼2",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00287",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00287",
+      "name": "컬럼3",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00589",
+      "name": "컬럼1",
+      "final": "dimension",
+      "confidence": 0.5
+    },
+    {
+      "report_id": "00589",
+      "name": "컬럼3",
+      "final": "dimension",
+      "confidence": 0.5
+    }
+  ],
+  "summary": {
+    "changed": 230,
+    "accepted": 227,
+    "reverted": 3,
+    "quarantined": 8,
+    "needs_review": 13
+  }
+}

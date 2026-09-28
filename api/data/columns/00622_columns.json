@@ -1,0 +1,109 @@
+{
+  "report_id": "00622",
+  "report_name": "자율화 시범운영 대상 기업구분별 구매실적 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-023R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 6,
+  "total_columns": 6,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 3,
+    "metrics": [
+      "합계",
+      "납품요구(조달청 단가계약)",
+      "납품요구(기관자체 단가계약)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 2,
+    "dimensions": [
+      "총액(경쟁)",
+      "총액(수의)"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "대기업(상호출자제한기업)",
+        "중견기업"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "79,116,000",
+        "314,711,329"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "납품요구(조달청 단가계약)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "79,116,000",
+        "314,711,329"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "총액(경쟁)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "총액(수의)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "납품요구(기관자체 단가계약)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ]
+}

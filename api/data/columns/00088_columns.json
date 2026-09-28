@@ -1,0 +1,39 @@
+{
+  "report_id": "00088",
+  "report_name": "혁신장터 상품등록 내역",
+  "official_id": "UI-ADOWCA-002R",
+  "full_report_title": "UI-ADOWCA-002R.혁신장터 상품등록 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 최초기준일자(From)\n20260918\n프롬프트 2: 최초기준일자(To)\n20260918\n프롬프트 3: 물품분류\n\n프롬프트 4: 세부품명\n\n프롬프트 5: 물품식별\n\n프롬프트 6: 혁신대분류카테고리\n\n프롬프트 7: 혁신중분류카테고리\n\n프롬프트 8: 카테고리\n\n프롬프트 9: 업체\n\n프롬프트 10: 업체소재시도\n\n프롬프트 11: 업체소재시군구\n\n프롬프트 12: 혁신상품구분\n\n프롬프트 13: 업체인증유형목록\n\n프롬프트 14: 혁신제품인증목록\n\n프롬프트 15: 업체제시가격(From)\n\n프롬프트 16: 업체제시가격(",
+  "sheet_name": "UI-ADOWCA-002R.혁신장터 상품등록 내역",
+  "total_data_rows": 0,
+  "total_columns": 1,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 0,
+    "dimensions": []
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다."
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "이 보기에 대한 데이터가 복귀되지 않았습니다. 이것은 적용된 필터가 모든 데이터를 제외시키기 때문일 수도 있습니다.",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    }
+  ]
+}

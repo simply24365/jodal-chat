@@ -1,0 +1,10 @@
+{
+  "model": "jina-embeddings-v3",
+  "dims": 1024,
+  "task_doc": "retrieval.passage",
+  "task_query": "retrieval.query",
+  "rrf_k": 60,
+  "bm25s": "0.3.11",
+  "kiwipiepy": "0.23.2",
+  "n_docs": 131
+}

@@ -1,0 +1,109 @@
+{
+  "report_id": "00274",
+  "report_name": "지역제한 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-117R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 3,
+  "total_columns": 6,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 2,
+    "metrics": [
+      "지역제한총액(C)",
+      "비율(%)(C/A)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 3,
+    "dimensions": [
+      "계약총액(A+B)",
+      "계약총액(입찰O)(A)",
+      "계약총액(입찰X)(B)"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "기준년월"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "기준년월",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "202601",
+        "합계"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "계약총액(A+B)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,154,460,335,268",
+        "19,154,460,335,268"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "계약총액(입찰O)(A)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "11,344,589,235,199",
+        "11,344,589,235,199"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "계약총액(입찰X)(B)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "7,809,871,100,069",
+        "7,809,871,100,069"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "지역제한총액(C)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1,641,478,820,866",
+        "1,641,478,820,866"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "비율(%)(C/A)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "14.469",
+        "14.469"
+      ]
+    }
+  ]
+}

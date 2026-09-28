@@ -1,0 +1,315 @@
+{
+  "url": "https://data.g2b.go.kr/portal/servlet/mstrWeb",
+  "readyState": "complete",
+  "htmlLen": 600707,
+  "body": {
+    "tag": "BODY",
+    "id": "",
+    "cls": "mstrWeb  Red mstrDHTML mstrFullScreen mstr-page-Html5Vi mstr-chrome workstation",
+    "text": "",
+    "children": [
+      {
+        "tag": "DIV",
+        "id": "rootView",
+        "cls": "mstrmojo-RootView  mojo-theme-light nowebdashdesign card spatial vizBoxShadowsOn",
+        "text": "",
+        "children": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "cls": "mstrmojo-RootView-pathbar",
+            "text": "",
+            "children": [
+              {
+                "tag": "DIV",
+                "id": "mstr28",
+                "cls": "mojoPath ",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-starburst",
+                    "cls": "mojoPath-starburst",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-navigation",
+                    "cls": "mojoPath-navigation",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-path",
+                    "cls": "mojoPath-path",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-toolbar",
+                    "cls": "mojoPath-toolbar",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-create",
+                    "cls": "mojoPath-create",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-search",
+                    "cls": "mojoPath-search",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "mojoPath-extraLinks",
+                    "cls": "mojoPath-extraLinks",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "cls": "mstrmojo-RootView-sharelinkbar",
+            "text": "",
+            "children": [
+              {
+                "tag": "DIV",
+                "id": "mstr37",
+                "cls": "mstrmojo-ShareLinkBar ",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "",
+                    "cls": "indicate-content",
+                    "text": "",
+                    "children": []
+                  },
+                  {
+                    "tag": "DIV",
+                    "id": "",
+                    "cls": "button-panel",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "cls": "mstrmojo-RootView-menutoolbar hidden",
+            "text": "",
+            "children": [
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-menubar noItems",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr36",
+                    "cls": "mstrmojo-ListBase mstrmojo-VIToolbar",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-toolbar",
+                "text": "",
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "DIV",
+            "id": "mstrmojo-RootView-inlineDialog",
+            "cls": "",
+            "text": "",
+            "children": []
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "cls": "",
+            "text": "",
+            "children": [
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-togglebar",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr565",
+                    "cls": "mstrmojo-ListBase mstrmojo-VIToolbar",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-toc",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr59",
+                    "cls": "mstrmojo-VIPanel mstrmojo-TableOfContents ",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-datasets",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr85",
+                    "cls": "mstrmojo-VIPanel mstrmojo-VIDatasetObjects mstrmojo-VIDocDatasetObjects",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-content",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr56",
+                    "cls": "mstrmojo-VIDocument",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "DIV",
+                "id": "",
+                "cls": "mstrmojo-RootView-vizControl",
+                "text": "",
+                "children": [
+                  {
+                    "tag": "DIV",
+                    "id": "mstr166",
+                    "cls": "mstrmojo-VizControl ",
+                    "text": "",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "DIV",
+        "id": "mainAppMsg",
+        "cls": "",
+        "text": "",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "var isQuickSearchEnabled = true;\n\n    // Set common config properties for most applications\n    mstr",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "window.console = window.console || {log: function(){}};  //avoid IE9 error\n\twindow.mstr_profile = {\n",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      },
+      {
+        "tag": "SPAN",
+        "id": "vis-measure-span",
+        "cls": "",
+        "text": "Test Text",
+        "children": []
+      },
+      {
+        "tag": "CANVAS",
+        "id": "vis-measure-canvas",
+        "cls": "",
+        "text": "",
+        "children": []
+      },
+      {
+        "tag": "SCRIPT",
+        "id": "",
+        "cls": "",
+        "text": "<!-- -->",
+        "children": []
+      }
+    ]
+  },
+  "allIframes": [],
+  "hiddenEls": 126
+}

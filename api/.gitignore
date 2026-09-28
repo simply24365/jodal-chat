@@ -1,0 +1,4 @@
+# secrets — never commit
+.env
+*.log
+__pycache__/

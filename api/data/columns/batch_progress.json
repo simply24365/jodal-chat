@@ -1,0 +1,1730 @@
+{
+  "00118": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "나라장터쇼핑몰 납품요구 물품 내역",
+    "official_id": "UI-ADOXAA-038R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:39:57.983637"
+  },
+  "00606": {
+    "status": "SUCCESS",
+    "columns_count": 40,
+    "metrics_count": 5,
+    "data_rows": 9296,
+    "excel_file": "00606_UI-ADOXFA-191R.중앙조달 물품 순번별 계약 내역.xlsx",
+    "metrics": [
+      "단가",
+      "수량",
+      "증감수량",
+      "금액",
+      "증감금액"
+    ],
+    "report_name": "중앙조달 물품 순번별 계약 내역",
+    "official_id": "UI-ADOXFA-191R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T09:41:52.635846"
+  },
+  "00604": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 59,
+    "metrics_count": 2,
+    "data_rows": -1,
+    "metrics": [
+      "계약수량",
+      "계약증감수량"
+    ],
+    "report_name": "업무별 구성원별 계약 내역",
+    "official_id": "UI-ADOXFA-189R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:23.348516"
+  },
+  "00010": {
+    "status": "SUCCESS",
+    "columns_count": 14,
+    "metrics_count": 1,
+    "data_rows": 34758,
+    "excel_file": "00010_UI-ADOAAA-010R.조달업체 면허 업종 등록 내역.xlsx",
+    "metrics": [
+      "시공능력평가금액"
+    ],
+    "report_name": "조달업체 면허 업종 등록 내역",
+    "official_id": "UI-ADOAAA-010R",
+    "mstrFrmt": "엠060003",
+    "updated_at": "2026-09-19T09:46:57.728402"
+  },
+  "00011": {
+    "status": "FAIL_NO_EXPORT_WINDOW",
+    "error": "A:Timeout 60000ms exceeded while waiting for event \"page\" / B:Timeout 60000ms exceeded while waiting for event \"page\"",
+    "report_name": "조달업체 물품 내역",
+    "official_id": "UI-ADOAAA-011R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:44:19.182238"
+  },
+  "00112": {
+    "status": "SUCCESS",
+    "columns_count": 39,
+    "metrics_count": 3,
+    "data_rows": 879,
+    "excel_file": "00112_UI-ADOXAA-012R.중소기업 우선구매대상 기술개발제품 계약납품요구 내역.xlsx",
+    "metrics": [
+      "물품순번",
+      "공급금액",
+      "공급증감금액"
+    ],
+    "report_name": "중소기업 우선구매대상 기술개발제품 계약납품요구 내역",
+    "official_id": "UI-ADOXAA-012R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:11:06.839627"
+  },
+  "00607": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 53,
+    "metrics_count": 9,
+    "data_rows": 50,
+    "metrics": [
+      "지역의무공동도급비율",
+      "추정가격",
+      "관급금액",
+      "낙찰하한율",
+      "기초금액",
+      "예정가격",
+      "낙찰자투찰금액",
+      "낙찰자투찰율",
+      "입찰자수"
+    ],
+    "report_name": "입찰공고 내역",
+    "official_id": "UI-ADOFAA-010R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:14:38.732346"
+  },
+  "00608": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 51,
+    "metrics_count": 9,
+    "data_rows": 30,
+    "metrics": [
+      "배정예산",
+      "추정가격",
+      "기초금액",
+      "예정가격",
+      "개찰순위",
+      "투찰금액",
+      "투찰율",
+      "금차계약금액",
+      "총계약금액"
+    ],
+    "report_name": "입찰공고 기업별 투찰 및 계약내역",
+    "official_id": "UI-ADOFAA-011R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:14:10.202944"
+  },
+  "00609": {
+    "status": "SUCCESS",
+    "columns_count": 19,
+    "metrics_count": 1,
+    "data_rows": 13,
+    "excel_file": "00609_UI-ADOFAA-012R.자체전자조달시스템 입찰공고 내역.xlsx",
+    "metrics": [
+      "추정가격"
+    ],
+    "report_name": "자체전자조달시스템 입찰공고 내역",
+    "official_id": "UI-ADOFAA-012R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:16:09.419566"
+  },
+  "00017": {
+    "status": "SUCCESS",
+    "columns_count": 15,
+    "metrics_count": 0,
+    "data_rows": 644,
+    "excel_file": "00017_UI-ADOAAA-017R.나라장터 부정당제재 내역.xlsx",
+    "metrics": [],
+    "report_name": "나라장터 부정당제재 내역",
+    "official_id": "UI-ADOAAA-017R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T09:46:23.084918"
+  },
+  "00197": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 중증장애인생산품 실적통계",
+    "official_id": "UI-ADOXFA-038R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:12.723497"
+  },
+  "00258": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 8,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "수요기관별 기업형태별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-101R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:37.721225"
+  },
+  "00262": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "수요기관별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-105R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:28:32.561867"
+  },
+  "00204": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "수요기관별 중소기업기술개발제품 실적통계",
+    "official_id": "UI-ADOXFA-045R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:49.969214"
+  },
+  "00195": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 중소기업기술개발제품 실적통계",
+    "official_id": "UI-ADOXFA-036R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:25:14.026551"
+  },
+  "00283": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 36,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "연계시스템별 계약방법별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-126R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:11.166753"
+  },
+  "00269": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "조달업체별 업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-112R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:06:59.612493"
+  },
+  "00225": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 2,
+    "data_rows": 18,
+    "metrics": [
+      "해당지역업체실적",
+      "전체실적 대비 비중"
+    ],
+    "report_name": "지역별 조달업체 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-067R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:28:07.748928"
+  },
+  "00265": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 물품분류별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-108R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T11:08:25.232316"
+  },
+  "00065": {
+    "status": "SUCCESS",
+    "columns_count": 14,
+    "metrics_count": 3,
+    "data_rows": 3316,
+    "excel_file": "00065_UI-ADOOAA-003R.비축물자 판매공고 내역.xlsx",
+    "metrics": [
+      "판매금액",
+      "업체기준판매한도량",
+      "주간판매한도량"
+    ],
+    "report_name": "비축물자 판매공고 내역",
+    "official_id": "UI-ADOOAA-003R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T09:52:08.841538"
+  },
+  "00249": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "월별 기업형태별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-092R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:29:12.632343"
+  },
+  "00027": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "나라장터 발주계획 내역",
+    "official_id": "UI-ADOCAA-003R",
+    "mstrFrmt": "엠060003",
+    "updated_at": "2026-09-21T10:40:48.323367"
+  },
+  "00601": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 3,
+    "data_rows": 6,
+    "metrics": [
+      "합계",
+      "납품요구(조달청 단가계약)",
+      "납품요구(기관자체 단가계약)"
+    ],
+    "report_name": "자율화 시범운영 대상 기업구분별 구매실적 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-009R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:59.364337"
+  },
+  "00196": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 중소기업자간경쟁제품 실적통계",
+    "official_id": "UI-ADOXFA-037R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:24:49.180700"
+  },
+  "00082": {
+    "status": "SUCCESS",
+    "columns_count": 6,
+    "metrics_count": 0,
+    "data_rows": 975,
+    "excel_file": "00082_UI-ADOSAA-006R.중소기업 경쟁제품 및 공사용자재 내역.xlsx",
+    "metrics": [],
+    "report_name": "중소기업 경쟁제품 및 공사용자재 내역",
+    "official_id": "UI-ADOSAA-006R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T09:55:19.255235"
+  },
+  "00168": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 0,
+    "data_rows": 9,
+    "metrics": [],
+    "report_name": "계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-003R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:26:01.671400"
+  },
+  "00193": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 녹색제품 실적통계",
+    "official_id": "UI-ADOXFA-034R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:22:48.253842"
+  },
+  "00205": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "수요기관별 중소기업자간경쟁제품 실적통계",
+    "official_id": "UI-ADOXFA-046R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:29:36.619634"
+  },
+  "00622": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 3,
+    "data_rows": 6,
+    "metrics": [
+      "합계",
+      "납품요구(조달청 단가계약)",
+      "납품요구(기관자체 단가계약)"
+    ],
+    "report_name": "자율화 시범운영 대상 기업구분별 구매실적 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-023R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:24:36.785701"
+  },
+  "00030": {
+    "status": "ALERT",
+    "error": "보고서 조회실패",
+    "report_name": "조달요청 내역",
+    "official_id": "UI-ADOCAA-008R",
+    "mstrFrmt": "엠060003",
+    "updated_at": "2026-09-21T10:45:20.651454"
+  },
+  "00182": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 17,
+    "metrics": [
+      "지역의무 공동계약 실적",
+      "공사계약실적",
+      "비중"
+    ],
+    "report_name": "지역별 지역의무공동 공사 계약 실적통계 시각화",
+    "official_id": "UI-ADOXFA-019R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:23:47.207253"
+  },
+  "00273": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 3,
+    "data_rows": 4,
+    "metrics": [
+      "계약총액(입찰X)(B)",
+      "지역의무공동계약총액(C)",
+      "비율(%)(C/A)"
+    ],
+    "report_name": "지역의무공동 공사 계약 실적통계",
+    "official_id": "UI-ADOXFA-116R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:11:39.185051"
+  },
+  "00621": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 5,
+    "metrics_count": 2,
+    "data_rows": 49,
+    "metrics": [
+      "납품요구(조달청 단가계약)",
+      "단가(기관 자체)"
+    ],
+    "report_name": "자율화 시범운영 대상 세부품명 구매실적 순위 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-022R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:21.125818"
+  },
+  "00230": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 2,
+    "data_rows": 18,
+    "metrics": [
+      "창업기업 현황",
+      "비중"
+    ],
+    "report_name": "지역별 창업기업수 통계 시각화",
+    "official_id": "UI-ADOXFA-072R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:32:08.633292"
+  },
+  "00179": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 0,
+    "data_rows": 3,
+    "metrics": [],
+    "report_name": "업무대상별 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-015R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:35:53.730285"
+  },
+  "00600": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 5,
+    "metrics_count": 2,
+    "data_rows": 22,
+    "metrics": [
+      "납품요구(조달청 단가계약)",
+      "단가(기관 자체)"
+    ],
+    "report_name": "자율화 시범운영 대상 세부품명 구매실적 순위 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-010R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:00.208551"
+  },
+  "00261": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "수요기관별 연계시스템별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-104R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:50.094672"
+  },
+  "00099": {
+    "status": "SUCCESS",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 0,
+    "excel_file": "00099_UI-ADOWKA-001R.상품정보 분류변경이력 내역.xlsx",
+    "metrics": [],
+    "report_name": "상품정보 분류변경이력 내역",
+    "official_id": "UI-ADOWKA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T10:03:16.870076"
+  },
+  "00255": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 계약납품요구 증감실적통계",
+    "official_id": "UI-ADOXFA-098R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:41:10.693758"
+  },
+  "00276": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "계약방법별 월별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-119R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:18:34.020815"
+  },
+  "00263": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "수요기관별 소관구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-106R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:34:45.963979"
+  },
+  "00615": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 2,
+    "data_rows": 4,
+    "metrics": [
+      "합계",
+      "자체조달(단가계약)"
+    ],
+    "report_name": "자율화 시범운영 대상 사업실적 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-016R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T11:08:50.152014"
+  },
+  "00175": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 2,
+    "data_rows": 16,
+    "metrics": [
+      "소재지 실적",
+      "전체실적 대비 비중"
+    ],
+    "report_name": "수요기관 지역별 계약납품요구업체 실적통계 시각화",
+    "official_id": "UI-ADOXFA-011R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:34:19.662269"
+  },
+  "00598": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 3,
+    "metrics": [
+      "총구매금액",
+      "지방기업구매금액",
+      "지방기업구매비율"
+    ],
+    "report_name": "지방기업 구매실적 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-011R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:40.635468"
+  },
+  "00176": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "수요기관별 나라장터 계약실적 시각화",
+    "official_id": "UI-ADOXFA-012R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-21T10:55:31.108338"
+  },
+  "00285": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 0,
+    "data_rows": 49,
+    "metrics": [],
+    "report_name": "수요기관별 창업기업 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-128R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:34:58.542395"
+  },
+  "00219": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 창업기업 계약 실적통계",
+    "official_id": "UI-ADOXFA-060R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:35:42.391789"
+  },
+  "00284": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 장애인표준사업장 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-127R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:50.088278"
+  },
+  "00268": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "기업형태별 월별 계약납품요구 실적 추이통계",
+    "official_id": "UI-ADOXFA-111R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:38.908909"
+  },
+  "00595": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "자율화 시범운영 대상 중소,여성,장애인 구매내역 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-007R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T11:08:26.619480"
+  },
+  "00620": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 3,
+    "data_rows": 30,
+    "metrics": [
+      "순위",
+      "건수",
+      "금액"
+    ],
+    "report_name": "수의계약 사유별 실적순위 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-021R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:35:13.778476"
+  },
+  "00264": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 계약방법별 계약납품요구 상세실적통계",
+    "official_id": "UI-ADOXFA-107R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:55:54.186245"
+  },
+  "00071": {
+    "status": "SUCCESS",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 0,
+    "excel_file": "00071_UI-ADOPCA-001R.품질보증물품 지정 내역.xlsx",
+    "metrics": [],
+    "report_name": "품질보증물품 지정 내역",
+    "official_id": "UI-ADOPCA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T10:15:11.599744"
+  },
+  "00277": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 8,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "물품분류별 계약납품요구 물품 실적통계",
+    "official_id": "UI-ADOXFA-120R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:28:47.016562"
+  },
+  "00588": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 0,
+    "data_rows": 4,
+    "metrics": [],
+    "report_name": "기업형태별 계약납품요구 실적 기업현황",
+    "official_id": "UI-ADOXFA-187R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:24:12.086337"
+  },
+  "00001": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 12,
+    "metrics_count": 1,
+    "data_rows": 2,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 수요기관 등록 실적통계",
+    "official_id": "UI-ADOAAA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:29:24.703636"
+  },
+  "00257": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 5,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "소관구분별 계약방법별 계약납품요구 증감실적통계",
+    "official_id": "UI-ADOXFA-100R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:54.591011"
+  },
+  "00254": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 13,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 연계시스템별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-097R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:23:59.136188"
+  },
+  "00274": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 2,
+    "data_rows": 3,
+    "metrics": [
+      "지역제한총액(C)",
+      "비율(%)(C/A)"
+    ],
+    "report_name": "지역제한 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-117R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:10:47.742516"
+  },
+  "00612": {
+    "status": "SUCCESS",
+    "columns_count": 23,
+    "metrics_count": 1,
+    "data_rows": 21,
+    "excel_file": "00612_UI-ADOXAA-045R.혁신제품 계약납품요구 내역.xlsx",
+    "metrics": [
+      "계약(납품요구)금액"
+    ],
+    "report_name": "혁신제품 계약납품요구 내역",
+    "official_id": "UI-ADOXAA-045R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T10:21:46.541226"
+  },
+  "00090": {
+    "status": "SUCCESS",
+    "columns_count": 5,
+    "metrics_count": 1,
+    "data_rows": 44306,
+    "excel_file": "00090_UI-ADOWEA-001R.국유화 완료 내역.xlsx",
+    "metrics": [
+      "면적"
+    ],
+    "report_name": "국유화 완료 내역",
+    "official_id": "UI-ADOWEA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T10:22:02.765771"
+  },
+  "00281": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 36,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "연계시스템별 기업형태별 계약납품요구업체 실적통계",
+    "official_id": "UI-ADOXFA-124R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:41:31.030019"
+  },
+  "00207": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 한국산업표준인증제품 실적통계",
+    "official_id": "UI-ADOXFA-048R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:41:11.587769"
+  },
+  "00087": {
+    "status": "SUCCESS",
+    "columns_count": 36,
+    "metrics_count": 4,
+    "data_rows": 1,
+    "excel_file": "00087_UI-ADOWCA-001R.혁신 물품 구매 내역.xlsx",
+    "metrics": [
+      "단가",
+      "수량",
+      "계약금액",
+      "혁신장터가격"
+    ],
+    "report_name": "혁신 물품 구매 내역",
+    "official_id": "UI-ADOWCA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T10:25:19.935594"
+  },
+  "00222": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "연도별 소관구분별 사회적약자기업 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-063R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:22:49.148434"
+  },
+  "00618": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 25,
+    "metrics_count": 0,
+    "data_rows": -1,
+    "metrics": [],
+    "report_name": "수의계약 수요기관별 발주 순위 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-019R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:25:48.870311"
+  },
+  "00579": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "나라장터쇼핑몰 품목 등록 내역",
+    "official_id": "UI-ADOXFA-183R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:36:59.585370"
+  },
+  "00194": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "증감"
+    ],
+    "report_name": "소관구분별 에너지이용합리화법관련제품 실적통계",
+    "official_id": "UI-ADOXFA-035R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:34:22.334114"
+  },
+  "00259": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-102R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:08:12.063962"
+  },
+  "00228": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 18,
+    "metrics": [
+      "해당지역업체실적",
+      "전체실적",
+      "비중"
+    ],
+    "report_name": "지역별 창업기업 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-070R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:35:26.989482"
+  },
+  "00088": {
+    "status": "SUCCESS",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 0,
+    "excel_file": "00088_UI-ADOWCA-002R.혁신장터 상품등록 내역.xlsx",
+    "metrics": [],
+    "report_name": "혁신장터 상품등록 내역",
+    "official_id": "UI-ADOWCA-002R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:08:13.086706"
+  },
+  "00181": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 0,
+    "data_rows": 3,
+    "metrics": [],
+    "report_name": "지역별 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-018R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:30:02.531802"
+  },
+  "00272": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "조달업체별 소재지별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-115R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:22:51.402081"
+  },
+  "00616": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 41,
+    "metrics_count": 0,
+    "data_rows": -1,
+    "metrics": [],
+    "report_name": "자율화 시범운영 대상 중소,여성,장애인 구매내역 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-017R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:30:47.659398"
+  },
+  "00275": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 1,
+    "data_rows": 6,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "업무구분별 계약방법별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-118R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:23:05.476166"
+  },
+  "00098": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "공공역량개발원 교육일정 내역",
+    "official_id": "UI-ADOWGA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:52:09.315434"
+  },
+  "00280": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 3,
+    "metrics": [],
+    "report_name": "물품분류별 수요기관별 계약납품요구 물품 실적통계",
+    "official_id": "UI-ADOXFA-123R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:55:51.892460"
+  },
+  "00278": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "물품분류별 금액순 계약납품요구 물품 실적통계",
+    "official_id": "UI-ADOXFA-121R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:11:07.690702"
+  },
+  "00083": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "친환경 인증 물품 내역",
+    "official_id": "UI-ADOSAA-007R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:40:49.579622"
+  },
+  "00170": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "나라장터 계약실적 시각화",
+    "official_id": "UI-ADOXFA-006R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-21T10:55:29.799399"
+  },
+  "00610": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 2,
+    "data_rows": 18,
+    "metrics": [
+      "건수",
+      "금액"
+    ],
+    "report_name": "지방정부 수의계약 내역",
+    "official_id": "UI-ADOXFZ-015R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:40.196069"
+  },
+  "00035": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "나라장터 입찰공고 실적 시각화",
+    "official_id": "UI-ADODAA-004R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-21T10:48:47.517293"
+  },
+  "00250": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-093R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:23:36.574907"
+  },
+  "00200": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 녹색제품 실적통계",
+    "official_id": "UI-ADOXFA-041R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:12:16.446271"
+  },
+  "00201": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "수요기관별 에너지이용합리화법관련제품 실적통계",
+    "official_id": "UI-ADOXFA-042R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:29:48.429029"
+  },
+  "00040": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 17,
+    "metrics": [
+      "지역제한 건수",
+      "입찰공고건수",
+      "비중"
+    ],
+    "report_name": "지역별 지역제한 입찰 실적통계 시각화",
+    "official_id": "UI-ADODAA-009R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:32:03.562791"
+  },
+  "00271": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "조달업체별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-114R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:08.977792"
+  },
+  "00592": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수의계약 조달기업별 수주 순위 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-004R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:12:41.944942"
+  },
+  "00198": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "소관구분별 한국산업표준인증제품 실적통계",
+    "official_id": "UI-ADOXFA-039R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:12:44.737890"
+  },
+  "00078": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "상품정보시스템 등록 물품 내역",
+    "official_id": "UI-ADOSAA-002R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:19:21.118429"
+  },
+  "00227": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 17,
+    "metrics": [
+      "지역업체 실적",
+      "해당 지역 전체실적",
+      "비중"
+    ],
+    "report_name": "지역별 지역업체 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-069R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:26:59.658233"
+  },
+  "00270": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 8,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "조달업체별 계약방법별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-113R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:25:01.875587"
+  },
+  "00599": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 2,
+    "data_rows": 20,
+    "metrics": [
+      "건수",
+      "금액"
+    ],
+    "report_name": "수의계약 사유별 실적순위 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-014R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:24:24.726453"
+  },
+  "00253": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-096R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:22.398399"
+  },
+  "00287": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 사회적약자기업 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-130R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:13:08.281549"
+  },
+  "00079": {
+    "status": "SUCCESS",
+    "source": "EXCEL_A",
+    "columns_count": 11,
+    "metrics_count": 1,
+    "data_rows": 400070,
+    "excel_file": "00079_UI-ADOSAA-003R.시설공통자재 가격정보 내역.xlsx",
+    "metrics": [
+      "가격"
+    ],
+    "report_name": "시설공통자재 가격정보 내역",
+    "official_id": "UI-ADOSAA-003R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:17:42.784772"
+  },
+  "00343": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 28,
+    "metrics_count": 6,
+    "data_rows": 50,
+    "metrics": [
+      "단가계약번호",
+      "단가계약변경차수",
+      "계약납품수량",
+      "계약납품금액",
+      "종결물품금액",
+      "종결물품수량"
+    ],
+    "report_name": "우수제품 중앙조달 종결 내역",
+    "official_id": "UI-ADOXFA-174R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:18.599358"
+  },
+  "00267": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 8,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "기업형태별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-110R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:25.345641"
+  },
+  "00282": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 1,
+    "data_rows": 36,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "연계시스템별 업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-125R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:32.200158"
+  },
+  "00376": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "중소기업 업체 인증정보 내역",
+    "official_id": "UI-ADOAAA-029R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:22:57.776152"
+  },
+  "00266": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 6,
+    "metrics_count": 1,
+    "data_rows": 8,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "기업형태별 업무구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-109R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:29:00.056260"
+  },
+  "00256": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 13,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 월별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-099R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:33:09.515572"
+  },
+  "00590": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 23,
+    "metrics_count": 0,
+    "data_rows": -1,
+    "metrics": [],
+    "report_name": "중소,여성,장애인기업 의무 우선구매실적",
+    "official_id": "UI-ADOXFZ-002R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:36:22.640855"
+  },
+  "00288": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 0,
+    "data_rows": 49,
+    "metrics": [],
+    "report_name": "수요기관별 장애인표준사업장 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-131R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:35:37.826577"
+  },
+  "00260": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "수요기관별 계약방법별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-103R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:41:33.346564"
+  },
+  "00216": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "사회적약자기업 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-057R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:15:11.891860"
+  },
+  "00593": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 25,
+    "metrics_count": 0,
+    "data_rows": -1,
+    "metrics": [],
+    "report_name": "수의계약 수요기관별 발주 순위 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-005R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:31:55.137919"
+  },
+  "00619": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 3,
+    "metrics": [
+      "총구매금액",
+      "지방기업구매금액",
+      "지방기업구매비율"
+    ],
+    "report_name": "지방기업 구매실적 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-020R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:28:20.309823"
+  },
+  "00252": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 8,
+    "metrics_count": 1,
+    "data_rows": 12,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 기업형태별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-095R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:26:03.703725"
+  },
+  "00024": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 2,
+    "data_rows": 50,
+    "metrics": [
+      "업종분류",
+      "근거법령"
+    ],
+    "report_name": "업종 및 근거법규 내역",
+    "official_id": "UI-ADOBAA-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:15:43.581639"
+  },
+  "00589": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "자율화 시범운영 대상 사업실적 &#40;118개 품명&#41;",
+    "official_id": "UI-ADOXFZ-001R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:16:01.910633"
+  },
+  "00178": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 0,
+    "data_rows": 3,
+    "metrics": [],
+    "report_name": "시스템유형별 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-014R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:34:07.156787"
+  },
+  "00243": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 1,
+    "data_rows": 14,
+    "metrics": [
+      "금액(원)"
+    ],
+    "report_name": "연계시스템별 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-086R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:23:07.023691"
+  },
+  "00183": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 17,
+    "metrics": [
+      "지역제한실적",
+      "지역전체실적",
+      "비중"
+    ],
+    "report_name": "지역별 지역제한 실적통계 시각화",
+    "official_id": "UI-ADOXFA-020R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:23:34.228132"
+  },
+  "00036": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 2,
+    "metrics_count": 1,
+    "data_rows": 29,
+    "metrics": [
+      "건수"
+    ],
+    "report_name": "연계시스템별 입찰공고 실적통계",
+    "official_id": "UI-ADODAA-005R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:32:17.572144"
+  },
+  "00105": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "공사용자재 직접구매 대상 조달 내역",
+    "official_id": "UI-ADOXAA-005R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:19:57.587647"
+  },
+  "00028": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 3,
+    "metrics_count": 0,
+    "data_rows": 1,
+    "metrics": [],
+    "report_name": "외자규격 공개모집 내역",
+    "official_id": "UI-ADOCAA-006R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:17:14.148809"
+  },
+  "00086": {
+    "status": "SUCCESS",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 0,
+    "excel_file": "00086_UI-ADOWAA-002R.벤처나라 물품 주문거래 내역.xlsx",
+    "metrics": [],
+    "report_name": "벤처나라 물품 주문거래 내역",
+    "official_id": "UI-ADOWAA-002R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:17:35.189335"
+  },
+  "00113": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "최상위기관별 품목별 수의계약 실적 시각화",
+    "official_id": "UI-ADOXAA-013R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-21T10:52:10.087578"
+  },
+  "00081": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "우수제품 지정 내역",
+    "official_id": "UI-ADOSAA-005R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:48:49.536757"
+  },
+  "00617": {
+    "status": "SUCCESS",
+    "source": "MSTR_TASKPROC_JSON",
+    "columns_count": 25,
+    "metrics_count": 0,
+    "data_rows": -1,
+    "metrics": [],
+    "report_name": "수의계약 조달기업별 수주 순위 &#40;전체 품명&#41;",
+    "official_id": "UI-ADOXFZ-018R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:38:12.228427"
+  },
+  "00218": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 7,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "사회적약자기업 지역별 계약납품요구 실적통계 시각화",
+    "official_id": "UI-ADOXFA-059R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:23:06.790174"
+  },
+  "00206": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "증감률(%)"
+    ],
+    "report_name": "수요기관별 중증장애인생산품 실적통계",
+    "official_id": "UI-ADOXFA-047R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:27:30.544287"
+  },
+  "00279": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 1,
+    "data_rows": 49,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "물품분류별 월별 계약납품요구 물품 실적통계",
+    "official_id": "UI-ADOXFA-122R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:25:26.401191"
+  },
+  "00248": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 13,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "소관구분별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-091R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:19:08.961252"
+  },
+  "00251": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 9,
+    "metrics_count": 1,
+    "data_rows": 4,
+    "metrics": [
+      "합계"
+    ],
+    "report_name": "계약방법별 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-094R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:23:21.145053"
+  },
+  "00100": {
+    "status": "SUCCESS",
+    "columns_count": 1,
+    "metrics_count": 0,
+    "data_rows": 0,
+    "excel_file": "00100_UI-ADOWKA-002R.상품정보 품목변경이력 내역.xlsx",
+    "metrics": [],
+    "report_name": "상품정보 품목변경이력 내역",
+    "official_id": "UI-ADOWKA-002R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-19T11:19:15.627539"
+  },
+  "00289": {
+    "status": "SUCCESS",
+    "source": "RW_DASHBOARD_DOM",
+    "columns_count": 4,
+    "metrics_count": 3,
+    "data_rows": 18,
+    "metrics": [
+      "사회적약자기업건수",
+      "전체건수",
+      "비중"
+    ],
+    "report_name": "지역별 사회적약자기업 계약납품요구 실적통계",
+    "official_id": "UI-ADOXFA-132R",
+    "mstrFrmt": "엠060004",
+    "updated_at": "2026-09-19T11:31:20.253108"
+  },
+  "00605": {
+    "status": "TIMEOUT_SEARCH",
+    "error": "180초 내 검색 완료 신호 미감지 (조회 지연 또는 0건)",
+    "report_name": "특정품목 조달 내역",
+    "official_id": "UI-ADOXFA-190R",
+    "mstrFrmt": "엠060001",
+    "updated_at": "2026-09-21T10:06:18.028302"
+  }
+}

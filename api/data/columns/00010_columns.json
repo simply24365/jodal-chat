@@ -1,0 +1,209 @@
+{
+  "report_id": "00010",
+  "report_name": "조달업체 면허 업종 등록 내역",
+  "official_id": "UI-ADOAAA-010R",
+  "full_report_title": "업체명",
+  "prompt_summary": "검색조건 : 프롬프트 1: 최초기준일자(From)\n20260918\n프롬프트 2: 최초기준일자(To)\n20260918\n프롬프트 3: 면허업종\n\n프롬프트 4: 대표면허여부\n\n프롬프트 5: 업체\n\n프롬프트 6: 업체소재시도\n\n프롬프트 7: 업체소재시군구\n\n프롬프트 8: 본사지사구분\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOAAA-010R.조달업체 면허 업종 등록 내역",
+  "total_data_rows": 34758,
+  "total_columns": 14,
+  "header_row_index": 3,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "시공능력평가금액"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 4,
+    "dimensions": [
+      "업체명",
+      "업체소재시군구",
+      "업체국가",
+      "면허업종"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 2,
+    "identifiers": [
+      "사업자등록번호",
+      "업체기본팩스번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "나라장터 등록일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        " 주식회사전호이앤씨",
+        " 주식회사전호이앤씨",
+        "(사) 한국관세무역개발원"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "3038110032",
+        "3038110032",
+        "2118203210"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "업체소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "충청북도 충주시",
+        "충청북도 충주시",
+        "서울특별시 강서구"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "본사지사구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "본사",
+        "본사",
+        "본사"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "업체기본팩스번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "05089372345",
+        "05089372345",
+        "025128888"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "업체국가",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "대한민국",
+        "대한민국",
+        "대한민국"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업",
+        "중소기업",
+        "비영리법인등기타"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "면허업종",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "철근.콘크리트공사업",
+        "포장공사업",
+        "학술.연구용역"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "대표면허여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "나라장터 등록일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "19000101",
+        "19000101",
+        "19000101"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "여성기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "장애인기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "사회적기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "시공능력평가금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "2225546000",
+        "2378273000"
+      ]
+    }
+  ],
+  "export_path": "semiform-newtab-PreferenceForm"
+}

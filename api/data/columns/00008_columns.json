@@ -1,0 +1,209 @@
+{
+  "report_id": "00008",
+  "report_name": "조달업체 등록 내역",
+  "official_id": "UI-ADOAAA-008R",
+  "full_report_title": "UI-ADOAAA-008R.조달업체 등록 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 최초기준일자(From)\n20250918\n프롬프트 2: 최초기준일자(To)\n20260918\n프롬프트 3: 업체\n\n프롬프트 4: 본사지사구분\n\n프롬프트 5: 업체소재시도\n\n프롬프트 6: 업체소재시군구\n\n프롬프트 7: 대표업종\n\n프롬프트 8: 대표세부품명\n\n프롬프트 9: 제조여부\n\n프롬프트 10: 여성기업인증여부\n\n프롬프트 11: 장애인기업인증여부\n\n프롬프트 12: 사회적기업인증여부\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOAAA-008R.조달업체 등록 내역",
+  "total_data_rows": 41658,
+  "total_columns": 14,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 5,
+    "dimensions": [
+      "업체명",
+      "업체소재시군구",
+      "업체국가",
+      "대표업종",
+      "대표세부품명"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 2,
+    "identifiers": [
+      "사업자등록번호",
+      "대표세부품명번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "나라장터등록일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "    제  일  인  테  리  어",
+        "  하이드로인사이트",
+        " 경원농자재"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "5150419799",
+        "6104601065",
+        "2780801307"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "업체소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "대구광역시 동구",
+        "서울특별시 마포구",
+        "강원특별자치도 원주시"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "본사지사구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "본사",
+        "본사",
+        "본사"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "업체국가",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "대한민국",
+        "대한민국",
+        "대한민국"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업",
+        "중소기업",
+        "중소기업"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "대표업종",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "기타자유업종",
+        "학술.연구용역",
+        "국내무료직업소개사업"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "제조업체여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "대표세부품명번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "4323260501",
+        "7212120201",
+        "7215409001"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "대표세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "분석및과학용소프트웨어",
+        "온실설치공사",
+        "기타물품설치서비스"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "나라장터등록일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260605",
+        "20260825",
+        "20260519"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "여성기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "Y",
+        "Y"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "장애인기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "사회적기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    }
+  ],
+  "export_path": "semiform-newtab-PreferenceForm"
+}

@@ -1,0 +1,85 @@
+{
+  "report_id": "00204",
+  "report_name": "수요기관별 중소기업기술개발제품 실적통계",
+  "official_id": "UI-ADOXFA-045R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 4,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "증감률(%)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 1,
+    "dimensions": [
+      "수요기관"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 2,
+    "dates": [
+      "전년도(동기)",
+      "금년도"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "합계",
+        "감사원"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "전년도(동기)",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "20,973",
+        "1"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "금년도",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "245,844,832,911",
+        "4,984,000"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "증감률(%)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "25,607",
+        "0"
+      ]
+    }
+  ]
+}

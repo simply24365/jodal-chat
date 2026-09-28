@@ -1,0 +1,275 @@
+{
+  "report_id": "00609",
+  "report_name": "자체전자조달시스템 입찰공고 내역",
+  "official_id": "UI-ADOFAA-012R",
+  "full_report_title": "UI-ADOFAA-012R.자체전자조달시스템 입찰공고 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 공고일자(From)\n2026-09-18\n프롬프트 2: 공고일자(To)\n2026-09-18\n프롬프트 3: 개찰예정일자(From)\n\n프롬프트 4: 개찰예정일자\n\n프롬프트 5: 조달업무영역\n\n프롬프트 6: 공고기관\n\n프롬프트 7: 공고기관\n\n프롬프트 8: 공고기관소재시도\n\n프롬프트 9: 공고기관소재시군구\n\n프롬프트 10: 입찰공고통합번호\n\n프롬프트 11: 입찰공고명\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOFAA-012R.자체전자조달시스템 입찰공고 내",
+  "total_data_rows": 13,
+  "total_columns": 19,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "추정가격"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 9,
+    "dimensions": [
+      "입찰방법",
+      "공고명",
+      "공고기관",
+      "수요기관",
+      "입찰계약방법",
+      "낙찰방법",
+      "개찰장소",
+      "연계기관공고링크URL",
+      "공고기관소재시군구"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 2,
+    "identifiers": [
+      "입찰공고번호",
+      "입찰공고차수"
+    ]
+  },
+  "dates_summary": {
+    "count": 4,
+    "dates": [
+      "공고일자",
+      "입찰서접수시작일시",
+      "입찰서접수마감일시",
+      "개찰일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업무구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "공사",
+        "물품(내자)",
+        "물품(내자)"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "입찰방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전자입찰",
+        "전자입찰",
+        "전자입찰"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "입찰공고번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "202608754",
+        "A102610829",
+        "A142600002"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "입찰공고차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "01",
+        "00",
+        "00"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "공고명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "영동선 부발 하이패스나들목 전기공사",
+        "비파괴검사",
+        "수전해 생산공정 모형 제작 구매"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "공고일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "공고기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "한국도로공사",
+        "한전케이피에스주식회사",
+        "사단법인 한국발전인재개발원"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "한국도로공사 서울경기본부",
+        "발전안전사업본부 영흥사업처",
+        "기획경영실"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "입찰계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "제한경쟁",
+        "수의계약",
+        "수의계약"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "입찰서접수시작일시",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2026-09-18 오후 2:00:00",
+        "2026-09-18 오전 8:49:00",
+        "2026-09-18 오후 1:58:22"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "입찰서접수마감일시",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2026-09-29 10:00:00",
+        "2026-10-15 18:00:00",
+        "2026-09-22 13:58:00"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "낙찰방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "적격심사제",
+        "수의시담(2인 이상)",
+        "수의시담(2인 이상)"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "개찰일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260929",
+        "20261015",
+        "20260922"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "개찰장소",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "한국도로공사 서울경기본부",
+        "온라인개찰",
+        "온라인개찰"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "공동도급여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "재입찰허용여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "연계기관공고링크URL",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "https://ebid.ex.co.kr/appLogin.do?userna",
+        "http://srm.kepco.net",
+        "http://srm.kepco.net"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "공고기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경상북도 김천시",
+        "전라남도 나주시",
+        "충청남도 태안군"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "추정가격",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "0",
+        "0",
+        "14700000"
+      ]
+    }
+  ]
+}

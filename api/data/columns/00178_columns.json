@@ -1,0 +1,57 @@
+{
+  "report_id": "00178",
+  "report_name": "시스템유형별 계약납품요구 실적통계 시각화",
+  "official_id": "UI-ADOXFA-014R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 3,
+  "total_columns": 2,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 2,
+    "dimensions": [
+      "물품",
+      "17,073억"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "물품",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "일반용역",
+        "기술용역",
+        "공사"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "17,073억",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "8,211억",
+        "1,008억",
+        "27,497억"
+      ]
+    }
+  ]
+}

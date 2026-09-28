@@ -1,0 +1,124 @@
+{
+  "report_id": "00218",
+  "report_name": "사회적약자기업 지역별 계약납품요구 실적통계 시각화",
+  "official_id": "UI-ADOXFA-059R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 5,
+    "dimensions": [
+      "수요기관소재시도",
+      "조달업무영역",
+      "물품",
+      "기술용역",
+      "공사"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반용역"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "수요기관소재시도",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "사회적약자기업구분",
+        "합계",
+        "서울특별시"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "조달업무영역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "여성기업",
+        "996"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "97,056",
+        "10,034"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "물품",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "1,906,620,670,526",
+        "173,395,706,937"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "일반용역",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "63,863",
+        "6,499"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "기술용역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "573,386,181,996",
+        "50,203,683,888"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "공사",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "9,435",
+        "1,231"
+      ]
+    }
+  ]
+}

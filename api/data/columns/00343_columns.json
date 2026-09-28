@@ -1,0 +1,393 @@
+{
+  "report_id": "00343",
+  "report_name": "우수제품 중앙조달 종결 내역",
+  "official_id": "UI-ADOXFA-174R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 50,
+  "total_columns": 28,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 6,
+    "metrics": [
+      "단가계약번호",
+      "단가계약변경차수",
+      "계약납품수량",
+      "계약납품금액",
+      "종결물품금액",
+      "종결물품수량"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 9,
+    "dimensions": [
+      "우수조달지정요청분야목록",
+      "계약명",
+      "품명",
+      "품목명",
+      "업체명",
+      "지청",
+      "수요기관",
+      "수요기관소재시군구",
+      "업체소재시군구"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 5,
+    "identifiers": [
+      "요청접수번호",
+      "계약(납품요구)번호",
+      "변경차수",
+      "사업자등록번호",
+      "수요기관코드"
+    ]
+  },
+  "dates_summary": {
+    "count": 3,
+    "dates": [
+      "요청접수일자",
+      "계약(납품요구)일자",
+      "종결일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "요청접수일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20240812",
+        "20260522",
+        "20260528"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "요청접수번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2124358296",
+        "R26DC00215945",
+        "R26DC00217580"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "계약납품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "계약",
+        "계약",
+        "계약"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "우수조달지정요청분야목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전기전자",
+        "기계장치, 건설환경",
+        "전기전자"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "계약(납품요구)일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20240829",
+        "20260610",
+        "20260622"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "계약(납품요구)번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "212431365_1",
+        "R26TA01950696",
+        "R26TA01985547"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "00",
+        "00",
+        "00"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "계약명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "양산시 신도시정수장 증설 전기공사(2차분) 관급자재-수배전반",
+        "분당구 대장동 오수중계펌프장 평면스크린 구매",
+        "실습선 육상전기 승압 및 기타공사 관급자재 구매(수배전반)"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "배전반",
+        "평면스크린",
+        "배전반"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "폐쇄형배전반, 기타물품 포함, 수요기관 규격",
+        "평면스크린, 에취켓, HK-BMVS-1000x4500, 1000×4500",
+        "폐쇄형배전반, 기타물품 포함, 수요기관 규격"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "종결일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "단가계약번호",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "002070238_1",
+        "002070238_1",
+        "002070238_1"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "단가계약변경차수",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "03",
+        "03",
+        "03"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "직불대지급구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "대지급",
+        "대지급",
+        "대지급"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "6218193737",
+        "1278157904",
+        "6218151611"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "(주)효성파워택",
+        "(주)에취켓",
+        "한국산전(주)"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "지청",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "부산지방조달청",
+        "서울지방조달청",
+        "부산지방조달청"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업",
+        "중소기업",
+        "중소기업"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방정부",
+        "지방정부",
+        "국가기관"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "5380101",
+        "3810000",
+        "7001278"
+      ]
+    },
+    {
+      "index": 21,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경상남도 양산시 상하수도사업소",
+        "경기도 성남시 분당구",
+        "한국해양대학교"
+      ]
+    },
+    {
+      "index": 22,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경상남도 양산시",
+        "경기도 성남시 분당구",
+        "부산광역시 영도구"
+      ]
+    },
+    {
+      "index": 23,
+      "name": "업체소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경상남도 양산시",
+        "경기도 포천시",
+        "부산광역시 해운대구"
+      ]
+    },
+    {
+      "index": 24,
+      "name": "본품옵션구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "일반",
+        "일반",
+        "일반"
+      ]
+    },
+    {
+      "index": 25,
+      "name": "계약납품수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "index": 26,
+      "name": "계약납품금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "573,400,000",
+        "344,000,000",
+        "184,332,000"
+      ]
+    },
+    {
+      "index": 27,
+      "name": "종결물품금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "516,000,000",
+        "344,000,000",
+        "184,332,000"
+      ]
+    },
+    {
+      "index": 28,
+      "name": "종결물품수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  ]
+}

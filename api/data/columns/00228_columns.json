@@ -1,0 +1,84 @@
+{
+  "report_id": "00228",
+  "report_name": "지역별 창업기업 계약납품요구 실적통계 시각화",
+  "official_id": "UI-ADOXFA-070R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 18,
+  "total_columns": 4,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 3,
+    "metrics": [
+      "해당지역업체실적",
+      "전체실적",
+      "비중"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 1,
+    "dimensions": [
+      "업체시도"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업체시도",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울특별시",
+        "전남광주통합특별시",
+        "부산광역시"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "해당지역업체실적",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "502",
+        "328",
+        "130"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "전체실적",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "44,619",
+        "15,993",
+        "7,130"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "비중",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1.12%",
+        "2.05%",
+        "1.82%"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "report_id": "00263",
+  "report_name": "수요기관별 소관구분별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-106R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 4,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 2,
+    "dimensions": [
+      "순위",
+      "수요기관"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "순위",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "한국농어촌공사",
+        "경기도"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "준정부기관",
+        "지방정부",
+        "국가기관"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "6,432",
+        "20,129",
+        "878"
+      ]
+    }
+  ]
+}

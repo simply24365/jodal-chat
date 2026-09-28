@@ -1,0 +1,84 @@
+{
+  "report_id": "00619",
+  "report_name": "지방기업 구매실적 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-020R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 3,
+  "total_columns": 4,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 3,
+    "metrics": [
+      "총구매금액",
+      "지방기업구매금액",
+      "지방기업구매비율"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 1,
+    "dimensions": [
+      "수요기관명"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경기도",
+        "전북특별자치도",
+        "합계"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "총구매금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "7,972,000,863",
+        "522,127,169",
+        "8,494,128,032"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "지방기업구매금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "4,099,533,213",
+        "481,665,650",
+        "4,581,198,863"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "지방기업구매비율",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "51.42%",
+        "92.25%",
+        "53.93%"
+      ]
+    }
+  ]
+}

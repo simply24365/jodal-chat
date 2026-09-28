@@ -1,0 +1,135 @@
+{
+  "report_id": "00258",
+  "report_name": "수요기관별 기업형태별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-101R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 8,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 6,
+    "dimensions": [
+      "대기업",
+      "중견기업",
+      "중소기업",
+      "외국기업",
+      "비영리법인등기타",
+      "미분류"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "기업형태구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수요기관",
+        "합계",
+        "가축위생방역지원본부"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "544,358",
+        "248"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "대기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,154,460,335,339",
+        "72,292,670"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "중견기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "115,224",
+        "244"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "중소기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "1,760,780,124,934",
+        "36,234,670"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "외국기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "19,180",
+        "0"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "비영리법인등기타",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "3,076,019,087,572",
+        "0"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "미분류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "355,595",
+        "4"
+      ]
+    }
+  ]
+}

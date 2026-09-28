@@ -1,0 +1,83 @@
+{
+  "report_id": "00284",
+  "report_name": "소관구분별 장애인표준사업장 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-127R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 12,
+  "total_columns": 4,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "증감"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 0,
+    "dimensions": []
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 2,
+    "dates": [
+      "전년도",
+      "금년도"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "합계",
+        "국가기관"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "전년도",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "4,184",
+        "294"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "금년도",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "총실적 대비 비중(%)",
+        "47,897,573,125",
+        "6,135,722,980"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "증감",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "0.33",
+        "0.24"
+      ]
+    }
+  ]
+}

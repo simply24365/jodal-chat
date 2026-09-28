@@ -1,0 +1,29 @@
+# ---- secrets ----
+api/.env
+# ui/.env.local 은 ui/.gitignore(upstream) 가 제외한다.
+#   클론 후 필요: ui/.env.local 에 AUTH_SECRET 과
+#   CUSTOM_CHAT_BACKEND_URL=http://127.0.0.1:8078 을 넣는다.
+
+# ---- deps / build ----
+api/.venv/
+api/var/
+node_modules/
+.next/
+.turbo/
+.vercel/
+__pycache__/
+*.pyc
+.DS_Store
+
+# ---- wrangler ----
+# Cloudflare account id·이메일, cf.json 의 TLS 세션, 서버 GPS 좌표가 들어있다.
+# 절대 커밋하지 말 것. (934fa9a 에서 실수로 커밋됨 → baae6af 에서 제거)
+wrangler/
+.wrangler/
+
+# ---- raw upstream bulk (37M) ----
+# 원본 저장소(~/proj/jodal)는 이 박스에서 사라진 상태다. 런타임과 재벡터라이징엔
+# 불필요하고, 컬럼 재추출만 다시 하려면 조달데이터허브 재크롤이 필요하다.
+api/data/raw_excel/
+api/data/raw_mstr_json/
+api/data/raw/

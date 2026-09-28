@@ -1,0 +1,554 @@
+{
+  "https://data.g2b.go.kr/index.do?w2xPath=/kn/layout/nara/popu": {
+    "url": "https://data.g2b.go.kr/index.do?w2xPath=/kn/layout/nara/popupLayout.xml&w2xHome=/kn/layout/nara/",
+    "inputs": [
+      {
+        "id": "mf_popupCntsHeader_btnMenuPoup",
+        "type": "button",
+        "value": "온라인 매뉴얼 조회",
+        "className": "w2trigger btn menual",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCntsHeader_btnMenuPoup\" class=\"w2trigger btn menual\" value=\"온라인 매뉴얼 조회\" title=\"매뉴얼\">"
+      },
+      {
+        "id": "mf_popupCntsHeader_btnPrint",
+        "type": "button",
+        "value": "인쇄하기",
+        "className": "w2trigger btn print",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCntsHeader_btnPrint\" class=\"w2trigger btn print\" value=\"인쇄하기\" title=\"인쇄\">"
+      },
+      {
+        "id": "mf_popupCntsHeader_btnInspect",
+        "type": "button",
+        "value": "이용문의/오류신고",
+        "className": "w2trigger btn inspect hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCntsHeader_btnInspect\" class=\"w2trigger btn inspect hide\" value=\"이용문의/오류신고\" title=\"이용문의/오류신고\">"
+      },
+      {
+        "id": "wq_uuid_88_btnHelpToggle",
+        "type": "button",
+        "value": "토글버튼 안내문구 접고 펼치기",
+        "className": "w2trigger btn toggle active",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_88_btnHelpToggle\" class=\"w2trigger btn toggle active\" value=\"토글버튼 안내문구 접고 펼치기\">"
+      },
+      {
+        "id": "mf_popupCnts_btnReptDscdRvwDmnd",
+        "type": "button",
+        "value": "보고서폐기검토의견",
+        "className": "w2trigger btn_navy ic_report4",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnReptDscdRvwDmnd\" style=\"display:none\" class=\"w2trigger btn_navy ic_report4\" value=\"보고서폐기검토의견\">"
+      },
+      {
+        "id": "mf_popupCnts_btnReptDic",
+        "type": "button",
+        "value": "보고서사전",
+        "className": "w2trigger btn_navy ic_report1",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnReptDic\" class=\"w2trigger btn_navy ic_report1\" value=\"보고서사전\">"
+      },
+      {
+        "id": "mf_popupCnts_btnReptChg",
+        "type": "button",
+        "value": "보고서 변경요청",
+        "className": "w2trigger btn_navy ic_report2 hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnReptChg\" class=\"w2trigger btn_navy ic_report2 hide\" value=\"보고서 변경요청\">"
+      },
+      {
+        "id": "mf_popupCnts_btnReptHelp",
+        "type": "button",
+        "value": "보고서 도움말",
+        "className": "w2trigger btn_navy ic_report3",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnReptHelp\" class=\"w2trigger btn_navy ic_report3\" value=\"보고서 도움말\">"
+      },
+      {
+        "id": "mf_popupCnts_comp1_input",
+        "type": "text",
+        "value": "2026/01",
+        "className": "w2inputCalendar_divInput ",
+        "name": "mf_popupCnts_comp1_input",
+        "readOnly": false,
+        "html": "<input id=\"mf_popupCnts_comp1_input\" name=\"mf_popupCnts_comp1_input\" class=\"w2inputCalendar_divInput \" tabindex=\"0\" autocomplete=\"off\" style=\"width: 87px; height: 24px;\">"
+      },
+      {
+        "id": "mf_popupCnts_btnInit",
+        "type": "button",
+        "value": "초기화",
+        "className": "w2trigger btn_cm refresh",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnInit\" class=\"w2trigger btn_cm refresh\" value=\"초기화\">"
+      },
+      {
+        "id": "mf_popupCnts_btnS0001",
+        "type": "button",
+        "value": "검색",
+        "className": "w2trigger btn_cm srch btn-hide inline_block",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnS0001\" class=\"w2trigger btn_cm srch btn-hide inline_block\" value=\"검색\">"
+      },
+      {
+        "id": "wq_uuid_122_btnSearchToggle",
+        "type": "button",
+        "value": "상세조건",
+        "className": "w2trigger btn_cm srch_toggle",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_122_btnSearchToggle\" class=\"w2trigger btn_cm srch_toggle\" value=\"상세조건\">"
+      },
+      {
+        "id": "mf_popupCnts_wq_uuid_130",
+        "type": "button",
+        "value": "주소정보",
+        "className": "w2trigger btn_cm",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_wq_uuid_130\" style=\"display:none\" class=\"w2trigger btn_cm\" value=\"주소정보\">"
+      },
+      {
+        "id": "mf_popupCnts_btnSubsAply",
+        "type": "button",
+        "value": "구독관리",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnSubsAply\" class=\"w2trigger btn_cm hide\" value=\"구독관리\">"
+      },
+      {
+        "id": "mf_popupCnts_btnSubsTrmn",
+        "type": "button",
+        "value": "구독해지",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnSubsTrmn\" class=\"w2trigger btn_cm hide\" value=\"구독해지\">"
+      },
+      {
+        "id": "mf_popupCnts_btnItrstRept",
+        "type": "button",
+        "value": "관심보고서",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnItrstRept\" class=\"w2trigger btn_cm hide\" value=\"관심보고서\">"
+      },
+      {
+        "id": "mf_popupCnts_btnQna",
+        "type": "button",
+        "value": "Q&A",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnQna\" class=\"w2trigger btn_cm hide\" value=\"Q&amp;A\">"
+      },
+      {
+        "id": "mf_popupCnts_btnErr",
+        "type": "button",
+        "value": "오류신고",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnErr\" class=\"w2trigger btn_cm hide\" value=\"오류신고\">"
+      },
+      {
+        "id": "mf_popupCnts_btnExcelDown",
+        "type": "button",
+        "value": "엑셀다운로드",
+        "className": "w2trigger btn_cm excel_down hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnExcelDown\" class=\"w2trigger btn_cm excel_down hide\" value=\"엑셀다운로드\">"
+      },
+      {
+        "id": "mf_popupCnts_btnCsvDown",
+        "type": "button",
+        "value": "CSV다운로드",
+        "className": "w2trigger btn_cm csv_down hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnCsvDown\" class=\"w2trigger btn_cm csv_down hide\" value=\"CSV다운로드\">"
+      },
+      {
+        "id": "mf_popupCnts_btnPdfDown",
+        "type": "button",
+        "value": "PDF다운로드",
+        "className": "w2trigger btn_cm pdf_down hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnPdfDown\" class=\"w2trigger btn_cm pdf_down hide\" value=\"PDF다운로드\">"
+      },
+      {
+        "id": "mf_popupCnts_btnAplcn",
+        "type": "button",
+        "value": "적용",
+        "className": "w2trigger btn_cm gr_select_btn",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnAplcn\" style=\"display:none\" class=\"w2trigger btn_cm gr_select_btn\" value=\"적용\">"
+      },
+      {
+        "id": "wq_uuid_142_btnModuleToggle",
+        "type": "button",
+        "value": "토글버튼접기",
+        "className": "w2trigger btn_sm toggle_sm",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_142_btnModuleToggle\" class=\"w2trigger btn_sm toggle_sm\" value=\"토글버튼접기\">"
+      },
+      {
+        "id": "mf_popupCnts_btnClose",
+        "type": "button",
+        "value": "닫기",
+        "className": "w2trigger btn_cm close",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"mf_popupCnts_btnClose\" class=\"w2trigger btn_cm close\" value=\"닫기\">"
+      },
+      {
+        "id": "wq_uuid_4_btnToolTip",
+        "type": "button",
+        "value": "도움말",
+        "className": "w2trigger btn_q hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnToolTip\" style=\"margin-top:-0.8rem;\" class=\"w2trigger btn_q hide\" value=\"도움말\">"
+      },
+      {
+        "id": "wq_uuid_4_btnClose",
+        "type": "button",
+        "value": "닫기",
+        "className": "w2trigger btn close",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnClose\" class=\"w2trigger btn close\" value=\"닫기\">"
+      },
+      {
+        "id": "wq_uuid_4_btnMergePdfFile",
+        "type": "button",
+        "value": "첨부파일인쇄",
+        "className": "w2trigger btn_cm print btn-hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnMergePdfFile\" class=\"w2trigger btn_cm print btn-hide\" value=\"첨부파일인쇄\">"
+      },
+      {
+        "id": "wq_uuid_4_btnRowUp",
+        "type": "button",
+        "value": "위로",
+        "className": "w2trigger btn_cm row_up btn-hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnRowUp\" style=\"background-position: 0.2rem center;\" class=\"w2trigger btn_cm row_up btn-hide\" value=\"위로\">"
+      },
+      {
+        "id": "wq_uuid_4_btnRowDown",
+        "type": "button",
+        "value": "아래로",
+        "className": "w2trigger btn_cm row_down btn-hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnRowDown\" style=\"background-position: 0.2rem center;\" class=\"w2trigger btn_cm row_down btn-hide\" value=\"아래로\">"
+      },
+      {
+        "id": "wq_uuid_4_btnChceDel",
+        "type": "button",
+        "value": "선택삭제",
+        "className": "w2trigger btn_cm row_del",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnChceDel\" class=\"w2trigger btn_cm row_del\" value=\"선택삭제\">"
+      },
+      {
+        "id": "wq_uuid_4_btnChceDelRtrcn",
+        "type": "button",
+        "value": "선택삭제취소",
+        "className": "w2trigger btn_cm hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnChceDelRtrcn\" class=\"w2trigger btn_cm hide\" value=\"선택삭제취소\">"
+      },
+      {
+        "id": "wq_uuid_4_btnFileAddn",
+        "type": "button",
+        "value": "파일추가",
+        "className": "w2trigger btn_cm row_add",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnFileAddn\" class=\"w2trigger btn_cm row_add\" value=\"파일추가\">"
+      },
+      {
+        "id": "wq_uuid_4_btnFileDown",
+        "type": "button",
+        "value": "다운로드",
+        "className": "w2trigger btn_cm grid_file_down btn-hide",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_4_btnFileDown\" class=\"w2trigger btn_cm grid_file_down btn-hide\" value=\"다운로드\">"
+      },
+      {
+        "id": "wq_uuid_44_btnModuleToggle",
+        "type": "button",
+        "value": "토글버튼접기",
+        "className": "w2trigger btn_sm toggle_sm",
+        "name": "",
+        "readOnly": false,
+        "html": "<input type=\"button\" tabindex=\"0\" id=\"wq_uuid_44_btnModuleToggle\" class=\"w2trigger btn_sm toggle_sm\" value=\"토글버튼접기\">"
+      },
+      {
+        "id": "wq_uuid_47_header__CHK_checkboxLabel__id",
+        "type": "checkbox",
+        "value": "on",
+        "className": "",
+        "name": "wq_uuid_47_header__CHK_checkboxLabel_",
+        "readOnly": false,
+        "html": "<input type=\"checkbox\" name=\"wq_uuid_47_header__CHK_checkboxLabel_\" id=\"wq_uuid_47_header__CHK_checkboxLabel__id\" colid=\"chk\" title=\"전체선택\">"
+      }
+    ],
+    "selects": [
+      {
+        "id": "mf_popupCnts_wq_uuid_139",
+        "optionCount": 4,
+        "selectedIndex": 0,
+        "className": "w2selectbox_select "
+      }
+    ],
+    "buttons": [
+      {
+        "id": "mf_popupCntsHeader_btnMenuPoup",
+        "value": "온라인 매뉴얼 조회",
+        "cls": "w2trigger btn menual"
+      },
+      {
+        "id": "mf_popupCntsHeader_btnPrint",
+        "value": "인쇄하기",
+        "cls": "w2trigger btn print"
+      },
+      {
+        "id": "mf_popupCntsHeader_btnInspect",
+        "value": "이용문의/오류신고",
+        "cls": "w2trigger btn inspect hide"
+      },
+      {
+        "id": "wq_uuid_88_btnHelpToggle",
+        "value": "토글버튼 안내문구 접고 펼치기",
+        "cls": "w2trigger btn toggle active"
+      },
+      {
+        "id": "mf_popupCnts_btnReptDscdRvwDmnd",
+        "value": "보고서폐기검토의견",
+        "cls": "w2trigger btn_navy ic_report4"
+      },
+      {
+        "id": "mf_popupCnts_btnReptDic",
+        "value": "보고서사전",
+        "cls": "w2trigger btn_navy ic_report1"
+      },
+      {
+        "id": "mf_popupCnts_btnReptChg",
+        "value": "보고서 변경요청",
+        "cls": "w2trigger btn_navy ic_report2 hide"
+      },
+      {
+        "id": "mf_popupCnts_btnReptHelp",
+        "value": "보고서 도움말",
+        "cls": "w2trigger btn_navy ic_report3"
+      },
+      {
+        "id": "mf_popupCnts_comp1_img",
+        "value": "Calendar",
+        "cls": "w2inputCalendar_button"
+      },
+      {
+        "id": "mf_popupCnts_btnInit",
+        "value": "초기화",
+        "cls": "w2trigger btn_cm refresh"
+      },
+      {
+        "id": "mf_popupCnts_btnS0001",
+        "value": "검색",
+        "cls": "w2trigger btn_cm srch btn-hide inline_block"
+      },
+      {
+        "id": "wq_uuid_122_btnSearchToggle",
+        "value": "상세조건",
+        "cls": "w2trigger btn_cm srch_toggle"
+      },
+      {
+        "id": "mf_popupCnts_wq_uuid_130",
+        "value": "주소정보",
+        "cls": "w2trigger btn_cm"
+      },
+      {
+        "id": "mf_popupCnts_btnSubsAply",
+        "value": "구독관리",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "mf_popupCnts_btnSubsTrmn",
+        "value": "구독해지",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "mf_popupCnts_btnItrstRept",
+        "value": "관심보고서",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "mf_popupCnts_btnQna",
+        "value": "Q&A",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "mf_popupCnts_btnErr",
+        "value": "오류신고",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "mf_popupCnts_btnExcelDown",
+        "value": "엑셀다운로드",
+        "cls": "w2trigger btn_cm excel_down hide"
+      },
+      {
+        "id": "mf_popupCnts_btnCsvDown",
+        "value": "CSV다운로드",
+        "cls": "w2trigger btn_cm csv_down hide"
+      },
+      {
+        "id": "mf_popupCnts_btnPdfDown",
+        "value": "PDF다운로드",
+        "cls": "w2trigger btn_cm pdf_down hide"
+      },
+      {
+        "id": "mf_popupCnts_btnAplcn",
+        "value": "적용",
+        "cls": "w2trigger btn_cm gr_select_btn"
+      },
+      {
+        "id": "wq_uuid_142_btnModuleToggle",
+        "value": "토글버튼접기",
+        "cls": "w2trigger btn_sm toggle_sm"
+      },
+      {
+        "id": "mf_popupCnts_btnClose",
+        "value": "닫기",
+        "cls": "w2trigger btn_cm close"
+      },
+      {
+        "id": "wq_uuid_4_btnToolTip",
+        "value": "도움말",
+        "cls": "w2trigger btn_q hide"
+      },
+      {
+        "id": "wq_uuid_4_btnClose",
+        "value": "닫기",
+        "cls": "w2trigger btn close"
+      },
+      {
+        "id": "wq_uuid_4_btnMergePdfFile",
+        "value": "첨부파일인쇄",
+        "cls": "w2trigger btn_cm print btn-hide"
+      },
+      {
+        "id": "wq_uuid_4_btnRowUp",
+        "value": "위로",
+        "cls": "w2trigger btn_cm row_up btn-hide"
+      },
+      {
+        "id": "wq_uuid_4_btnRowDown",
+        "value": "아래로",
+        "cls": "w2trigger btn_cm row_down btn-hide"
+      },
+      {
+        "id": "wq_uuid_4_btnChceDel",
+        "value": "선택삭제",
+        "cls": "w2trigger btn_cm row_del"
+      },
+      {
+        "id": "wq_uuid_4_btnChceDelRtrcn",
+        "value": "선택삭제취소",
+        "cls": "w2trigger btn_cm hide"
+      },
+      {
+        "id": "wq_uuid_4_btnFileAddn",
+        "value": "파일추가",
+        "cls": "w2trigger btn_cm row_add"
+      },
+      {
+        "id": "wq_uuid_4_btnFileDown",
+        "value": "다운로드",
+        "cls": "w2trigger btn_cm grid_file_down btn-hide"
+      },
+      {
+        "id": "wq_uuid_44_btnModuleToggle",
+        "value": "토글버튼접기",
+        "cls": "w2trigger btn_sm toggle_sm"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      },
+      {
+        "id": "",
+        "value": "",
+        "cls": "w2grid_head_sort_div_main_btn w2grid_head_sort_image_none_bt"
+      }
+    ]
+  },
+  "__processbarIFrame": {
+    "url": "https://data.g2b.go.kr/websquare/_websquare_/message/processMsg.html?param=%c7%d8%b4%e7+%c0%db%be%f7%c0%bb+%c3%b3%b8%ae%c1%df%c0%d4%b4%cf%b4%d9&postfi",
+    "inputs": [],
+    "selects": [],
+    "buttons": []
+  },
+  "mstrFrame": {
+    "url": "about:blank",
+    "inputs": [],
+    "selects": [],
+    "buttons": []
+  }
+}

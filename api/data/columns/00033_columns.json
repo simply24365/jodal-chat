@@ -1,0 +1,292 @@
+{
+  "report_id": "00033",
+  "report_name": "구매규격 사전공개 내역",
+  "official_id": "UI-ADODAA-002R",
+  "full_report_title": "UI-ADODAA-002R.구매규격 사전공개 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 기준일자(From)\n20260918\n프롬프트 2: 기준일자(To)\n20260918\n프롬프트 3: 사전규격등록번호\n\n프롬프트 4: 조달방식구분\n\n프롬프트 5: 조달업무영역\n\n프롬프트 6: 세부품명번호목록\n\n프롬프트 7: 요청명\n\n프롬프트 8: 발주기관\n\n프롬프트 9: 수요기관소재시도\n\n프롬프트 10: 수요기관소재시군구\n\n프롬프트 11: 텍스트\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADODAA-002R.구매규격 사전공개 내역",
+  "total_data_rows": 454,
+  "total_columns": 21,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "배정예산"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 7,
+    "dimensions": [
+      "조달방식",
+      "사전공개사업명",
+      "의견등록수",
+      "공고기관",
+      "수요기관",
+      "세부품명목록",
+      "수요기관소재시군구"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 4,
+    "identifiers": [
+      "사전공개등록번호",
+      "공고기관코드",
+      "수요기관코드",
+      "발주계획번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 4,
+    "dates": [
+      "사전공개일자",
+      "의견등록마감일자",
+      "납품(완수)기한",
+      "납품일수"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "자체조달",
+        "자체조달",
+        "자체조달"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "업무구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "공사",
+        "공사",
+        "공사"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "사전공개등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26BD00276122",
+        "R26BD00276140",
+        "R26BD00276149"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "사전공개사업명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "'26~'29년 상용소프트웨어 유지보수 용역",
+        "좋은날 근린생활시설 증축공사",
+        "2026년 양주시 관망정비공사"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "사전공개일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "의견등록마감일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260919",
+        "20260918",
+        "20260923"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "의견등록수",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "공고기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Z004651",
+        "5700009",
+        "B500001"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "공고기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "한전KDN(주)",
+        "경기도 여주시 농업기술센터",
+        "한국수자원공사"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Z004651",
+        "5700009",
+        "B500001"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "한전KDN(주)",
+        "경기도 여주시 농업기술센터",
+        "한국수자원공사"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "세부품명목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 13,
+      "name": "배정예산",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1346983000",
+        "218598000",
+        "1104035000"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "SW사업대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "안전관리물품대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 16,
+      "name": "수의계약대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "발주계획번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26DD20870700",
+        "R26DD20875351",
+        "R26DD20874222"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전라남도 나주시",
+        "경기도 여주시",
+        "대전광역시 대덕구"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "공기업",
+        "지방정부",
+        "공기업"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "납품(완수)기한",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20291203"
+      ]
+    },
+    {
+      "index": 21,
+      "name": "납품일수",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "export_path": "semiform-newtab-PreferenceForm"
+}

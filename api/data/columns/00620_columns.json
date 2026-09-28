@@ -1,0 +1,110 @@
+{
+  "report_id": "00620",
+  "report_name": "수의계약 사유별 실적순위 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-021R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 30,
+  "total_columns": 6,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 3,
+    "metrics": [
+      "순위",
+      "건수",
+      "금액"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 3,
+    "dimensions": [
+      "적용 계약법",
+      "조항호명",
+      "조항호내용"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "순위",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "적용 계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방계약법",
+        "지방계약법",
+        "지방계약법"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "조항호명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "제25조제1항5호나목",
+        "제25조제1항4호사목",
+        "제25조제1항8호다목"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "조항호내용",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "추정가격 2천만원 이하 물품 또는 용역",
+        "특허,실용신안,디자인등록 제품",
+        "「조달사업에 관한 법률」 제27조제1항에 따른 혁신제품"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "건수",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "997",
+        "9",
+        "30"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "9,759,976,870",
+        "9,676,263,440",
+        "9,669,398,900"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "report_id": "00277",
+  "report_name": "물품분류별 계약납품요구 물품 실적통계",
+  "official_id": "UI-ADOXFA-120R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 8,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 5,
+    "dimensions": [
+      "계약방법",
+      "지명경쟁",
+      "제한경쟁",
+      "수의계약",
+      "미분류"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 1,
+    "identifiers": [
+      "공공조달분류번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반경쟁"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "공공조달분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "공공조달분류명",
+        "합계",
+        "10101502"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "개",
+        "염소"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "639,010",
+        "2"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "일반경쟁",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "19,154,460,335,573",
+        "3,125,000"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "지명경쟁",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "153,094",
+        "0"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "제한경쟁",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "5,348,719,009,570",
+        "0"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "수의계약",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "879",
+        "0"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "미분류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "560,261,086,943",
+        "0"
+      ]
+    }
+  ]
+}

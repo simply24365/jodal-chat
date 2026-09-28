@@ -1,0 +1,137 @@
+{
+  "report_id": "00270",
+  "report_name": "조달업체별 계약방법별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-113R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 49,
+  "total_columns": 8,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 6,
+    "dimensions": [
+      "계약방법",
+      "제한경쟁",
+      "지명경쟁",
+      "수의계약",
+      "미분류",
+      "수기등록"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반경쟁"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "업체",
+        "합계",
+        "서천해초김 주식회사"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "544,358",
+        "2"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "일반경쟁",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,154,460,335,339",
+        "4,587,600"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "제한경쟁",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "108,456",
+        "2"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "지명경쟁",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "5,348,719,009,371",
+        "4,587,600"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "수의계약",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "34,982",
+        "0"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "미분류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "7,224,308,720,431",
+        "0"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "수기등록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "3,616",
+        "0"
+      ]
+    }
+  ]
+}

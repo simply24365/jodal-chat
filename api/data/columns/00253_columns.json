@@ -1,0 +1,110 @@
+{
+  "report_id": "00253",
+  "report_name": "소관구분별 업무구분별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-096R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 12,
+  "total_columns": 6,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 3,
+    "dimensions": [
+      "물품",
+      "기술용역",
+      "공사"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반용역"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "기업형태구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "소관구분",
+        "합계",
+        "국가기관"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "533,590",
+        "51,473"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "물품",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,154,460,335,268",
+        "3,883,237,237,499"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "일반용역",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "393,515",
+        "40,932"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "기술용역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "4,138,698,556,252",
+        "817,876,753,047"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "공사",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "51,494",
+        "4,485"
+      ]
+    }
+  ]
+}

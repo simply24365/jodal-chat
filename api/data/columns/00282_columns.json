@@ -1,0 +1,123 @@
+{
+  "report_id": "00282",
+  "report_name": "연계시스템별 업무구분별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-125R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 36,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 4,
+    "dimensions": [
+      "조달업무영역",
+      "물품",
+      "기술용역",
+      "공사"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "일반용역"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "시스템유형",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "통계대상시스템",
+        "합계",
+        "전자조달시스템"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "조달업무영역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "나라장터(중앙조달)",
+        "84,586"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "533,590",
+        "133,666"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "물품",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "19,154,460,335,268",
+        "5,378,827,227,596"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "일반용역",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "393,515",
+        "131,582"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "기술용역",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "4,138,698,556,252",
+        "1,707,262,055,468"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "공사",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "51,494",
+        "1,420"
+      ]
+    }
+  ]
+}

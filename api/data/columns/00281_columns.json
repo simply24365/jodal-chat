@@ -1,0 +1,147 @@
+{
+  "report_id": "00281",
+  "report_name": "연계시스템별 기업형태별 계약납품요구업체 실적통계",
+  "official_id": "UI-ADOXFA-124R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 36,
+  "total_columns": 9,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "합계"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 6,
+    "dimensions": [
+      "대기업",
+      "중견기업",
+      "중소기업",
+      "외국기업",
+      "비영리법인등기타",
+      "미분류"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "시스템유형",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "통계대상시스템",
+        "합계",
+        "전자조달시스템"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "기업형태구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "나라장터(중앙조달)",
+        "93,311"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "544,358",
+        "135,006"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "대기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "19,154,460,335,339",
+        "5,378,827,227,616"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "중견기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "115,224",
+        "56,337"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "중소기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "1,760,780,124,934",
+        "752,041,979,080"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "외국기업",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "19,180",
+        "6,260"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "비영리법인등기타",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "3,076,019,087,572",
+        "1,093,057,820,796"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "미분류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액(원)",
+        "355,595",
+        "71,593"
+      ]
+    }
+  ]
+}

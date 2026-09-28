@@ -1,0 +1,257 @@
+{
+  "report_id": "00617",
+  "report_name": "수의계약 조달기업별 수주 순위 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-018R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "mstr_taskproc_json",
+  "source": "MSTR_TASKPROC_JSON",
+  "export_path": "mstr-taskProc-json (엑셀버튼 미노출 우회)",
+  "total_data_rows": -1,
+  "total_columns": 25,
+  "header_row_index": -1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 16,
+    "dimensions": [
+      "대표자",
+      "순위",
+      "업체명",
+      "업체소재지",
+      "계약명",
+      "계약방법",
+      "물품순번",
+      "세부품명",
+      "수요기관",
+      "실수요기관명",
+      "업체소재시",
+      "적용계약법",
+      "조달방식",
+      "조항호",
+      "조항호내용",
+      "품목명"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 6,
+    "identifiers": [
+      "사업자등록번호",
+      "계약납품통합번호",
+      "계약변경차수",
+      "물품식별번호",
+      "세부품명번호",
+      "사업자번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 1,
+    "dates": [
+      "계약(납풍요구)일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "대표자",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 2,
+      "name": "사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 3,
+      "name": "순위",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 4,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 5,
+      "name": "업체소재지",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 6,
+      "name": "계약(납풍요구)일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 7,
+      "name": "계약납품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 8,
+      "name": "계약납품통합번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 9,
+      "name": "계약명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 10,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 11,
+      "name": "계약변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 12,
+      "name": "계약유형",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 13,
+      "name": "물품순번",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 14,
+      "name": "물품식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 15,
+      "name": "세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 16,
+      "name": "세부품명번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 17,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 18,
+      "name": "실수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 19,
+      "name": "업체소재시",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 20,
+      "name": "적용계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 21,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 22,
+      "name": "조항호",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 23,
+      "name": "조항호내용",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 24,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 25,
+      "name": "사업자번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    }
+  ]
+}

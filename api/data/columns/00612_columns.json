@@ -1,0 +1,327 @@
+{
+  "report_id": "00612",
+  "report_name": "혁신제품 계약납품요구 내역",
+  "official_id": "UI-ADOXAA-045R",
+  "full_report_title": "UI-ADOXAA-045R.혁신제품 계약납품요구 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 기준일자(From)\n20260918\n프롬프트 2: 기준일자(To)\n20260918\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOXAA-045R.혁신제품 계약납품요구 내역",
+  "total_data_rows": 21,
+  "total_columns": 23,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "계약(납품요구)금액"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 8,
+    "dimensions": [
+      "혁신지정기관명",
+      "조달방식",
+      "계약방법",
+      "계약명",
+      "품명",
+      "품목명",
+      "수요기관",
+      "업체명"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 5,
+    "identifiers": [
+      "인증번호",
+      "계약(납품요구)번호",
+      "물품분류번호",
+      "물품식별번호",
+      "사업자등록번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 4,
+    "dates": [
+      "지정시작일자",
+      "지정종료일자",
+      "계약(납품요구)일자",
+      "납품기한"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "혁신지정구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "유형1",
+        "유형1",
+        "유형1"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "혁신지정기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "과학기술정보통신부",
+        "국토교통부",
+        "기후에너지환경부"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "인증번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2025-312",
+        "2021-297",
+        "2024-312"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "지정시작일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20251218",
+        "20210601",
+        "20241220"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "지정종료일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20281217",
+        "20270531",
+        "20271219"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "계약납품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "계약",
+        "계약",
+        "납품"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "자체조달",
+        "중앙조달",
+        "중앙조달"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "총액계약",
+        "총액계약",
+        "제3자단가계약"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수의계약",
+        "수의계약",
+        "수의계약"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "계약(납품요구)번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26TA02246597",
+        "R26TA02246647",
+        "R26TB02330921"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "계약(납품요구)일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "계약명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "통합돌봄 어르신 스마트 돌봄기기(효돌이) 구입",
+        "위임국도 방호울타리 개선사업 지지력 보강재 구입",
+        "관급자재 구매(고상제설제 15kg)"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "MAS여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "우수제품여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "물품분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "52999999",
+        "30102903",
+        "47131823"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "개인여가·오락·취미용및감성교감로봇",
+        "금속기둥",
+        "제설제또는서리제거제"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "물품식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "25151411",
+        "23647138",
+        "25468726"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "감성교감로봇, 효돌, HDOS-C4WA3-F, 반려로봇",
+        "금속기둥, 유신피플, USP-15AG45, (부품)600×1500×4.5",
+        "고상제설제, 스타스테크, ECO-ST2(15), 환경표지2종, 15kg/"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "강원특별자치도 삼척시",
+        "전남광주통합특별시 도로관리사업소",
+        "서울특별시 동작구"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "1208747125",
+        "4128152243",
+        "8538700953"
+      ]
+    },
+    {
+      "index": 21,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "주식회사 효돌",
+        "주식회사 유신피플",
+        "주식회사 스타스테크"
+      ]
+    },
+    {
+      "index": 22,
+      "name": "납품기한",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20261017",
+        "20270317",
+        "20261231"
+      ]
+    },
+    {
+      "index": 23,
+      "name": "계약(납품요구)금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "111800000",
+        "474889800",
+        "43560000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "report_id": "00024",
+  "report_name": "업종 및 근거법규 내역",
+  "official_id": "UI-ADOBAA-001R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 50,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 2,
+    "metrics": [
+      "업종분류",
+      "근거법령"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 4,
+    "dimensions": [
+      "업종",
+      "관련규정내용",
+      "제한업종",
+      "허용업종"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "업종분류",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "21",
+        "21",
+        "21"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "업종",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "행정일반",
+        "행정일반",
+        "행정일반"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "근거법령",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "2101",
+        "2102",
+        "2103"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "관련규정내용",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "남북교류협력사업자",
+        "남북교류협력 결제업무 취급기관",
+        "지역통일교육센터"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "사용여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "남북교류협력에관한법률 제17조",
+        "남북교류협력에관한법률 제19조",
+        "통일교육지원법 제6조의3"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "제한업종",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "남북교류협력에관한법률 시행령 제27조; 동 시행규칙 제13조",
+        "남북교류협력에관한법률 시행령 제31조, 제32조",
+        "통일교육지원법 시행령 제5조"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "허용업종",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "Y",
+        "Y"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "report_id": "00265",
+  "report_name": "수요기관별 물품분류별 계약납품요구 실적통계",
+  "official_id": "UI-ADOXFA-108R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 1,
+  "total_columns": 3,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 3,
+    "dimensions": [
+      "컬럼1",
+      "컬럼2",
+      "컬럼3"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "컬럼1",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 2,
+      "name": "컬럼2",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "PROCESSING REQUEST"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "컬럼3",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    }
+  ]
+}

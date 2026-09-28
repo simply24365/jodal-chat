@@ -1,0 +1,108 @@
+{
+  "report_id": "00082",
+  "report_name": "중소기업 경쟁제품 및 공사용자재 내역",
+  "official_id": "UI-ADOSAA-006R",
+  "full_report_title": "물품분류",
+  "prompt_summary": "검색조건 : 프롬프트 1: 기준일자\n2026-09-18\n프롬프트 2: 통계중소기업경쟁물품구분\n\n프롬프트 3: 물품분류\n\n프롬프트 4: 세부품명\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOSAA-006R.중소기업 경쟁제품 및 공사용자",
+  "total_data_rows": 975,
+  "total_columns": 6,
+  "header_row_index": 4,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 6,
+    "dimensions": [
+      "석회질비료",
+      "10171611",
+      "석회질비료",
+      "1017161101",
+      "20130101",
+      "20281231"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "석회질비료",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "규산질비료",
+        "활성탄(活性炭)",
+        "화강암"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "10171611",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "10171694",
+        "11101522",
+        "11111604"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "석회질비료",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "규산질비료",
+        "활성탄",
+        "화강석"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "1017161101",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "1017169401",
+        "1110152201",
+        "1111160401"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "20130101",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20130101",
+        "20130101",
+        "20130101"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "20281231",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20281231",
+        "20281231",
+        "20281231"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+{
+  "report_id": "00118",
+  "report_name": "나라장터쇼핑몰 납품요구 물품 내역",
+  "official_id": "UI-ADOXAA-038R",
+  "full_report_title": "UI-ADOXAA-038R.나라장터쇼핑몰 납품요구 물품 내역{1.전체기간}",
+  "prompt_summary": "검색조건 : 프롬프트 1: 기준일자(From)\n20260918\n프롬프트 2: 기준일자(To)\n20260918\n프롬프트 3: 수요기관\n\n프롬프트 4: 텍스트\n\n프롬프트 5: 업체\n\n프롬프트 6: 물품분류\n\n프롬프트 7: 세부품명\n\n프롬프트 8: 물품식별\n\n프롬프트 9: 지청조직\n\n프롬프트 10: 수요기관소재시도\n\n프롬프트 11: 수요기관소재시군구\n\n프롬프트 12: 계약단가(From)\n\n프롬프트 13: 계약단가\n(To)\n\n프롬프트 14: 구매방법구분\n\n프롬프트 15: 최초납품요구여부\n\n프롬프트 16: 최종납품요구여부\n\n프롬프트 17: ",
+  "sheet_name": "UI-ADOXAA-038R.나라장터쇼핑몰 납품요구 물품 ",
+  "total_data_rows": 8260,
+  "total_columns": 42,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 8,
+    "metrics": [
+      "계약단가",
+      "납품단가",
+      "납품수량",
+      "납품금액",
+      "납품증감수량",
+      "납품증감금액",
+      "합계납품증감수량",
+      "합계납품증감금액"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 12,
+    "dimensions": [
+      "물품순번",
+      "수요기관",
+      "납품요구명",
+      "업체명",
+      "품명",
+      "세부품명",
+      "품목명",
+      "구매방법",
+      "수요기관소재시군구",
+      "계약시점 업체소재시군구",
+      "지청",
+      "단위"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 9,
+    "identifiers": [
+      "납품요구번호",
+      "납품요구변경차수",
+      "수요기관코드",
+      "업체사업자등록번호",
+      "물품분류번호",
+      "세부품명번호",
+      "물품식별번호",
+      "계약번호",
+      "변경차수"
+    ]
+  },
+  "dates_summary": {
+    "count": 2,
+    "dates": [
+      "납품요구일자",
+      "납품기한"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "납품요구번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "1224126633",
+        "1224126633",
+        "1224225300"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "납품요구변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "01",
+        "01",
+        "01"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "물품순번",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "1",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "3780349",
+        "3780349",
+        "D605816"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경기도 성남시 도서관사업소",
+        "경기도 성남시 도서관사업소",
+        "한국토지주택공사 경기남부지역본부"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "납품요구일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "납품요구명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "대장지구 공공도서관 건립 공사 관급자재(토목-흙막이)조달 구매",
+        "대장지구 공공도서관 건립 공사 관급자재(토목-흙막이)조달 구매",
+        "과천지식정보타운 공원등 전기공사-가로등자동점멸기"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "업체사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2208200293",
+        "2208200293",
+        "1298167669"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울,경인레미콘공업협동조합",
+        "서울,경인레미콘공업협동조합",
+        "(주)가보테크"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "물품분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "30111505",
+        "30111505",
+        "39121107"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "레미콘",
+        "레미콘",
+        "조명제어장치"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "세부품명번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "3011150501",
+        "3011150501",
+        "3912110701"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "레미콘",
+        "레미콘",
+        "가로등자동점멸기"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "물품식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "23734421",
+        "23734428",
+        "22327209"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "레미콘, 조합공통품목, 25-18-120, 25-18-120",
+        "레미콘, 조합공통품목, 25-21-120, 25-21-120",
+        "가로등자동점멸기, 가보테크, GMC-200N, 무선양방향감시"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "납품기한",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20250331",
+        "20250331",
+        "20251210"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "제3자단가계약",
+        "제3자단가계약",
+        "제3자단가계약"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "계약번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "122410110_1",
+        "122410110_1",
+        "122220330_1"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "00",
+        "00",
+        "12"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "MAS여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    {
+      "index": 21,
+      "name": "직접구매대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    {
+      "index": 22,
+      "name": "우수제품여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 23,
+      "name": "물품인증유형목록",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "단체표준인증(물040024), 품질보증조달물품(물040040), 특허(물",
+        "단체표준인증(물040024), KC인증(물040025), G-PASS기업",
+        "단체표준인증(물040024), KC인증(물040025), G-PASS기업"
+      ]
+    },
+    {
+      "index": 24,
+      "name": "구매방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "동시구매",
+        "동시구매"
+      ]
+    },
+    {
+      "index": 25,
+      "name": "최종납품요구여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    {
+      "index": 26,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방정부",
+        "지방정부",
+        "공기업"
+      ]
+    },
+    {
+      "index": 27,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경기도 성남시 분당구",
+        "경기도 성남시 분당구",
+        "경기도 성남시 분당구"
+      ]
+    },
+    {
+      "index": 28,
+      "name": "기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업",
+        "중소기업",
+        "중소기업"
+      ]
+    },
+    {
+      "index": 29,
+      "name": "계약시점 업체소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울특별시 강남구",
+        "서울특별시 강남구",
+        "경기도 성남시 수정구"
+      ]
+    },
+    {
+      "index": 30,
+      "name": "계약시점 여성기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y"
+      ]
+    },
+    {
+      "index": 31,
+      "name": "계약시점 장애인기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N"
+      ]
+    },
+    {
+      "index": 32,
+      "name": "계약시점 사회적기업인증여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N"
+      ]
+    },
+    {
+      "index": 33,
+      "name": "지청",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울지방조달청",
+        "서울지방조달청",
+        "서울지방조달청"
+      ]
+    },
+    {
+      "index": 34,
+      "name": "계약단가",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "91,520",
+        "97,160",
+        "1,670,000"
+      ]
+    },
+    {
+      "index": 35,
+      "name": "납품단가",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "91520",
+        "97160",
+        "1670000"
+      ]
+    },
+    {
+      "index": 36,
+      "name": "단위",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "㎥",
+        "㎥",
+        "대"
+      ]
+    },
+    {
+      "index": 37,
+      "name": "납품수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "35",
+        "438",
+        "0"
+      ]
+    },
+    {
+      "index": 38,
+      "name": "납품금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "3203200",
+        "42556080",
+        "0"
+      ]
+    },
+    {
+      "index": 39,
+      "name": "납품증감수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "0",
+        "-244",
+        "-33"
+      ]
+    },
+    {
+      "index": 40,
+      "name": "납품증감금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "0",
+        "-23707040",
+        "-55110000"
+      ]
+    },
+    {
+      "index": 41,
+      "name": "합계납품증감수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "-244",
+        "-244",
+        "-33"
+      ]
+    },
+    {
+      "index": 42,
+      "name": "합계납품증감금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "-23707040",
+        "-23707040",
+        "-55110000"
+      ]
+    }
+  ]
+}

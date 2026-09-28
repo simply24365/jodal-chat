@@ -1,0 +1,349 @@
+{
+  "report_id": "00030",
+  "report_name": "조달요청 내역",
+  "official_id": "UI-ADOCAA-008R",
+  "export_path": "mstr-taskProc-json (엑셀버튼 미노출 우회)",
+  "total_columns": 39,
+  "total_data_rows": -1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 18,
+    "dimensions": [
+      "계약방법",
+      "낙찰방법",
+      "단위",
+      "물품순번",
+      "세부품명",
+      "수요기관",
+      "수요기관소재시군구",
+      "요청명",
+      "적용계약법",
+      "접수기관담당부서",
+      "접수지청",
+      "품명",
+      "품목",
+      "용역종류",
+      "용역현장",
+      "지역업체참여도 (지역가점)",
+      "공사현장",
+      "품목명"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 2,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 3,
+      "name": "국제입찰여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 4,
+      "name": "낙찰방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 5,
+      "name": "납품기한",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 6,
+      "name": "단위",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 7,
+      "name": "물품분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 8,
+      "name": "물품순번",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 9,
+      "name": "물품식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 10,
+      "name": "세부물품분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 11,
+      "name": "세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 12,
+      "name": "수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 13,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 14,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 15,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 16,
+      "name": "신규장기구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 17,
+      "name": "업무구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 18,
+      "name": "요청명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 19,
+      "name": "요청접수번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 20,
+      "name": "장기계약차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 21,
+      "name": "적용계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 22,
+      "name": "접수기관담당부서",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 23,
+      "name": "접수일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 24,
+      "name": "접수지청",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 25,
+      "name": "진행상태",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 26,
+      "name": "품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 27,
+      "name": "품목",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 28,
+      "name": "PQ심사대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 29,
+      "name": "공동이행방식의공동도급적영여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 30,
+      "name": "금차용역기간(일)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 31,
+      "name": "용역종류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 32,
+      "name": "용역현장",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 33,
+      "name": "장기계속차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 34,
+      "name": "적격심사대상여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 35,
+      "name": "지역업체참여도 (지역가점)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 36,
+      "name": "지역제한여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 37,
+      "name": "총용역기간(일)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 38,
+      "name": "공사현장",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 39,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    }
+  ]
+}

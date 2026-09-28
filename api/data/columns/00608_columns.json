@@ -1,0 +1,652 @@
+{
+  "report_id": "00608",
+  "report_name": "입찰공고 기업별 투찰 및 계약내역",
+  "official_id": "UI-ADOFAA-011R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 30,
+  "total_columns": 51,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 9,
+    "metrics": [
+      "배정예산",
+      "추정가격",
+      "기초금액",
+      "예정가격",
+      "개찰순위",
+      "투찰금액",
+      "투찰율",
+      "금차계약금액",
+      "총계약금액"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 19,
+    "dimensions": [
+      "조달방식",
+      "입찰방법",
+      "공고명",
+      "공고기관",
+      "수요기관",
+      "계약방법",
+      "낙찰방법",
+      "적용계약법",
+      "조항호내용",
+      "공공조달분류",
+      "공동도급구성방식",
+      "면허업종제한목록",
+      "제한지역목록",
+      "공동도급지역목록",
+      "공사현장",
+      "수요기관소재시군구",
+      "업체명",
+      "입찰부적격사유",
+      "업체소재시군구"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 8,
+    "identifiers": [
+      "입찰공고번호",
+      "입찰공고차수",
+      "입찰분류번호",
+      "공고기관코드",
+      "수요기관코드",
+      "세부품명번호목록",
+      "업체사업자등록번호",
+      "계약번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 4,
+    "dates": [
+      "공고일자",
+      "개찰일자",
+      "투찰일자",
+      "계약일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "자체조달",
+        "중앙조달",
+        "자체조달"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "업무구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "물품",
+        "물품",
+        "기술용역"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "입찰방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전자시담",
+        "전자시담",
+        "전자시담"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "총액계약",
+        "총액계약",
+        "총액계약"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "입찰공고번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26BK01727754",
+        "R26BK01732360",
+        "R26BK01734064"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "입찰공고차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "000",
+        "000",
+        "000"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "입찰분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "1",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "공고명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서남센터 1처리장 농축기동 탈취설비 제조구매설치",
+        "식수전용 저수지 확충사업 관급자재(수질계측기) 구입",
+        "2026년 하반기 소나무재선충병 방제사업 실시설계용역"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "공고일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "공고기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "B554408",
+        "1230158",
+        "5710289"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "공고기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울물재생시설공단",
+        "조달청 제주지방조달청",
+        "충청북도 청주시 공원산림본부"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "B554408",
+        "6500654",
+        "5710289"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울물재생시설공단",
+        "제주특별자치도 상하수도본부",
+        "충청북도 청주시 공원산림본부"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수의계약",
+        "수의계약",
+        "수의계약"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "낙찰방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수의시담",
+        "수의시담",
+        "수의시담"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "적용계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방계약법",
+        "지방계약법",
+        "지방계약법"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "조항호내용",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "특허를 받았거나 실용신안등록 또는 디자인등록이 된 물품을 제조하게 하거나",
+        "「조달사업에 관한 법률」 제27조제1항에 따른 혁신제품을 구매하려는 경우",
+        "입찰에 부칠 여유가 없는 긴급복구가 필요한 재난 등 행정안전부령에 따른 "
+      ]
+    },
+    {
+      "index": 18,
+      "name": "개찰일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "공공조달분류",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "기타기술용역",
+        "공연기획및대행서비스",
+        "조경관리서비스"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "공동도급구성방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 21,
+      "name": "면허업종제한목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "[조경식재ㆍ시설물공사업(4993)]",
+        "[조경식재ㆍ시설물공사업(4993)]"
+      ]
+    },
+    {
+      "index": 22,
+      "name": "세부품명번호목록",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "탈취기[4016160501]",
+        "기타수질분석기[4111331901]",
+        "자외선살균기[4710151701]"
+      ]
+    },
+    {
+      "index": 23,
+      "name": "제한지역목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 24,
+      "name": "공동도급지역목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 25,
+      "name": "공사현장",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경기도 양주시[41630]",
+        "충청남도 청양군[44790]",
+        "서울특별시[11000]"
+      ]
+    },
+    {
+      "index": 26,
+      "name": "정보화사업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 27,
+      "name": "긴급공고여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 28,
+      "name": "지역의무공동도급여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N",
+        "N",
+        "N"
+      ]
+    },
+    {
+      "index": 29,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방공기업",
+        "지방정부",
+        "지방정부"
+      ]
+    },
+    {
+      "index": 30,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "서울특별시 강남구",
+        "제주특별자치도 제주시",
+        "충청북도 청주시 상당구"
+      ]
+    },
+    {
+      "index": 31,
+      "name": "배정예산",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "446,409,000",
+        "131,402,130",
+        "48,148,000"
+      ]
+    },
+    {
+      "index": 32,
+      "name": "추정가격",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "405,826,364",
+        "118,440,000",
+        "43,770,909"
+      ]
+    },
+    {
+      "index": 33,
+      "name": "유찰여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 34,
+      "name": "기초금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "85,908,900"
+      ]
+    },
+    {
+      "index": 35,
+      "name": "예정가격",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "446,409,000",
+        "117,255,600",
+        "47,790,340"
+      ]
+    },
+    {
+      "index": 36,
+      "name": "개찰순위",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "index": 37,
+      "name": "낙찰자선정여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y",
+        "Y",
+        "Y"
+      ]
+    },
+    {
+      "index": 38,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "주식회사 에스.엠.엔지니어링",
+        "블루센 주식회사",
+        "주식회사 정진이엔지"
+      ]
+    },
+    {
+      "index": 39,
+      "name": "업체사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "6098149416",
+        "6068188031",
+        "3968600486"
+      ]
+    },
+    {
+      "index": 40,
+      "name": "투찰일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20260918"
+      ]
+    },
+    {
+      "index": 41,
+      "name": "투찰금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "75,200,000"
+      ]
+    },
+    {
+      "index": 42,
+      "name": "투찰율",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "88.443"
+      ]
+    },
+    {
+      "index": 43,
+      "name": "부적격여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "N"
+      ]
+    },
+    {
+      "index": 44,
+      "name": "입찰부적격사유",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 45,
+      "name": "업체소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "경상남도 창원시 의창구",
+        "대구광역시 달성군",
+        "충청북도 청주시 상당구"
+      ]
+    },
+    {
+      "index": 46,
+      "name": "계약번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26TA02246755",
+        "R26TA02247925",
+        "R26TA02247968"
+      ]
+    },
+    {
+      "index": 47,
+      "name": "계약일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": true,
+      "sample_values": [
+        "20260918",
+        "20260918",
+        "20260918"
+      ]
+    },
+    {
+      "index": 48,
+      "name": "계약시점기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업",
+        "중소기업",
+        "중소기업"
+      ]
+    },
+    {
+      "index": 49,
+      "name": "신규장기구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "신규(단기)",
+        "신규(단기)",
+        "신규(단기)"
+      ]
+    },
+    {
+      "index": 50,
+      "name": "금차계약금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "117,255,600",
+        "14,960,000",
+        "14,960,000"
+      ]
+    },
+    {
+      "index": 51,
+      "name": "총계약금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "0",
+        "14,960,000",
+        "14,960,000"
+      ]
+    }
+  ]
+}

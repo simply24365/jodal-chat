@@ -1,0 +1,422 @@
+{
+  "report_id": "00087",
+  "report_name": "혁신 물품 구매 내역",
+  "official_id": "UI-ADOWCA-001R",
+  "full_report_title": "조달방식",
+  "prompt_summary": "검색조건 : 프롬프트 1: 기준일자(From)\n20260918\n프롬프트 2: 기준일자(To)\n20260918\n프롬프트 3: 물품분류\n\n프롬프트 4: 세부품명\n\n프롬프트 5: 물품식별\n\n프롬프트 6: 소관구분\n\n프롬프트 7: 수요기관소재시도\n\n프롬프트 8: 수요기관소재시군구\n\n프롬프트 9: 업체\n\n프롬프트 10: 수요기관\n\n프롬프트 11: 수요기관\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOWCA-001R.혁신 물품 구매 내역",
+  "total_data_rows": 1,
+  "total_columns": 36,
+  "header_row_index": 3,
+  "metrics_summary": {
+    "count": 4,
+    "metrics": [
+      "단가",
+      "수량",
+      "계약금액",
+      "혁신장터가격"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 16,
+    "dimensions": [
+      "조달방식",
+      "물품순번",
+      "품명",
+      "세부품명",
+      "품목명",
+      "수요기관",
+      "수요기관소재시군구",
+      "업체명",
+      "계약명",
+      "계약방법",
+      "적용계약법",
+      "조항호",
+      "혁신업체인증목록",
+      "기업인증명목록",
+      "혁신제품인명목록",
+      "단위"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 8,
+    "identifiers": [
+      "계약번호",
+      "변경차수",
+      "물품분류번호",
+      "세부품명번호",
+      "물품식별번호",
+      "수요기관코드",
+      "업체사업자등록번호",
+      "혁신제품지정증서번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 3,
+    "dates": [
+      "계약일자",
+      "납품기한",
+      "지정일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중앙조달"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "총액계약"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "계약일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20260918"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "계약번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "R26TA02246647"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "00"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "최종계약여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "Y"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "물품순번",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "index": 8,
+      "name": "물품분류번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "30102903"
+      ]
+    },
+    {
+      "index": 9,
+      "name": "품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금속기둥"
+      ]
+    },
+    {
+      "index": 10,
+      "name": "세부품명번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "3010290301"
+      ]
+    },
+    {
+      "index": 11,
+      "name": "세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금속기둥"
+      ]
+    },
+    {
+      "index": 12,
+      "name": "물품식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "23647138"
+      ]
+    },
+    {
+      "index": 13,
+      "name": "품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금속기둥, 유신피플, USP-15AG45, (부품)600×1500×4.5"
+      ]
+    },
+    {
+      "index": 14,
+      "name": "수요기관코드",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "6130688"
+      ]
+    },
+    {
+      "index": 15,
+      "name": "수요기관",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전남광주통합특별시 도로관리사업소"
+      ]
+    },
+    {
+      "index": 16,
+      "name": "소관구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방정부"
+      ]
+    },
+    {
+      "index": 17,
+      "name": "수요기관소재시군구",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "전라남도 나주시"
+      ]
+    },
+    {
+      "index": 18,
+      "name": "업체사업자등록번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "4128152243"
+      ]
+    },
+    {
+      "index": 19,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "주식회사 유신피플"
+      ]
+    },
+    {
+      "index": 20,
+      "name": "기업구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "중소기업"
+      ]
+    },
+    {
+      "index": 21,
+      "name": "납품기한",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20270317"
+      ]
+    },
+    {
+      "index": 22,
+      "name": "계약명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "위임국도 방호울타리 개선사업 지지력 보강재 구입"
+      ]
+    },
+    {
+      "index": 23,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "수의계약"
+      ]
+    },
+    {
+      "index": 24,
+      "name": "적용계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "지방계약법"
+      ]
+    },
+    {
+      "index": 25,
+      "name": "조항호",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "제25조제1항8호다목"
+      ]
+    },
+    {
+      "index": 26,
+      "name": "혁신제품지정증서번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "2021297"
+      ]
+    },
+    {
+      "index": 27,
+      "name": "지정일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "20210601"
+      ]
+    },
+    {
+      "index": 28,
+      "name": "혁신상품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "혁신상품"
+      ]
+    },
+    {
+      "index": 29,
+      "name": "혁신업체인증목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 30,
+      "name": "기업인증명목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "여성기업"
+      ]
+    },
+    {
+      "index": 31,
+      "name": "혁신제품인명목록",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "여성기업제품"
+      ]
+    },
+    {
+      "index": 32,
+      "name": "단위",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "식"
+      ]
+    },
+    {
+      "index": 33,
+      "name": "단가",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "474889800"
+      ]
+    },
+    {
+      "index": 34,
+      "name": "수량",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "1"
+      ]
+    },
+    {
+      "index": 35,
+      "name": "계약금액",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "474889800"
+      ]
+    },
+    {
+      "index": 36,
+      "name": "혁신장터가격",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "154000"
+      ]
+    }
+  ]
+}

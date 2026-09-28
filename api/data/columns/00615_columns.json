@@ -1,0 +1,123 @@
+{
+  "report_id": "00615",
+  "report_name": "자율화 시범운영 대상 사업실적 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-016R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "dashboard_dom",
+  "source": "RW_DASHBOARD_DOM",
+  "total_data_rows": 4,
+  "total_columns": 7,
+  "header_row_index": 1,
+  "metrics_summary": {
+    "count": 2,
+    "metrics": [
+      "합계",
+      "자체조달(단가계약)"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 5,
+    "dimensions": [
+      "수요기관명",
+      "중앙조달(납품요구)",
+      "중앙조달(총액계약)",
+      "자체조달(총액_경쟁계약)",
+      "자체조달(총액_수의계약)"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "경기도",
+        "전북특별자치도"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "합계",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "7,342",
+        "2,626"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "중앙조달(납품요구)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액비율",
+        "197,020,139,546",
+        "68,625,615,951"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "중앙조달(총액계약)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "100.00%",
+        "100.00%"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "자체조달(총액_경쟁계약)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액",
+        "6,255",
+        "2,317"
+      ]
+    },
+    {
+      "index": 6,
+      "name": "자체조달(총액_수의계약)",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "금액비율",
+        "138,451,268,905",
+        "45,796,163,022"
+      ]
+    },
+    {
+      "index": 7,
+      "name": "자체조달(단가계약)",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": false,
+      "sample_values": [
+        "건수",
+        "70.27%",
+        "66.73%"
+      ]
+    }
+  ]
+}

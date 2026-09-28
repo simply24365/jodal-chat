@@ -1,0 +1,392 @@
+{
+  "report_id": "00616",
+  "report_name": "자율화 시범운영 대상 중소,여성,장애인 구매내역 &#40;전체 품명&#41;",
+  "official_id": "UI-ADOXFZ-017R",
+  "full_report_title": "",
+  "prompt_summary": "",
+  "sheet_name": "mstr_taskproc_json",
+  "source": "MSTR_TASKPROC_JSON",
+  "export_path": "mstr-taskProc-json (엑셀버튼 미노출 우회)",
+  "total_data_rows": -1,
+  "total_columns": 41,
+  "header_row_index": -1,
+  "metrics_summary": {
+    "count": 0,
+    "metrics": []
+  },
+  "dimensions_summary": {
+    "count": 20,
+    "dimensions": [
+      "FF_계약명",
+      "FF_계약방법",
+      "FF_대표업체",
+      "FF_대표자",
+      "FF_물품순번",
+      "FF_세부품명",
+      "FF_수요기관명",
+      "FF_업체소재지",
+      "FF_조항호내용",
+      "FF_조항호명",
+      "FF_품목명",
+      "실수요기관명",
+      "적용계약법",
+      "수요기관명",
+      "조달방식",
+      "계약방법",
+      "계약(납품요구)명",
+      "업체명",
+      "대표자",
+      "업체소재지"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 8,
+    "identifiers": [
+      "FF_계약납품번호",
+      "FF_계약변경차수",
+      "FF_사업자번호",
+      "FF_세부품명번호",
+      "FF_식별번호",
+      "계약(납품요구)번호",
+      "변경차수",
+      "사업자번호"
+    ]
+  },
+  "dates_summary": {
+    "count": 2,
+    "dates": [
+      "FF_계약납품일자",
+      "계약(납품요구)일자"
+    ]
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "FF_계약납품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 2,
+      "name": "FF_계약납품번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 3,
+      "name": "FF_계약납품일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 4,
+      "name": "FF_계약명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 5,
+      "name": "FF_계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 6,
+      "name": "FF_계약변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 7,
+      "name": "FF_계약유형",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 8,
+      "name": "FF_대표업체",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 9,
+      "name": "FF_대표자",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 10,
+      "name": "FF_물품순번",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 11,
+      "name": "FF_사업자번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 12,
+      "name": "FF_세부품명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 13,
+      "name": "FF_세부품명번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 14,
+      "name": "FF_수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 15,
+      "name": "FF_식별번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 16,
+      "name": "FF_업체소재지",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 17,
+      "name": "FF_여성기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 18,
+      "name": "FF_장애인기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 19,
+      "name": "FF_조달방식구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 20,
+      "name": "FF_조항호내용",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 21,
+      "name": "FF_조항호명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 22,
+      "name": "FF_중소기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 23,
+      "name": "FF_품목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 24,
+      "name": "실수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 25,
+      "name": "적용계약법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 26,
+      "name": "수요기관명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 27,
+      "name": "조달방식",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 28,
+      "name": "계약방법",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 29,
+      "name": "계약구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 30,
+      "name": "계약납품구분",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 31,
+      "name": "계약(납품요구)번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 32,
+      "name": "변경차수",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 33,
+      "name": "계약(납품요구)일자",
+      "category": "date",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 34,
+      "name": "계약(납품요구)명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 35,
+      "name": "사업자번호",
+      "category": "identifier",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 36,
+      "name": "업체명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 37,
+      "name": "대표자",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 38,
+      "name": "업체소재지",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 39,
+      "name": "중소기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 40,
+      "name": "여성기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    },
+    {
+      "index": 41,
+      "name": "장애인기업여부",
+      "category": "flag",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": []
+    }
+  ]
+}

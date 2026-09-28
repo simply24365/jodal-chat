@@ -1,0 +1,9 @@
+[project]
+name = "jodal"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "bm25s>=0.3.11",
+    "kiwipiepy>=0.23.2",
+    "numpy>=2.5.3",
+]

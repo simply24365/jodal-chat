@@ -1,0 +1,160 @@
+{
+  "_version": 2,
+  "batch_042": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_043": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_044": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_045": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_046": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_047": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_048": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_049": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_052": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_053": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_058": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_059": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_060": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_061": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_062": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_063": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_064": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_065": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_068": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_069": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_070": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_071": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_072": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_073": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_080": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_081": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_084": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_085": {
+    "ok": true,
+    "n": 10
+  },
+  "batch_086": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_087": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_090": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_091": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_106": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_107": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_108": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_109": {
+    "ok": true,
+    "n": 10,
+    "via": "gemini-cli"
+  },
+  "batch_112": {
+    "ok": true,
+    "n": 2,
+    "via": "gemini-cli"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "report_id": "00090",
+  "report_name": "국유화 완료 내역",
+  "official_id": "UI-ADOWEA-001R",
+  "full_report_title": "UI-ADOWEA-001R.국유화 완료 내역",
+  "prompt_summary": "검색조건 : 프롬프트 1: 중앙관서\n\n출력일자 : 2026-09-19",
+  "sheet_name": "UI-ADOWEA-001R.국유화 완료 내역",
+  "total_data_rows": 44306,
+  "total_columns": 5,
+  "header_row_index": 5,
+  "metrics_summary": {
+    "count": 1,
+    "metrics": [
+      "면적"
+    ]
+  },
+  "dimensions_summary": {
+    "count": 4,
+    "dimensions": [
+      "법정동",
+      "지번주소",
+      "지목명",
+      "중앙관서명"
+    ]
+  },
+  "identifiers_summary": {
+    "count": 0,
+    "identifiers": []
+  },
+  "dates_summary": {
+    "count": 0,
+    "dates": []
+  },
+  "columns": [
+    {
+      "index": 1,
+      "name": "법정동",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "강원특별자치도 강릉시 강동면 모전리",
+        "강원특별자치도 강릉시 강동면 모전리",
+        "강원특별자치도 강릉시 강동면 모전리"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "지번주소",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "116-8",
+        "116-9",
+        "231-1"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "지목명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "구거",
+        "도로",
+        "임야"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "면적",
+      "category": "metric",
+      "is_metric": true,
+      "is_numeric": true,
+      "sample_values": [
+        "590",
+        "332",
+        "645"
+      ]
+    },
+    {
+      "index": 5,
+      "name": "중앙관서명",
+      "category": "dimension",
+      "is_metric": false,
+      "is_numeric": false,
+      "sample_values": [
+        "농림축산식품부",
+        "재정경제부",
+        "재정경제부"
+      ]
+    }
+  ]
+}
