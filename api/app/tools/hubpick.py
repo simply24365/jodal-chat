@@ -22,6 +22,7 @@ import re
 from pathlib import Path
 from typing import Any
 
+from ..retrieval import catalog as cat_mod
 from ..utils import setup_logger
 
 logger = setup_logger("custom_chat.hubpick")
@@ -285,6 +286,26 @@ def _scan_form_options(hub: dict, query: str, top_k: int, intent: Any) -> dict:
     return {"total": len(found), "reports": slim}
 
 
+def _decorate_with_catalog(reports: list[dict]) -> list[dict]:
+    """스캔 결과에 카탈로그 메타(dims·시각화·인기도·synopsis)를 덧붙인다.
+
+    값 매칭만으로는 수십 개가 동률이 된다(IDF 붕괴). 에이전트가 이 목록을
+    스스로 좁히려면 각 후보가 '어떤 차원으로 집계되는지'와 '어떤 질문에 답하는지'
+    데이터가 필요하다 — 정렬 규칙을 늘리는 게 아니라 판단 근거를 주는 방식.
+    """
+    cat_all = cat_mod.catalog()
+    d2q = cat_mod.doc2query()
+    for r in reports:
+        rec = cat_all.get(r["report_id"], {})
+        r["dims"] = rec.get("dims") or []
+        r["is_visual"] = bool(rec.get("is_visual"))
+        r["views"] = rec.get("조회수") or 0
+        syn = (d2q.get(r["report_id"]) or {}).get("synopsis")
+        if syn:
+            r["synopsis"] = syn[:100]
+    return reports
+
+
 def value_lookup(
     query: str,
     report_id: Any = None,
@@ -326,7 +347,7 @@ def value_lookup(
             "query": query,
             "matched_reports": scan["total"],
             "returned": len(scan["reports"]),
-            "reports": scan["reports"],
+            "reports": _decorate_with_catalog(scan["reports"]),
             "note": "이 값을 조건으로 골라 조회할 수 있는 보고서 목록이다. "
             "여기서는 링크를 주지 않으므로, 고른 보고서의 열기 링크가 필요하면 "
             "그 report_id 로 get_report_detail 을 한 번 더 불러라.",
