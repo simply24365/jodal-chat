@@ -730,7 +730,14 @@ def _append_tool_turn(
         docs: list[SearchDoc] | None = None
         rich = r.rich_response
         if isinstance(rich, dict) and isinstance(rich.get("search_docs"), list):
-            docs = [SearchDoc(**d) for d in rich["search_docs"]]
+            raw_docs = [SearchDoc(**d) for d in rich["search_docs"]]
+            # document_id 기준 dedupe — 같은 보고서가 search/value_lookup/detail 여러
+            # 툴 결과에 걸쳐 중복 등장하면 citation 슬롯을 낭비하고 답변 인용이 흐려진다.
+            docs, seen_ids = [], {d.document_id for d in result.citation_docs.values()}
+            for d in raw_docs:
+                if d.document_id not in seen_ids:
+                    seen_ids.add(d.document_id)
+                    docs.append(d)
             cmap = rich.get("citation_mapping") or {}
             nums = sorted(int(k) for k in cmap.keys()) if cmap else []
             for n, d in zip(nums, docs):

@@ -7,7 +7,7 @@ import re
 from typing import Any
 
 from .. import config
-from ..models import MCPServerConfig, Packet, ToolResponse
+from ..models import MCPServerConfig, Packet, SearchDoc, ToolResponse
 from ..utils import setup_logger
 from . import mcp_client
 from .interface import Tool
@@ -15,6 +15,50 @@ from .interface import Tool
 logger = setup_logger("custom_chat.mcp_tool")
 
 _INVALID = re.compile(r"[^a-zA-Z0-9_-]")
+
+# citation 계약을 지원하는 jodal 툴 — 응답에 report_id + 이름 목록이 있는 것들.
+# web_search/open_url 과 동일한 SearchDoc+citation_mapping 계약으로 통일해,
+# 루프의 인용 수집·근거 검증(citation_docs)이 jodal 툴에도 작동하게 한다.
+_CITATION_TOOLS = {"search_reports", "get_report_detail", "value_lookup", "concept_reports"}
+
+
+def _extract_citation_docs(result_text: str) -> list[SearchDoc]:
+    """툴 결과 JSON에서 (report_id, 보고서명)을 SearchDoc으로 뽑는다.
+
+    실패해도 툴 호출 자체는 성공한 것이므로 조용히 빈 목록을 돌려준다.
+    """
+    try:
+        data = json.loads(result_text)
+    except (json.JSONDecodeError, TypeError):
+        return []
+    if not isinstance(data, dict):
+        return []
+    items: list[tuple[str, str]] = []
+    for cand in data.get("candidates") or []:
+        rid, nm = cand.get("report_id"), cand.get("name")
+        if rid and nm:
+            items.append((str(rid), str(nm)))
+    for rep in data.get("reports") or []:
+        rid, nm = rep.get("report_id"), rep.get("name")
+        if rid and nm:
+            items.append((str(rid), str(nm)))
+    if data.get("report_id") and data.get("name"):
+        rid, nm = str(data["report_id"]), str(data["name"])
+        if (rid, nm) not in items:
+            items.append((rid, nm))
+    seen: set[str] = set()
+    docs: list[SearchDoc] = []
+    for rid, nm in items:
+        if rid in seen:
+            continue
+        seen.add(rid)
+        docs.append(SearchDoc(
+            document_id=f"JODAL_REPORT_{rid}",
+            title=nm,
+            link=f"https://data.g2b.go.kr/link/AISC001_01/?g2bOpen={rid}",
+            snippet="",
+        ))
+    return docs
 
 # httpx/anyio는 예외를 ExceptionGroup으로 감싼다 ("unhandled errors in a
 # TaskGroup (1 sub-exception)") — str()만 쓰면 진짜 원인이 사라진다.
@@ -148,6 +192,15 @@ class MCPTool(Tool[None]):
             )
             payload = {"error": f"Tool execution failed: {reason}"}
             llm_str = json.dumps(payload, ensure_ascii=False)
+        docs: list[SearchDoc] = []
+        if self._mcp_tool_name in _CITATION_TOOLS and "error" not in payload:
+            docs = _extract_citation_docs(result_text)
+        rich: dict[str, Any] = {"tool_name": self._name, **payload}
+        if docs:
+            rich["search_docs"] = [d.model_dump() for d in docs]
+            rich["citation_mapping"] = {
+                str(i + 1): d.document_id for i, d in enumerate(docs)
+            }
         packets.append(
             Packet(
                 turn_index=turn_index,
@@ -157,7 +210,7 @@ class MCPTool(Tool[None]):
             )
         )
         response = ToolResponse(
-            rich_response={"tool_name": self._name, **payload},
+            rich_response=rich,
             llm_facing_response=llm_str,
         )
         return response, packets
