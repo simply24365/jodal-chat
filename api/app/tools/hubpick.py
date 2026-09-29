@@ -300,6 +300,10 @@ def _decorate_with_catalog(reports: list[dict]) -> list[dict]:
         r["dims"] = rec.get("dims") or []
         r["is_visual"] = bool(rec.get("is_visual"))
         r["views"] = rec.get("조회수") or 0
+        official_id = rec.get("official_id")
+        # UI citation 승격은 links.move 를 단서로 삼는다(route.ts extractMcpLinks).
+        # search_reports 후보와 계약을 맞춰 value_lookup 경로도 답변 인용·링크 표시가 작동하게 한다.
+        r["links"] = {"move": cat_mod.report_link(official_id) if official_id else None}
         syn = (d2q.get(r["report_id"]) or {}).get("synopsis")
         if syn:
             r["synopsis"] = syn[:100]
