@@ -115,11 +115,13 @@ def search_reports(
             degraded = "vector_index_missing: pipeline/build_local_index.py 로 생성"
 
     cat_all = cat.catalog()
+    d2q_all = cat.doc2query()
     ranked = sorted(scores.items(), key=lambda x: -x[1])[:top_k]
     candidates = []
     for rid, s in ranked:
         rec = cat_all.get(rid, {})
         official_id = rec.get("official_id")
+        d2q = d2q_all.get(rid) or {}
         candidates.append(
             {
                 "report_id": rid,
@@ -127,6 +129,8 @@ def search_reports(
                 "score": round(float(s), 6),
                 "official_id": official_id or None,
                 "summary": (rec.get("desc_summary") or "")[:180],
+                # LLM 생성 한줄요약 — desc_summary 보다 질의 관점이어서 후보 판단에 유리
+                "synopsis": (d2q.get("synopsis") or "")[:140] or None,
                 "dims": rec.get("dims") or [],
                 "metrics": (rec.get("metrics") or [])[:6],
                 "family": rec.get("family"),

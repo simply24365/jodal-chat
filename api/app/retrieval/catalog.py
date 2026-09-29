@@ -21,6 +21,7 @@ API_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = API_ROOT / "data"
 CATALOG_PATH = DATA_DIR / "catalog" / "report_catalog_w2d.json"
 CONCEPTS_PATH = DATA_DIR / "catalog" / "concepts.json"
+DOC2QUERY_PATH = DATA_DIR / "catalog" / "doc2query.json"
 
 DATA_BASE = "https://data.g2b.go.kr/link/AISC001_01/"
 # mcp/ 의 PROXY(https://g2bgo.simply24365.workers.dev/). 데이터가 아니라
@@ -36,6 +37,7 @@ _COND_UI_TAIL_RE = re.compile(r"\(([a-z][a-z0-9_]*(?:=.*)?)\)\s*$")
 
 _catalog: dict[str, dict[str, Any]] | None = None
 _concepts: list[dict[str, Any]] | None = None
+_doc2query: dict[str, dict[str, Any]] | None = None
 
 
 def catalog() -> dict[str, dict[str, Any]]:
@@ -45,6 +47,21 @@ def catalog() -> dict[str, dict[str, Any]]:
         rows = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
         _catalog = {str(r["report_id"]): r for r in rows}
     return _catalog
+
+
+def doc2query() -> dict[str, dict[str, Any]]:
+    """report_id → {queries, aliases, synopsis}. pipeline/build_doc2query.py 산출물.
+
+    LLM 생성 데이터 — 검색 후보에 '이 보고서가 어떤 질문에 답하는가'를 직접
+    노출해 에이전트의 후보 판단 근거를 늘린다 (프롬프트가 아니라 데이터로).
+    """
+    global _doc2query
+    if _doc2query is None:
+        try:
+            _doc2query = json.loads(DOC2QUERY_PATH.read_text(encoding="utf-8"))
+        except FileNotFoundError:
+            _doc2query = {}
+    return _doc2query
 
 
 def concepts() -> list[dict[str, Any]]:

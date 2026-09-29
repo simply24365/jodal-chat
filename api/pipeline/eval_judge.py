@@ -349,15 +349,24 @@ def _judge_once(rec: dict, verbose: bool = False, pre: dict | None = None) -> di
     return None
 
 
-def _judge_record(rec: dict, pre: dict | None = None) -> dict:
+def _judge_record(rec: dict, pre: dict | None = None, votes_target: int = 1) -> dict:
+    """단일 레코드 채점.
+
+    votes_target: 다수결 투표 수 (1=단일 판정, 3=self-consistency).
+    temperature 0 이라도 free-tier 모델은 런 간 편차가 크므로(측정 ±0.14),
+    중요 비교에서는 votes_target=3 로 안정화한다 — 토큰 절약 프리필터와 결합해
+    추가 비용을 흡수한다.
+    """
     pre = pre if pre is not None else _prefilter(rec)
     votes = []
     s = _judge_once(rec, pre=pre)
     if s is not None:
         votes.append(s)
-        if _is_flagged(s):
-            print(f"  [judge] flagged({rec['query_id']}) → 3회 다수결")
-            extra = [x for x in (_judge_once(rec, pre=pre) for _ in range(2)) if x is not None]
+        flagged = _is_flagged(s)
+        if votes_target > 1 or flagged:
+            print(f"  [judge] {rec['query_id']} 추가 투표 (flagged={flagged}, target={votes_target})")
+            extra = [x for x in (_judge_once(rec, pre=pre)
+                                 for _ in range(votes_target - 1)) if x is not None]
             votes.extend(extra)
     if not votes:
         return {"query_id": rec["query_id"], "scores": None, "votes": [],
@@ -397,12 +406,13 @@ def cmd_judge(a: argparse.Namespace) -> None:
                            "evidence": f"run error: {rec['error']}"})
             continue
         print(f"  [{rec['query_id']}] 채점 중…")
-        judged.append(_judge_record(rec))
+        judged.append(_judge_record(rec, votes_target=a.votes))
     summary = _summarize(recs, judged)
     result = {
         "meta": {
             "source": str(src), "judge_model": _judge_model_name(),
             "rubric": {k: ("binary" if k in BINARY else "1-5") for k in CRITERIA},
+            "votes_target": a.votes,
             "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
             "ts": datetime.now(timezone.utc).isoformat(),
         },
@@ -575,6 +585,8 @@ def main() -> None:
     j.add_argument("--input", "--in", dest="input", default="runs/head.ndjson")
     j.add_argument("--output", default=None)
     j.add_argument("--limit", type=int, default=0)
+    j.add_argument("--votes", type=int, default=1,
+                   help="레코드당 투표 수 (3=self-consistency 다수결, 편차 감소)")
 
     c = sub.add_parser("compare", help="두 run 비교 리포트")
     c.add_argument("head", help="runs/head.ndjson")
