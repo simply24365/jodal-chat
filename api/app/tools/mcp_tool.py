@@ -230,8 +230,11 @@ class MCPTool(Tool[None]):
                 ]},
                 ensure_ascii=False,
             )
+            # citable_reports 를 원문 tool_result 앞에 배치한다. 평가·디버깅에서
+            # tool_result 를 앞부분만 자르면(1200자) 인용 계약이 함께 잘려나가
+            # judge 가 정상 인용을 환각으로 오판하는 원인이 되었기 때문이다(실측).
             llm_str = (
-                llm_str[:-1] + ", " + cited[1:-1] + "}"
+                cited[:-1] + ", " + llm_str[1:-1] + "}"
                 if llm_str.endswith("}")
                 else llm_str
             )
