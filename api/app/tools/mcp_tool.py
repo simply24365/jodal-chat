@@ -160,7 +160,7 @@ class MCPTool(Tool[None]):
         self,
         turn_index: int,
         tab_index: int,
-        override_kwargs: None = None,
+        override_kwargs: dict | None = None,
         **llm_kwargs: Any,
     ) -> tuple[ToolResponse, list[Packet]]:
         packets = [
@@ -171,6 +171,9 @@ class MCPTool(Tool[None]):
                 data={"tool_name": self._name, "tool_args": llm_kwargs},
             )
         ]
+        # runner 의 전역 citation 슬롯 계약: 병렬 호출 간 번호 충돌 방지.
+        # web_search/open_url 과 동일한 starting_citation_num 을 쓴다.
+        start_num = int((override_kwargs or {}).get("starting_citation_num", 1))
         try:
             result_text = mcp_client.call_mcp_tool(
                 self._server.url,
@@ -199,7 +202,7 @@ class MCPTool(Tool[None]):
         if docs:
             rich["search_docs"] = [d.model_dump() for d in docs]
             rich["citation_mapping"] = {
-                str(i + 1): d.document_id for i, d in enumerate(docs)
+                str(start_num + i): d.document_id for i, d in enumerate(docs)
             }
             # web_search 와 동일한 UI 계약: citation_info 로 사용자 화면에 근거를 띄우고
             # LLM facing 페이로드에도 [N] 인용 대상을 명시해 답변의 보고서명이
@@ -211,7 +214,7 @@ class MCPTool(Tool[None]):
                         tab_index=tab_index,
                         type="citation_info",
                         data={
-                            "citation_number": i + 1,
+                            "citation_number": start_num + i,
                             "document_id": d.document_id,
                             "title": d.title,
                             "link": d.link,
@@ -220,7 +223,8 @@ class MCPTool(Tool[None]):
                 )
             cited = json.dumps(
                 {"citable_reports": [
-                    {"num": i + 1, "report_id": d.document_id.removeprefix("JODAL_REPORT_"),
+                    {"num": start_num + i,
+                     "report_id": d.document_id.removeprefix("JODAL_REPORT_"),
                      "name": d.title}
                     for i, d in enumerate(docs)
                 ]},

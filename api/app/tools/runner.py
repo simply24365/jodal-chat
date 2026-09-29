@@ -128,7 +128,8 @@ def run_tool_calls(
         override: Any = None
         # Citeable tools share the starting_citation_num contract:
         # each reserves a slot so parallel calls never collide.
-        if isinstance(tool, (WebSearchTool, OpenURLTool)):
+        # MCPTool 은 jodal 검색/값조회 툴도 SearchDoc 인용을 내놓으므로 같은 계약에 넣는다.
+        if isinstance(tool, (WebSearchTool, OpenURLTool, MCPTool)):
             override = {"starting_citation_num": start}
             start += CITATION_SLOT
         params.append((tool, call, override))
