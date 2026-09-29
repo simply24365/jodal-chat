@@ -201,6 +201,36 @@ class MCPTool(Tool[None]):
             rich["citation_mapping"] = {
                 str(i + 1): d.document_id for i, d in enumerate(docs)
             }
+            # web_search 와 동일한 UI 계약: citation_info 로 사용자 화면에 근거를 띄우고
+            # LLM facing 페이로드에도 [N] 인용 대상을 명시해 답변의 보고서명이
+            # 근거와 1:1 대응되게 한다.
+            for i, d in enumerate(docs):
+                packets.append(
+                    Packet(
+                        turn_index=turn_index,
+                        tab_index=tab_index,
+                        type="citation_info",
+                        data={
+                            "citation_number": i + 1,
+                            "document_id": d.document_id,
+                            "title": d.title,
+                            "link": d.link,
+                        },
+                    )
+                )
+            cited = json.dumps(
+                {"citable_reports": [
+                    {"num": i + 1, "report_id": d.document_id.removeprefix("JODAL_REPORT_"),
+                     "name": d.title}
+                    for i, d in enumerate(docs)
+                ]},
+                ensure_ascii=False,
+            )
+            llm_str = (
+                llm_str[:-1] + ", " + cited[1:-1] + "}"
+                if llm_str.endswith("}")
+                else llm_str
+            )
         packets.append(
             Packet(
                 turn_index=turn_index,
