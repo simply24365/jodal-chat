@@ -18,21 +18,20 @@ LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
 LLM_MODEL = os.environ.get("LLM_MODEL", "llama-3.3-70b-versatile")
 LLM_API_KEY = os.environ.get("LLM_API_KEY") or os.environ.get("GROQ_API_KEY")
 LLM_API_BASE = os.environ.get("LLM_API_BASE")
-# 체인 순서 override: LLM_CHAIN="xkiro,agnes,groq,gemini" (부분집합·순서 변경 가능)
-LLM_CHAIN = os.environ.get("LLM_CHAIN", "xkiro,agnes,groq,gemini")
+# 체인 순서 override: LLM_CHAIN="xkiro,agnes" (부분집합·순서 변경 가능)
+# 기본 체인은 xkiro 메인 + agnes 폴백. groq·gemini 는 폐기.
+LLM_CHAIN = os.environ.get("LLM_CHAIN", "xkiro,agnes")
 # 1순위: xkiro (OpenAI 호환, https://api.xkiro.com/v1). Cloudflare 1010에 걸리므로
 # SDK 기본 UA는 통과하지만 raw urllib은 브라우저 UA가 필요 — SDK 경유는 문제없음.
 XKIRO_API_KEY = os.environ.get("XKIRO_API_KEY")
 XKIRO_MODEL = os.environ.get("XKIRO_MODEL", "meta/muse-spark-1.3-contributor:free")
+# 폴백: agnes (OpenAI 호환, apihub)
 AGNES_API_KEY = os.environ.get("AGNES_API_KEY")
 AGNES_MODEL = os.environ.get("AGNES_MODEL", "agnes-3.0-flash")
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY") or (
-    os.environ.get("LLM_API_KEY") if os.environ.get("LLM_PROVIDER") == "groq" else None
-)
-# raw env 기준: 미설정 시 동작하는 모델로 폴백 (폐기된 llama-3.3-70b-versatile 회피)
-GROQ_MODEL = os.environ.get("GROQ_MODEL") or (
-    os.environ.get("LLM_MODEL") if os.environ.get("LLM_PROVIDER") == "groq" else None
-) or "openai/gpt-oss-120b"
+# 폐기됨: groq·gemini 는 체인에서 제외. 키가 남아 있어도 기본 체인은
+# xkiro,agnes 만 사용한다 (LLM_CHAIN 으로 되돌릴 수 있다).
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+GROQ_MODEL = os.environ.get("GROQ_MODEL") or "openai/gpt-oss-120b"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE") or 0.7)

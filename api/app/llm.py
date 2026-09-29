@@ -55,8 +55,9 @@ class _Endpoint:
 
 
 def _chain() -> list[_Endpoint]:
-    """xkiro → agnes → groq → gemini (키 있는 것만, LLM_CHAIN 순서).
-    xkiro/agnes는 OpenAI 호환 직결이라 provider 태그만 쓰고 litellm을 타지 않는다."""
+    """LLM_CHAIN 순서대로 키 있는 provider만. 기본 xkiro → agnes.
+    groq·gemini는 키가 있으면 등록 가능하나, 기본 체인에서는 제외된다
+    (config.LLM_CHAIN = "xkiro,agnes"). xkiro/agnes는 OpenAI 호환 직결."""
     eps: list[_Endpoint] = []
     if config.XKIRO_API_KEY:
         eps.append(_Endpoint("xkiro", config.XKIRO_MODEL, config.XKIRO_API_KEY, XKIRO_DIRECT_BASE))
@@ -68,8 +69,11 @@ def _chain() -> list[_Endpoint]:
         eps.append(_Endpoint("gemini", config.GEMINI_MODEL, config.GEMINI_API_KEY, None))
     order = [p.strip() for p in (config.LLM_CHAIN or "").split(",") if p.strip()]
     if order:
+        # 체인에 명시된 provider만 유지 — 기복된 잠계 provider(예: groq)가
+        # 키만 있으면 뒤에 까지 리스피하는 것을 막는다.
         rank = {name: i for i, name in enumerate(order)}
-        eps.sort(key=lambda e: rank.get(e.provider, 99))
+        eps = [e for e in sorted(eps, key=lambda e: rank.get(e.provider, 99))
+               if e.provider in rank]
     return eps
 
 
