@@ -33,6 +33,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import os
@@ -390,6 +391,17 @@ def _judge_model_name() -> str:
     return ", ".join(f"{p['name']}:{p['model']}" for p in provs[:2]) or "none"
 
 
+def _rubric_version() -> str:
+    """루브릭 프롬프트의 지문 해시 — 비교 가능한 채점 결과인지 판별하는 열쇠.
+
+    실측: 동일 루브릭이면 온도0 xkiro 는 3회 독립 채점에서 stdev=0 (완전 결정적).
+    즉 채점 총점이 달라지면 모델 비결정성이 아니라 '루브릭이 바뀐 것'이므로,
+    버전 해시를 기록해 이종 루브릭 간 compare 를 차단한다.
+    """
+    blob = JUDGE_SYSTEM + JUDGE_PROMPT
+    return hashlib.sha256(blob.encode("utf-8")).hexdigest()[:10]
+
+
 def cmd_judge(a: argparse.Namespace) -> None:
     src = BASE_DIR / a.input
     recs = _read_ndjson(src)
@@ -412,6 +424,7 @@ def cmd_judge(a: argparse.Namespace) -> None:
         "meta": {
             "source": str(src), "judge_model": _judge_model_name(),
             "rubric": {k: ("binary" if k in BINARY else "1-5") for k in CRITERIA},
+            "rubric_version": _rubric_version(),
             "votes_target": a.votes,
             "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
             "ts": datetime.now(timezone.utc).isoformat(),
@@ -484,6 +497,7 @@ def _ensure_judged(path: Path) -> dict:
         judged.append(_judge_record(rec))
     result = {
         "meta": {"source": str(path), "judge_model": _judge_model_name(),
+                 "rubric_version": _rubric_version(),
                  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
                  "ts": datetime.now(timezone.utc).isoformat()},
         "summary": _summarize(recs, judged),
@@ -502,6 +516,12 @@ def cmd_compare(a: argparse.Namespace) -> None:
     prev = _ensure_judged(prev_path)
     if head["meta"]["judge_model"] != prev["meta"]["judge_model"]:
         print("[compare] 경고: 양쪽 judge 모델이 다르다 — judge 혼입 주의")
+    hv = head["meta"].get("rubric_version")
+    pv = prev["meta"].get("rubric_version")
+    if hv != pv:
+        print(f"[compare] 차단: 루브릭 버전이 다르다 ({pv} vs {hv}) — 채점 총점 비교 무효.")
+        print("        양쪽 모두 현재 루브릭으로 재채점하라 (기존 judged.json 삭제 후 compare 재실행).")
+        return
 
     # 기준별 Δ (같은 query_id끼리)
     h_scores = {j["query_id"]: j["scores"] for j in head["records"] if j["scores"]}
