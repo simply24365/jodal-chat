@@ -2,6 +2,39 @@
 
 import json
 import os
+import re
+from pathlib import Path
+
+
+def _load_env_file(path: Path) -> None:
+    """api/.env 자체 로딩 (표준 라이브러리만). 크로스플랫폼 필수 동작.
+
+    Linux(make dev — bash sourcing)든 Windows(uvicorn 직접 실행)든 동일하게
+    키가 주입되도록 한다. 셸 passthrough가 원칙이지만, sourcing 없이 서버를
+    띄우는 경로에서 키가 조용히 빠지는 사고를 막는 안전장치.
+    우선순위: 이미 설정된 환경변수(셸) > .env. BOM·CRLF·export 접두어·따옴표 허용.
+    """
+    try:
+        text = path.read_text(encoding="utf-8-sig")
+    except FileNotFoundError:
+        return
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        m = re.match(r"(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$", line)
+        if not m:
+            continue
+        key, val = m.group(1), m.group(2).strip()
+        if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
+            val = val[1:-1]
+        else:
+            val = val.split(" #", 1)[0].strip()
+        if val:
+            os.environ.setdefault(key, val)
+
+
+_load_env_file(Path(__file__).resolve().parent.parent / ".env")
 
 
 def _int(name: str, default: int) -> int:

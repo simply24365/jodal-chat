@@ -16,10 +16,15 @@ BM25 에 유리했다. 이 스크립트는 data/eval/natural_queries.json — �
 from __future__ import annotations
 
 import json
-import resource
 import sys
 import time
 from pathlib import Path
+
+try:
+    # POSIX 전용 (ru_maxrss). Windows 에는 없다 — 메모리 측정은 선택 기능.
+    import resource  # noqa: F401
+except ImportError:
+    resource = None
 
 API = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(API))
@@ -123,7 +128,8 @@ def main() -> None:
     t0 = time.time()
     m.load()
     load_s = time.time() - t0
-    r0 = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
+    r0 = (resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
+          if resource else 0.0)
     rows = [
         json.loads(x)
         for x in (API / "data" / "catalog" / "search_docs.jsonl").read_text(encoding="utf-8").splitlines()
@@ -132,8 +138,10 @@ def main() -> None:
     t0 = time.time()
     dv = m.embed_passages([r["text"] for r in rows], batch=8)
     idx_s = time.time() - t0
-    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024 - r0
-    print(f"  로드 {load_s:.1f}s · 131건 임베딩 {idx_s:.1f}s · RSS +{rss:.0f}MB")
+    rss = (resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024 - r0
+           if resource else 0.0)
+    print(f"  로드 {load_s:.1f}s · 131건 임베딩 {idx_s:.1f}s · "
+          + (f"RSS +{rss:.0f}MB" if resource else "RSS 측정 생략 (Windows)"))
 
     for r in evaluate(m, rids, dv, True):
         print(json.dumps(r, ensure_ascii=False))
