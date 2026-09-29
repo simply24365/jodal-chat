@@ -11,6 +11,16 @@ TOverride = TypeVar("TOverride")
 
 
 class Tool(abc.ABC, Generic[TOverride]):
+    # --- 루프가 읽는 툴 정책 메타데이터 (기본값: 정책 없음) ---
+    # 이 툴이 이번 턴에 누적 몇 번까지 호출될 수 있는지. None 은 무제한.
+    # 초과하면 루프가 이 툴의 exhausted_reminder 를 히스토리에 추가한다.
+    max_calls_per_turn: int | None = None
+    # 호출 한도 초과 시 모델에게 보여줄 안내문. max_calls_per_turn 이 있을 때만 의미가 있다.
+    exhausted_reminder: str | None = None
+    # 이 툴이 성공한 직후 모델을 다음 단계로 유도하는 문장(예: web_search → open_url).
+    # None 이면 후속 유도 없음. Onyx select_reminder_text 의 일반화.
+    followup_reminder: str | None = None
+
     @property
     @abc.abstractmethod
     def id(self) -> int:

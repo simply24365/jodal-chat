@@ -11,6 +11,7 @@ from ..models import Packet, SearchDoc, ToolResponse
 from ..utils import setup_logger
 from .interface import Tool, ToolCallException
 from .providers import DEFAULT_MAX_RESULTS, JinaClient, TavilyClient, WebSearchResult
+from ..prompts import OPEN_URL_REMINDER
 
 logger = setup_logger("custom_chat.web_search_tool")
 
@@ -32,6 +33,9 @@ class WebSearchTool(Tool[dict]):
     NAME = "web_search"
     DESCRIPTION = "Search the web for information."
     DISPLAY_NAME = "Web Search"
+    # 검색 직후에는 원문을 읽어야 근거가 생긴다 (Onyx select_reminder_text 의
+    # 일반화: 루프는 툴 이름을 모르고 followup_reminder 속성만 읽는다).
+    followup_reminder = OPEN_URL_REMINDER
 
     def __init__(self, tool_id: int = 1, provider: Any | None = None) -> None:
         self._id = tool_id

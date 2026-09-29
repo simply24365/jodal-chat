@@ -136,7 +136,7 @@ def ranks(q, pool=50, embed_query=True):
 def rrf_scores(bm_rank, vec_rank, pool=50, weight=None):
     """가중 RRF: score=(1-w)/(K+rb) + w/(K+rv). 미포함 rank 는 pool+1."""
     w = _vector_weight(weight)
-    k = _meta.get("rrf_k", 60)
+    k = _RRF_K
     out = {}
     for rid in set(bm_rank) | set(vec_rank):
         rb = bm_rank.get(rid, pool + 1)
@@ -147,8 +147,7 @@ def rrf_scores(bm_rank, vec_rank, pool=50, weight=None):
 
 def bm25_only_scores(bm_rank, pool=50):
     """Vector 경로 강등용: w=0 RRF (=순수 BM25 RRF)."""
-    k = _meta.get("rrf_k", 60)
-    return {rid: 1 / (k + r) for rid, r in bm_rank.items()}, 0.0, k
+    return {rid: 1 / (_RRF_K + r) for rid, r in bm_rank.items()}, 0.0, _RRF_K
 
 
 def _vector_weight(weight=None):

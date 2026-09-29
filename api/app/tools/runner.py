@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import os
 from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError as FuturesTimeoutError
 from typing import Any
 
 from ..models import Packet, ToolCallKickoff, ToolResponse
@@ -15,7 +17,12 @@ from .web_search import QUERIES_FIELD, WebSearchTool
 
 logger = setup_logger("custom_chat.tool_runner")
 
-TOOL_EXECUTION_TIMEOUT_SECONDS = 600
+# 개별 툴 호출의 상한. 개별 툴 내부 타임아웃(MCP 60s, requests 30s)보다 큰
+# 최후 방어선이다 — 툴 내부가 타임아웃 없는 연산에 갇혀 루프가 영원히 안 끝나는
+# 것을 막는다. 실패한 호출은 표준 ToolCallException 계약으로 모델에게 돌아간다.
+TOOL_EXECUTION_TIMEOUT_SECONDS = int(
+    os.environ.get("TOOL_EXECUTION_TIMEOUT_SECONDS", "600")
+)
 # Citation slots reserved per search tool so parallel calls never collide.
 CITATION_SLOT = 100
 
@@ -90,6 +97,30 @@ def run_tool_calls(
         )
     params: list[tuple[Tool, ToolCallKickoff, Any]] = []
     for call in filtered:
+        if call.args_unparsed:
+            # 표준 에이전트 패턴(OpenAI Agents SDK 관용): 인자를 파싱할 수 없으면
+            # 툴을 실행하지 않고 즉시 모델에게 재생성을 요구한다. 조용한 빈 인자
+            # 실행은 스키마 오류(-32602)를 유발하고 원인이 모델에게 숨겨진다.
+            logger.warning(
+                "Tool %s had unparsable arguments; asking model to regenerate", call.tool_name
+            )
+            missed_responses.append(
+                ToolResponse(
+                    rich_response=None,
+                    llm_facing_response=(
+                        f"Tool call to {call.tool_name} had invalid arguments — not valid JSON. "
+                        f"Raw: {call.args_unparsed[:200]}. Regenerate the arguments as a "
+                        "valid JSON object matching the tool schema and call again."
+                    ),
+                    tool_call=call,
+                )
+            )
+            packets.append(
+                Packet(
+                    turn_index=call.turn_index, tab_index=call.tab_index, type="section_end"
+                )
+            )
+            continue
         tool = by_name[call.tool_name]
         start_packet = tool.emit_start(call.turn_index, call.tab_index)
         if start_packet is not None:
@@ -139,7 +170,35 @@ def run_tool_calls(
 
     workers = min(len(params), max_concurrent_tools or len(params))
     with ThreadPoolExecutor(max_workers=max(workers, 1)) as pool:
-        results = list(pool.map(lambda p: _run_one(*p), params))
+        futures = [pool.submit(_run_one, *p) for p in params]
+        results: list[tuple[ToolResponse | None, list[Packet]]] = []
+        for call, fut in zip((p[1] for p in params), futures):
+            try:
+                results.append(fut.result(timeout=TOOL_EXECUTION_TIMEOUT_SECONDS))
+            except FuturesTimeoutError:
+                logger.error(
+                    "Tool %s exceeded %ss timeout", call.tool_name,
+                    TOOL_EXECUTION_TIMEOUT_SECONDS,
+                )
+                results.append(
+                    (
+                        ToolResponse(
+                            rich_response=None,
+                            llm_facing_response=(
+                                f"Tool failed with error: {call.tool_name} "
+                                f"timed out after {TOOL_EXECUTION_TIMEOUT_SECONDS}s"
+                            ),
+                            tool_call=call,
+                        ),
+                        [
+                            Packet(
+                                turn_index=call.turn_index,
+                                tab_index=call.tab_index,
+                                type="section_end",
+                            )
+                        ],
+                    )
+                )
 
     responses: list[ToolResponse] = list(missed_responses)
     for response, tool_packets in results:

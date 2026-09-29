@@ -110,7 +110,7 @@ def solve(parsed, rrf_scores=None, pool=50, top_k=10, consensus_rid=None, qtext=
         _qc = _re2.sub(r"(보여줘|알려줘|찾아줘|궁금해|궁금합니다|주세요)$", "", _qnorm(qtext))
         _nm = _qnorm(r.get("보고서명") or "")
         if (_nm and _nm in _qnorm(qtext)) or (len(_qc) >= 6 and _qc in _nm):
-            score += 2.0
+            score += W["NAME_MENTION_BONUS"]
             log.append({"stage": 1, "reason": "이름 직접언급 +2"})
 
         # S2 (명시 dims만 점수화. 주제어 오탐은 점수 미반영 — S0와 동일 원칙)
@@ -135,7 +135,7 @@ def solve(parsed, rrf_scores=None, pool=50, top_k=10, consensus_rid=None, qtext=
             c = _concepts().get(cid) or {}
             terms = [c.get("label")] + list(c.get("aliases") or [])
             if any(t and any(t in n or n in t for n in colnames) for t in terms if t):
-                score += 0.3
+                score += W["CONCEPT_HIT_BONUS"]
                 log.append({"stage": 2, "reason": f"개념 적중 {cid}"})
 
         # S3
@@ -154,7 +154,7 @@ def solve(parsed, rrf_scores=None, pool=50, top_k=10, consensus_rid=None, qtext=
         #  명시 슬롯 있으면 텍스트가 결정, 없으면 인기도 prior 허용)
         s4 = 0.0
         if parsed.get("visual") and r.get("is_visual"):
-            s4 += 0.2
+            s4 += W["S4_VISUAL_BONUS"]
         fam = parsed.get("family") or {}
         has_slot = (fam.get("value") or (parsed.get("dims_explicit") or [])
                     or (parsed.get("metric") or []) or parsed.get("channel")
@@ -167,7 +167,7 @@ def solve(parsed, rrf_scores=None, pool=50, top_k=10, consensus_rid=None, qtext=
         # 컬럼정보 없는 보고서는 답변 순위에서 감점 (참고용으로는 허용).
         # 단 BM25·Vector 양쪽 1위 일치면 면제 (텍스트 확정 신호).
         if r.get("columns_missing") and rid != consensus_rid:
-            s4 -= 0.3
+            s4 -= W["S4_NO_COLUMNS_PENALTY"]
             log.append({"stage": 4, "reason": "컬럼정보 없음 감점"})
         s4 = max(-W["S4_CAP"], min(W["S4_CAP"], s4))
         score += s4

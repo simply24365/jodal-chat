@@ -187,7 +187,10 @@ def chat(req: ChatRequest) -> StreamingResponse | JSONResponse:
             logger.exception("Chat stream failed")
             yield json.dumps({"type": "error", "error": str(e)}) + "\n"
 
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
+    # 바디는 줄 단위 JSON(NDJSON)이다. SSE 프레이밍(data: …\n\n)이 아니므로
+    # 표준상 정직한 media_type 을 쓴다 — text/event-stream 으로 선언하면
+    # EventSource/프록시 파서가 오해한다. UI 는 줄 단위 파싱이라 영향 없다.
+    return StreamingResponse(event_stream(), media_type="application/x-ndjson")
 
 
 @app.get("/sessions/{session_id}")

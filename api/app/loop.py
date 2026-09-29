@@ -37,9 +37,7 @@ from .models import (
     ToolCallSimple,
     ToolResponse,
 )
-from .prompts import OPEN_URL_REMINDER
 from .tools.interface import Tool
-from .tools.open_url import OpenURLTool
 from .tools.runner import run_tool_calls
 from .utils import setup_logger
 logger = setup_logger("custom_chat.loop")
@@ -70,8 +68,8 @@ DATA_LINK_MARKERS = ("data.g2b.go.kr", "goods.g2b.go.kr")
 PROMISE_MAX_NUDGES = 2
 TOOL_REQUIRED_REMINDER = (
     "방금 답변은 도구 호출 '예고'이고 실제 답이 아니다. "
-    "이제 반드시 mcp_jodal_search_reports를 실제로 호출해라. "
-    "호출 결과가 없으면 보고서명+링크를 넣어 답하고, "
+    "이제 가용한 검색·조회 도구를 실제로 호출해라. "
+    "호출 결과가 없으면 근거(링크·수치·보고서명)를 넣어 답하고, "
     "어떤 예고 문장도 출력하지 마라."
 )
 
@@ -445,11 +443,10 @@ def run_loop(
         ),
         "",
     )
-    # jodal 툴이 없는 구성에서는 "조회해볼게요"를 재촉할 대상이 없다.
-    has_jodal_tools = any(
-        getattr(t, "display_name", "") and "jodal" in getattr(t, "name", "")
-        for t in tools
-    )
+    # "예고만 하고 끝내는" 재촉이 의미 있으려면 재촉 대상 툴이 존재해야 한다.
+    # 툴 이름 매칭 대신 max_calls_per_turn 정책이 있는 툴(=도메인 정책을 가진
+    # 툴)의 존재로 판정한다 — 도메인 이름이 코어에 스는 일이 없다.
+    has_policy_tools = any(t.max_calls_per_turn is not None for t in tools)
     cycle = 0
     for cycle in range(max_cycles):
         is_last = cycle == max_cycles - 1
@@ -543,32 +540,34 @@ def run_loop(
             result.tool_urls |= collect_tool_urls(payloads)
             result.tool_report_ids |= collect_tool_report_ids(payloads)
             _append_tool_turn(history, responses, result)
-            # resolve_items 3회차 차단: 후보 탐색은 2회(원문+핵심명사)면 충분.
-            # 누적 2회 이후의 resolve는 소모성 반복이므로 스킵 통보.
-            resolve_n = sum(1 for r in result.tool_calls
-                            if r.tool_name == "mcp_jodal_resolve_items")
-            if resolve_n >= 2:
-                history.append(
-                    ChatMessageSimple(
-                        message="resolve_items는 2회로 충분하다. 더 호출하지 말고 가진 후보로 좁히거나 되물어라.",
-                        message_type=MessageType.USER,
-                    )
+            # 툴 정책은 Tool 메타데이터(max_calls_per_turn/exhausted_reminder/
+            # followup_reminder)가 소유하고, 루프는 속성만 읽는다. 코어에
+            # 특정 툴 이름을 박지 않는다 (Onyx select_reminder_text 일반화).
+            for t in tools:
+                if t.max_calls_per_turn is None:
+                    continue
+                used = sum(
+                    1 for r in result.tool_calls if r.tool_name == t.name
                 )
-            # Onyx select_reminder_text: after a web_search hit, nudge the
-            # model toward open_url — gated on the tool actually existing.
-            just_ran_web_search = any(
-                r.tool_call is not None and r.tool_call.tool_name == "web_search"
+                if used >= t.max_calls_per_turn and t.exhausted_reminder:
+                    history.append(
+                        ChatMessageSimple(
+                            message=t.exhausted_reminder,
+                            message_type=MessageType.USER,
+                        )
+                    )
+                    break  # 한 턴에 한 툴의 만료 통보면 충분하다
+            followup_texts = [
+                t.followup_reminder
                 for r in responses
-            )
-            has_open_url = any(isinstance(t, OpenURLTool) for t in tools)
-            if (
-                just_ran_web_search
-                and has_open_url
-                and cycle < max_cycles - 1
-            ):
+                if r.tool_call is not None
+                for t in tools
+                if t.name == r.tool_call.tool_name and t.followup_reminder
+            ]
+            if followup_texts and cycle < max_cycles - 1:
                 history.append(
                     ChatMessageSimple(
-                        message=OPEN_URL_REMINDER,
+                        message=followup_texts[0],
                         message_type=MessageType.USER,
                     )
                 )
@@ -589,12 +588,30 @@ def run_loop(
             # 재촉한다. 툴을 끝까지 안 부르면 (nudges 소진 후) 아래에서 강제 종료.
             # 툴을 이미 썼더라도 문장이 전부 예고면(_is_all_narration) 재촉한다 —
             # 그러면 사용자에게 실제 내용이 전혀 전달되지 않는다.
-            nudgable = has_jodal_tools and promise_nudges < PROMISE_MAX_NUDGES
+            nudgable = has_policy_tools and promise_nudges < PROMISE_MAX_NUDGES
             no_tool_yet = not result.tool_calls
-            if not nudgable or (
-                not (_is_promise_only(step_result.answer) and no_tool_yet)
-                and not _is_all_narration(step_result.answer)
-            ):
+            # 재촉 판정은 구조적 신호가 1순위다: "툴을 아직 한 번도 안 불렀는데
+            # 답이 짧거나 없다". 어미 정규식(PROMISE_RE)은 보조 신호로만 쓴다 —
+            # 열거형 어미 목록은 새 표현을 놓치는 구조라, 놓친 경우에도 짧은
+            # 빈 답은 구조 조건이 잡는다. 반대로 툴을 이미 썼고 근거(링크·문서)
+            # 가 있으면 정규식이 matching 해도 답으로 인정한다.
+            answer_len = len(step_result.answer or "")
+            has_evidence = bool(
+                result.tool_urls or result.citation_docs
+            )
+            structural_miss = (
+                no_tool_yet and answer_len < 200
+            ) or (
+                no_tool_yet and not step_result.answer
+            )
+            regex_miss = (
+                no_tool_yet and not has_evidence
+                and (
+                    _is_promise_only(step_result.answer)
+                    or _is_all_narration(step_result.answer)
+                )
+            )
+            if not nudgable or not (structural_miss or regex_miss):
                 # Answer with no tool calls: done. Without this break the loop
                 # re-sends the same history and streams a duplicate answer
                 # every cycle (MAX_LLM_CYCLES repeats in one bubble).

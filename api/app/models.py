@@ -34,6 +34,10 @@ class ToolCallKickoff(BaseModel):
     tool_args: dict[str, Any]
     turn_index: int = 0
     tab_index: int = 0
+    # 인자 JSON 파싱 실패 시 원문. None 이면 정상. runner 는 이 값이 있으면
+    # 툴을 실행하지 않고 모델에게 "인자를 유효한 JSON 으로 재생성하라"는
+    # tool-response 를 돌려준다(조용한 빈 인자 실행 방지).
+    args_unparsed: str | None = None
 
 
 class ToolResponse(BaseModel):
@@ -148,9 +152,13 @@ class ChatTurnMessage(BaseModel):
 
 class MCPServerConfig(BaseModel):
     name: str
-    url: str
+    url: str = ""
     transport: str = "STREAMABLE_HTTP"
     headers: dict[str, str] = Field(default_factory=dict)
+    # True 면 HTTP 루프백 대신 같은 프로세스의 MCP 서버 객체를 SDK 표준
+    # 인메모리 트랜스포트로 직결한다(mcp.shared.memory). url 은 불필요하다.
+    # 외부 MCP 서버는 url 을 채우고 local 을 비우면 기존 HTTP 경로를 탄다.
+    local: bool = False
 
 
 class ChatRequest(BaseModel):

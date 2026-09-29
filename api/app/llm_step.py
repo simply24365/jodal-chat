@@ -95,13 +95,25 @@ def _extract_kickoffs(
     tab = 0
     for data in in_progress.values():
         if data.get("id") and data.get("name"):
+            raw = data.get("arguments")
+            parsed = _parse_tool_args(raw)
+            # 표준 에이전트 패턴: 인자 파싱 실패(문자열이 있었는데 JSON 이
+            # 아니었음) 시 조용한 {} 로 툴을 실행하지 않는다 — 빈 인자 실행은
+            # 엉뚱한 호출로 이어지고 모델이 원인을 모른다. 대신 원문을 보존해
+            # runner 가 "인자 재생성" tool-response 를 돌려줄 수 있게 한다.
+            invalid = (
+                isinstance(raw, str)
+                and bool(raw.strip())
+                and not parsed
+            )
             calls.append(
                 ToolCallKickoff(
                     tool_call_id=data["id"],
                     tool_name=data["name"],
-                    tool_args=_parse_tool_args(data.get("arguments")),
+                    tool_args=parsed,
                     turn_index=turn_index,
                     tab_index=tab,
+                    args_unparsed=raw.strip() if invalid else None,
                 )
             )
             tab += 1

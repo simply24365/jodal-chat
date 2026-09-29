@@ -15,6 +15,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+from collections import OrderedDict
 from pathlib import Path
 
 API_ROOT = Path(__file__).resolve().parents[2]
@@ -24,6 +25,14 @@ ENDPOINT = "https://api.jina.ai/v1/embeddings"
 FALLBACK_MODEL = "jina-embeddings-v3"
 FALLBACK_DIMS = 1024
 FALLBACK_TASK_QUERY = "retrieval.query"
+# HTTP timeout (s). Env-driven: retry total time = timeout x attempts.
+HTTP_TIMEOUT_SECONDS = int(os.environ.get("JINA_HTTP_TIMEOUT_SECONDS", "30"))
+# Query-embedding LRU cache: repeated identical queries (common in an
+# agent loop) must not re-spend Jina credits. Doc embeddings are built
+# once offline, so the cache only applies to query-task calls.
+_QUERY_CACHE_SIZE = 512
+_QUERY_CACHE_TTL_SECONDS = 600.0
+_query_cache: OrderedDict[tuple[str, str], tuple[float, list[list[float]]]] = OrderedDict()
 
 _meta: dict | None = None
 
@@ -88,6 +97,27 @@ def _trip_breaker() -> None:
 
 
 def embed(texts: list[str], task: str | None = None) -> list[list[float]]:
+    """Jina embeddings (cached for query-task calls). 실패 시 EmbeddingError."""
+    effective_task = task or task_query()
+    if effective_task == task_query():
+        now = time.monotonic()
+        ck = (effective_task, json.dumps(texts, ensure_ascii=False))
+        hit = _query_cache.get(ck)
+        if hit is not None:
+            ts, vecs = hit
+            if now - ts < _QUERY_CACHE_TTL_SECONDS:
+                _query_cache.move_to_end(ck)
+                return vecs
+            _query_cache.pop(ck, None)
+        vecs = _embed_uncached(texts, task)
+        _query_cache[ck] = (time.monotonic(), vecs)
+        while len(_query_cache) > _QUERY_CACHE_SIZE:
+            _query_cache.popitem(last=False)
+        return vecs
+    return _embed_uncached(texts, task)
+
+
+def _embed_uncached(texts: list[str], task: str | None = None) -> list[list[float]]:
     """Jina embeddings 호출. 실패 시 EmbeddingError.
 
     주의: 원본 jina_embed() 는 sys.exit() 로 프로세스를 죽였다. 앱 안에서 쓰면
@@ -121,7 +151,7 @@ def embed(texts: list[str], task: str | None = None) -> list[list[float]]:
                     "User-Agent": "Mozilla/5.0",
                 },
             )
-            with urllib.request.urlopen(req, timeout=30) as r:  # noqa: S310
+            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as r:  # noqa: S310
                 d = json.loads(r.read().decode())
             return [e["embedding"] for e in d["data"]]
         except urllib.error.HTTPError as e:

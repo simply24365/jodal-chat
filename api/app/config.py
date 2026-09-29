@@ -23,7 +23,7 @@ LLM_CHAIN = os.environ.get("LLM_CHAIN", "xkiro,agnes,groq,gemini")
 # 1순위: xkiro (OpenAI 호환, https://api.xkiro.com/v1). Cloudflare 1010에 걸리므로
 # SDK 기본 UA는 통과하지만 raw urllib은 브라우저 UA가 필요 — SDK 경유는 문제없음.
 XKIRO_API_KEY = os.environ.get("XKIRO_API_KEY")
-XKIRO_MODEL = os.environ.get("XKIRO_MODEL", "qwen/qwen3.8-max:free")
+XKIRO_MODEL = os.environ.get("XKIRO_MODEL", "meta/muse-spark-1.3-contributor:free")
 AGNES_API_KEY = os.environ.get("AGNES_API_KEY")
 AGNES_MODEL = os.environ.get("AGNES_MODEL", "agnes-3.0-flash")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY") or (
@@ -36,9 +36,6 @@ GROQ_MODEL = os.environ.get("GROQ_MODEL") or (
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE") or 0.7)
-MAX_INPUT_TOKENS = _int("MAX_INPUT_TOKENS", 128_000)
-# Fraction of the context window reserved as safety margin (mirrors Onyx).
-INPUT_SAFETY_MARGIN = float(os.environ.get("INPUT_SAFETY_MARGIN") or 0.1)
 
 # Loop
 MAX_LLM_CYCLES = _int("MAX_LLM_CYCLES", 6)
@@ -58,22 +55,18 @@ JINA_SEARCH_URL = os.environ.get("JINA_SEARCH_URL", "https://s.jina.ai/")
 TAVILY_API_KEY = os.environ.get("TAVILY_API_KEY")
 
 # MCP servers: JSON list of {"name": ..., "url": ..., "transport":
-# "STREAMABLE_HTTP"|"SSE", "headers": {...}}. Empty = no MCP tools.
+# "STREAMABLE_HTTP"|"SSE", "headers": {...}}. Empty = the in-process jodal
+# server via the SDK in-memory transport. A server with "local": true is
+# served by this process (mcp_server.build_server) without HTTP.
 def _mcp_servers() -> list[dict]:
     raw = os.environ.get("MCP_SERVERS", "").strip()
     if not raw:
-        # 기본값: 이 앱이 직접 서빙하는 조달데이터허브 MCP 서버(/mcp).
-        # mcp/ Cloudflare Worker(jodal.simply24365.workers.dev)를 통합하면서
-        # 자기 자신을 클라이언트로 부른다 — 계층 분리를 유지하고 MCP 서버를
-        # curl/다른 클라이언트로 독립 검증할 수 있게 하려는 선택.
-        # 원격 Worker 를 쓰려면 MCP_SERVERS 로 url 을 덮어쓴다.
-        return [
-            {
-                "name": "jodal",
-                "url": f"http://127.0.0.1:{os.environ.get('PORT', '8078')}/mcp/",
-                "transport": "STREAMABLE_HTTP",
-            }
-        ]
+        # 기본값: 이 앱이 직접 서빙하는 조달데이터허브 MCP 서버.
+        # HTTP 루프백(127.0.0.1:$PORT/mcp/) 대신 SDK 표준 인메모리 트랜스포트로
+        # 같은 프로세스의 서버 객체를 직결한다 — 포트 불일치·lifespan 데드락·
+        # 스레드/이벤트루프/TCP 비용이 모두 사라진다. /mcp 마운트는 curl 등
+        # 외부 클라이언트의 독립 검증용으로 그대로 유지된다.
+        return [{"name": "jodal", "local": True}]
     try:
         parsed = json.loads(raw)
     except json.JSONDecodeError as e:
@@ -100,6 +93,10 @@ OPEN_URL_TIMEOUT_SECONDS = _int("OPEN_URL_TIMEOUT_SECONDS", 30)
 OPEN_URL_MAX_URLS = _int("OPEN_URL_MAX_URLS", 5)
 OPEN_URL_MAX_CHARS_PER_PAGE = _int("OPEN_URL_MAX_CHARS_PER_PAGE", 15000)
 OPEN_URL_MAX_CHARS_TOTAL = _int("OPEN_URL_MAX_CHARS_TOTAL", 150000)
+
+# MCP 툴별 호출 정책 (tool_name -> max_calls_per_turn). 툴의 도메인 정책은
+# 루프 코어가 아니라 설정 계층이 소유한다. 없는 툴은 무제한.
+MCP_TOOL_MAX_CALLS = {"resolve_items": 2}
 
 # In-memory session history cap (session_id -> messages). v0 only.
 MAX_SESSIONS = _int("MAX_SESSIONS", 200)
