@@ -166,7 +166,7 @@ export async function POST(request: Request) {
       const toolBlocks = new Map<string, ToolActivityData & { id: string }>();
       // MCP 후보 캐시: search_reports 10건×N회 호출분을 즉시 승격하면 버튼이 쏟아진다.
       // 캐시에만 적재하고, 스트림 종료 후 최종 답에 지명된 1~3건만 data-citation으로 승격.
-      const mcpHits = new Map<string, { report_id: string; name: string; move: string; score: number }>();
+      const mcpHits = new Map<string, { report_id: string; name: string; move: string; score: number; citation_num?: number }>();
       const flushTool = (key: string) => {
         const b = toolBlocks.get(key);
         if (!b) return;
@@ -325,15 +325,24 @@ export async function POST(request: Request) {
               break;
             }
             case "citation_info": {
+              // jodal 툴이 40건 목록을 한 번에 내보낼 수 있다(value_lookup 스캔).
+              // 실시간 승격은 스트림을 범람시키므로 캐시에만 적재하고,
+              // 스트림 종료 후 최종 답변에 지명된 것만 아래에서 승격한다.
               const strOrNull = (v: unknown): string | null =>
                 typeof v === "string" ? v : null;
-              const citation: CitationData = {
-                document_id: strOrNull(d.document_id),
-                link: strOrNull(d.link),
-                number: Number(d.citation_number ?? 0),
-                title: strOrNull(d.title),
-              };
-              dataStream.write({ data: citation, type: "data-citation" });
+              const docId = strOrNull(d.document_id);
+              if (docId) {
+                const rid = docId.replace(/^JODAL_REPORT_/, "");
+                if (rid && !mcpHits.has(rid)) {
+                  mcpHits.set(rid, {
+                    report_id: rid,
+                    name: strOrNull(d.title) ?? rid,
+                    move: strOrNull(d.link) ?? `https://data.g2b.go.kr/link/AISC001_01/?g2bOpen=${rid}`,
+                    score: 0,
+                    citation_num: Number(d.citation_number ?? 0) || undefined,
+                  });
+                }
+              }
               break;
             }
             case "section_end":
@@ -363,11 +372,23 @@ export async function POST(request: Request) {
         const byMove = new Map([...mcpHits.values()].map((h) => [h.move, h]));
         const linked = [...linkedMoves].map((u) => byMove.get(u)).filter((h) => h !== undefined);
         const ids = [...new Set((streamed.match(/\b\d{5}\b/g) ?? []).filter((id) => mcpHits.has(id)))].slice(0, 3);
+        // 3순위: [N] 인용 마커 — jodal 툴이 citable_reports 로 건네준 번호.
+        // 에이전트가 근거와 1:1 대응되는 이름을 쓸 때 이 마커를 남긴다(실측 n15).
+        const byCiteNum = new Map<string, string>();
+        for (const hit of mcpHits.values()) {
+          const m2 = streamed.match(new RegExp(`\\[${hit.citation_num}\\]`));
+          if (m2 && !byCiteNum.has(String(hit.citation_num))) {
+            byCiteNum.set(String(hit.citation_num), hit.report_id);
+          }
+        }
+        const citedNums = [...byCiteNum.values()];
         const picks = linked.length
           ? linked.slice(0, 3).map((h) => h.report_id)
           : ids.length
             ? ids
-            : [...mcpHits.values()].sort((a, b) => b.score - a.score).slice(0, 2).map((h) => h.report_id);
+            : citedNums.length
+              ? citedNums.slice(0, 3)
+              : [...mcpHits.values()].sort((a, b) => b.score - a.score).slice(0, 2).map((h) => h.report_id);
         for (const rid of picks) {
           const hit = mcpHits.get(rid);
           if (!hit) continue;
