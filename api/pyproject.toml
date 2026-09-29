@@ -16,6 +16,7 @@ dependencies = [
     "bm25s==0.3.11",   # meta.json 이 기록한 빌드 버전 — 인덱스 로드 호환성 고정
     "kiwipiepy==0.23.2",  # 동일 (meta.json 기록 버전)
     "numpy>=2.0",
+    "onnxruntime>=1.30.0",
 ]
 
 [tool.uv]
