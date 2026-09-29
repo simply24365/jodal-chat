@@ -101,10 +101,17 @@ def _extract_kickoffs(
             # 아니었음) 시 조용한 {} 로 툴을 실행하지 않는다 — 빈 인자 실행은
             # 엉뚱한 호출로 이어지고 모델이 원인을 모른다. 대신 원문을 보존해
             # runner 가 "인자 재생성" tool-response 를 돌려줄 수 있게 한다.
+            #
+            # 주의: parsed 가 빈 dict 인 경우는 두 가지다 — (a) 무인자 툴의
+            # 정상 호출(catalog_health 등, raw=="{}"), (b) 진짜 파싱 실패.
+            # falsy 체크(not parsed)로는 (a)를 (b)로 오판해 무인자 툴이
+            # 3회 연속 "인자 재생성" 루프에 빠진다(실측: n03). JSON 으로
+            # 파싱된 경우는 정상으로 본다.
             invalid = (
                 isinstance(raw, str)
                 and bool(raw.strip())
-                and not parsed
+                and parsed == {}
+                and raw.strip() not in ("{}", "null", "undefined")
             )
             calls.append(
                 ToolCallKickoff(
