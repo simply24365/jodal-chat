@@ -465,4 +465,14 @@ def family_map(family: str) -> dict:
 
 
 def catalog_health() -> dict:
-    return load_hub()["health"]
+    # w2c.no_columns(컬럼 매핑 실패 수)와 is_visual(시각화 보고서 수)은 전혀 다른 개념인데
+    # 숫자(113/18)만 보면 모델이 혼동한다(실측: n03 에서 113 을 시각화 수로 보고).
+    # 용도를 데이터에 명시해 답변 오용을 막는다 — 시각화 집계는 search_reports 의
+    # catalog_facets.visualizable 이 유일한 공식 출처다.
+    out = load_hub()["health"]
+    out["_usage"] = (
+        "이 툴은 내부 진단용이다. 사용자 답변에 쓰지 말 것. "
+        "보고서 개수·시각화 개수·분류별 집계가 필요하면 search_reports 의 "
+        "catalog_facets 를 답변 근거로 사용할 것."
+    )
+    return out

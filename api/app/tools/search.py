@@ -24,6 +24,7 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -41,6 +42,8 @@ MAX_TOP_K = 30
 SEARCH_REPORTS_DESC = (
     f"131개 조달 통계보고서 검색. 원하는 통계를 문장으로 주면 후보를 score 내림차순으로 "
     f"최대 {MAX_TOP_K}개 반환한다. 각 후보에 report_id·이름·설명·조건·지표가 붙는다. "
+    "'몇 개나 있어?'·'어떤 종류가 있어?' 같은 집계 질문에는 catalog_facets 를 답한다 "
+    "(total_reports·visualizable·by_family·by_dimension). "
     "후보에 없는 report_id를 지어내지 말 것 — 보고서를 특정할 수 없으면 "
     "조건 선택값(기관명·업체명)으로는 못 잡히므로 value_lookup 을 쓸 것. "
     "요청한 통계에 해당하는 보고서가 후보에 없으면 없다고 말하고 지어내지 말 것."
@@ -146,6 +149,15 @@ def search_reports(
     return {
         "query": q,
         "candidates": candidates,
+        "catalog_facets": {
+            # 메타질문("몇 개나 있어?", "어떤 종류가 있어?")에 답하는 집계 —
+            # 검색 패싯(faceted search)의 표준 구성. LLM 이 후보 목록만으로는
+            # 알 수 없는 전체 분포를 데이터로 제공한다.
+            "total_reports": len(cat_all),
+            "visualizable": sum(1 for r in cat_all.values() if r.get("is_visual")),
+            "by_family": dict(Counter(r.get("family") for r in cat_all.values()).most_common(10)),
+            "by_dimension": dict(Counter(d for r in cat_all.values() for d in (r.get("dims") or [])).most_common(10)),
+        },
         "scoring": {
             "method": "hybrid_bm25+vector_rrf",
             "vector_weight": w,
