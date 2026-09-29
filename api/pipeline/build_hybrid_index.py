@@ -20,7 +20,10 @@ from app.retrieval.embed import embed as _embed  # noqa: E402
 from app.retrieval.embed import model as MODEL  # noqa: E402
 
 BASE_DIR = API_ROOT / "data"
-JSONL_PATH = BASE_DIR / "catalog" / "search_docs.jsonl"
+# 증강 문서 우선: doc2query·구보고서명 병기본(search_docs_aug.jsonl)이 있으면 그걸 읽고,
+# 없으면 원본을 쓴다 (원본 불변 원칙 유지 — augment_docs.py 가 증강본을 생성한다).
+_AUG = BASE_DIR / "catalog" / "search_docs_aug.jsonl"
+JSONL_PATH = _AUG if _AUG.exists() else BASE_DIR / "catalog" / "search_docs.jsonl"
 IDX_DIR = BASE_DIR / "index"
 BM25_DIR = IDX_DIR / "bm25"
 VEC_PATH = IDX_DIR / "vectors.json"

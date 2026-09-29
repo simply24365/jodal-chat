@@ -24,7 +24,11 @@ sys.path.insert(0, str(API / "app" / "retrieval"))
 
 from app.retrieval.onnx_embed import LocalEmbedder  # noqa: E402
 
-JSONL = API / "data" / "catalog" / "search_docs.jsonl"
+import argparse
+
+JSONL_DEFAULT = API / "data" / "catalog" / "search_docs.jsonl"
+_AUG = API / "data" / "catalog" / "search_docs_aug.jsonl"
+JSONL = _AUG if _AUG.exists() else JSONL_DEFAULT  # 증강본 우선 (doc2query 병기)
 IDX = API / "data" / "index"
 OUT_VEC = IDX / "local_vectors.json"
 OUT_META = IDX / "local_meta.json"

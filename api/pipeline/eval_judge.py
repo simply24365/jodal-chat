@@ -81,6 +81,23 @@ def _extract_report_ids(tool_result: str) -> list[str]:
     return re.findall(r"\b\d{5}\b", tool_result)
 
 
+def _channel_rich_ids(rec_tool_calls: list[dict]) -> list[str]:
+    """채널 정직화: 검색 외 툴(value_lookup/get_report_detail 등)이 확인한 report_id.
+
+    기관명 질의는 value_lookup(조건값→보고서 역색인) + get_report_detail 로
+    정답을 확정하는 툴 체인이 정석 경로다. retrieved_top(검색 채널)만으로
+    판정하면 이 정석 경로를 '미스'로 잘못 계산한다.
+    """
+    ids: list[str] = []
+    for c in rec_tool_calls:
+        name = c.get("tool_name") or ""
+        if "value_lookup" in name or "get_report_detail" in name:
+            for i in _extract_report_ids(c.get("tool_result") or ""):
+                if i not in ids:
+                    ids.append(i)
+    return ids
+
+
 def run_server(url: str, query: str, web_search: bool, timeout: int) -> dict:
     body = {"message": query, "stream": False, "web_search": web_search}
     req = urllib.request.Request(
@@ -148,6 +165,12 @@ def cmd_run(a: argparse.Namespace) -> None:
                     rec["retrieved_top"] = _extract_report_ids(c.get("tool_result") or "")
                     if rec["retrieved_top"]:
                         break
+                rec["retrieved_top"] = rec["retrieved_top"][:NDJSON_TOP]
+                # 채널 정직화: value_lookup/get_report_detail 이 확정한 보고서를
+                # 뒤에 붙인다 (hit@k 계산에서 검색 채널과 동등하게 인정).
+                for i in _channel_rich_ids(calls):
+                    if i not in rec["retrieved_top"]:
+                        rec["retrieved_top"].append(i)
                 rec["retrieved_top"] = rec["retrieved_top"][:NDJSON_TOP]
             except Exception as e:  # 서버 다운·타임아웃도 레코드로 남긴다
                 rec["error"] = str(e)[:200]
