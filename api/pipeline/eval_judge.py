@@ -51,6 +51,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _env  # noqa: F401,E402  — api/.env 로딩 (llm_chain 전에)
 import llm_chain  # noqa: E402
 
+# judge가 근거 시트를 만들 때 카탈로그 공식 보고서명·synopsis를 대조한다
+# (app 경로 추가 — 카탈로그는 읽기만 하고 서버를 띄우지 않는다)
+sys.path.insert(0, str(BASE_DIR))
+from app.retrieval import catalog as cat  # noqa: E402
+
 CRITERIA = ["goldcoverage", "groundedness", "toolappropriateness",
             "hygieneresidue", "koreanquality"]
 BINARY = {"goldcoverage", "groundedness", "hygieneresidue", "koreanquality"}
@@ -191,11 +196,16 @@ JUDGE_SYSTEM = (
 
 # 압축 루브릭: MT-Bench 계열 pairwise 루브릭을 pointwise로 줄이고,
 # 각 기준을 한 줄로 한정해 judge 입력 토큰을 최소화한다 (항목당 설명 제거).
+# [근거 시트]는 툴이 반환한 (report_id, 공식 보고서명) 전체 목록 — 절단된 툴 원문만
+# 주면 judge가 정상 인용을 환각으로 오판한다(실측: n01). RAG 평가의 근거 완전성 원칙.
 JUDGE_PROMPT = """[질의] {query}
 [gold] {gold}  | 조건: {gold_any} | 유형: {qtype}
 (gold 비어있음 = 도메인밖 질문 → 근거 없이 거절하면 정답)
 
-[툴 기록]
+[근거 시트 — 툴이 실제로 반환한 보고서 (ID | 공식 보고서명 | 한줄요약)]
+{evidence_sheet}
+
+[툴 기록 (절단된 원문 — ID·수치·링크 검증용)]
 {tool_calls}
 
 [검색 top] {retrieved_top}
@@ -280,6 +290,32 @@ def _fmt_tool_calls(calls: list[dict]) -> str:
     return "\n".join(lines)
 
 
+def _evidence_sheet(rec: dict) -> str:
+    """근거 시트: 툴이 실제로 반환한 (report_id, 이름) 쌍의 완전 목록.
+
+    절단된 툴 원문 대신 이 시트를 근거 집합으로 준다 — judge가 '툴 결과에
+    없는 보고서명'을 환각으로 오판하는 것을 막는다 (name은 툴 결과 candidates
+    안에 있지만 TOOL_RESULT_MAX_CHARS 절단 때문에 시야에서 잘렸던 케이스).
+    카탈로그의 공식 보고서명과 대조하도록 사실과 함께 제공한다.
+    """
+    cat_all = cat.catalog()
+    d2q = cat.doc2query()
+    rows = []
+    seen = []
+    for c in rec.get("tool_calls") or []:
+        for rid in _extract_report_ids(c.get("tool_result") or ""):
+            if rid in seen:
+                continue
+            seen.append(rid)
+            rec_cat = cat_all.get(rid)
+            name = rec_cat.get("보고서명") if rec_cat else None
+            syn = (d2q.get(rid) or {}).get("synopsis") or ""
+            rows.append(f"  {rid} | {name or '(카탈로그 없음)'} | {syn[:60]}")
+    if not rows:
+        return "(툴이 반환한 보고서 없음)"
+    return "\n".join(rows)
+
+
 def _build_judge_messages(rec: dict, pre: dict | None = None) -> list[dict]:
     fixed = pre if pre is not None else _prefilter(rec)
     fixed_lines, fixed_note = _fixed_block(fixed)
@@ -288,6 +324,7 @@ def _build_judge_messages(rec: dict, pre: dict | None = None) -> list[dict]:
         gold=json.dumps(rec.get("gold") or [], ensure_ascii=False),
         gold_any=json.dumps(rec.get("gold_any"), ensure_ascii=False),
         qtype=rec.get("type", "?"),
+        evidence_sheet=_evidence_sheet(rec),
         tool_calls=_fmt_tool_calls(rec.get("tool_calls") or []),
         retrieved_top=", ".join(rec.get("retrieved_top") or []) or "(없음)",
         answer=(rec.get("final_answer") or "(빈 답변)")[:4000],
@@ -338,7 +375,7 @@ def _judge_once(rec: dict, verbose: bool = False, pre: dict | None = None) -> di
     msgs = _build_judge_messages(rec, pre=pre)
     for attempt in (1, 2):  # 파싱 실패 1회 재시도 → unscored
         try:
-            text = llm_chain.chat(msgs, max_tokens=400, temperature=0,
+            text = llm_chain.chat(msgs, max_tokens=800, temperature=0,
                                   verbose=verbose, json_mode=True)
         except llm_chain.LLMExhausted as e:
             print(f"  [judge] LLMExhausted: {e}")
