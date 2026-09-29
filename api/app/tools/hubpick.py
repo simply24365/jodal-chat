@@ -22,6 +22,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 from ..retrieval import catalog as cat_mod
 from ..utils import setup_logger
 
@@ -286,15 +288,18 @@ def _scan_form_options(hub: dict, query: str, top_k: int, intent: Any) -> dict:
     return {"total": len(found), "reports": slim}
 
 
-def _decorate_with_catalog(reports: list[dict]) -> list[dict]:
-    """스캔 결과에 카탈로그 메타(dims·시각화·인기도·synopsis)를 덧붙인다.
+def _decorate_with_catalog(reports: list[dict], query: str = "") -> list[dict]:
+    """스캔 결과에 카탈로그 메타(dims·시각화·인기도·synopsis·질의 유사도)를 덧붙인다.
 
     값 매칭만으로는 수십 개가 동률이 된다(IDF 붕괴). 에이전트가 이 목록을
     스스로 좁히려면 각 후보가 '어떤 차원으로 집계되는지'와 '어떤 질문에 답하는지'
     데이터가 필요하다 — 정렬 규칙을 늘리는 게 아니라 판단 근거를 주는 방식.
+    query_sim: 질의 임베딩과 후보 문서(증강본) 임베딩의 cosine 유사도.
     """
     cat_all = cat_mod.catalog()
     d2q = cat_mod.doc2query()
+    vecs = _load_local_vecs()
+    qvec = _query_vec(query)
     for r in reports:
         rec = cat_all.get(r["report_id"], {})
         r["dims"] = rec.get("dims") or []
@@ -307,7 +312,39 @@ def _decorate_with_catalog(reports: list[dict]) -> list[dict]:
         syn = (d2q.get(r["report_id"]) or {}).get("synopsis")
         if syn:
             r["synopsis"] = syn[:100]
+        v = vecs.get(r["report_id"])
+        if qvec is not None and v is not None:
+            r["query_sim"] = round(float(qvec @ v), 4)
     return reports
+
+
+_local_vecs: dict[str, list[float]] | None = None
+
+
+def _load_local_vecs() -> dict[str, list[float]]:
+    global _local_vecs
+    if _local_vecs is None:
+        # search.py 의 LOCAL_VEC_PATH 와 동일 파일을 공유한다 (증강 문서 기반 e5 벡터).
+        from .search import LOCAL_VEC_PATH
+
+        try:
+            _local_vecs = json.loads(LOCAL_VEC_PATH.read_text(encoding="utf-8"))
+        except (FileNotFoundError, json.JSONDecodeError):
+            _local_vecs = {}
+    return _local_vecs
+
+
+def _query_vec(query: str):
+    """질의 임베딩. 임베딩 실패 시 None — 신호 부재는 계약 위반이 아니다."""
+    try:
+        from ..retrieval.onnx_embed import get_default
+
+        emb = get_default()
+        emb.load()
+        v = np.asarray(emb.embed_query(query), dtype="float32")
+        return v / (np.linalg.norm(v) + 1e-9)
+    except Exception:  # noqa: BLE001
+        return None
 
 
 def value_lookup(
@@ -351,7 +388,7 @@ def value_lookup(
             "query": query,
             "matched_reports": scan["total"],
             "returned": len(scan["reports"]),
-            "reports": _decorate_with_catalog(scan["reports"]),
+            "reports": _decorate_with_catalog(scan["reports"], query),
             "note": "이 값을 조건으로 골라 조회할 수 있는 보고서 목록이다. "
             "여기서는 링크를 주지 않으므로, 고른 보고서의 열기 링크가 필요하면 "
             "그 report_id 로 get_report_detail 을 한 번 더 불러라.",
