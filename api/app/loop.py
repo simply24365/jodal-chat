@@ -433,6 +433,7 @@ def run_loop(
     last_answer: str | None = None
     pending_calls = False
     promise_nudges = 0
+    empty_answer_retried = False
     # 이번 턴의 사용자 원문. 사용자가 report_id 를 직접 물어봤는지 판별한다.
     latest_user_text = next(
         (
@@ -582,6 +583,21 @@ def run_loop(
 
         if step_result.answer and step_result.answer.strip():
             last_answer = step_result.answer
+        elif result.tool_calls and not step_result.tool_calls:
+            # 툴 결과를 이미 받았는데 최종 답변이 빈 경우 (free-tier 모델이 content
+            # 없이 finish 하는 케이스). 조용히 통과시키면 아래 fallback 이 영어
+            # 무근거 문구를 내보낸다. 한 번은 답변 생성을 재요청한다 — rate-limit
+            # 재시도와 같은 '싸고 국소적인' 복구.
+            if not empty_answer_retried:
+                empty_answer_retried = True
+                logger.info("Empty answer after tool calls on cycle %d — retrying once", cycle)
+                history.append(
+                    ChatMessageSimple(
+                        message=FINAL_ANSWER_REMINDER,
+                        message_type=MessageType.USER,
+                    )
+                )
+                continue
         pending_calls = bool(step_result.tool_calls)
         if not step_result.tool_calls:
             # 답 없이 '조회해볼게요'로 끝난 경우: 예고를 답으로 인정하지 않고
@@ -734,11 +750,24 @@ def _append_tool_turn(
 
 
 def _extractive_fallback(result: LoopResult) -> str:
-    """Last resort: summarize gathered search docs without another LLM call."""
+    """최후 수단: LLM 재시도마저 실패했을 때 수집한 근거를 그대로 정리해 보여준다.
+
+    이 문구는 사용자에게 그대로 노출되므로 서비스 언어(한국어)로 쓴다.
+    근거가 있으면 툴 결과를 요약해 주고, 없으면 솔직하게 실패를 알린다.
+    """
     docs = [d for _, d in sorted(result.citation_docs.items())]
     if not docs:
-        return "I couldn't produce an answer for that request."
-    lines = ["Based on the search results:"]
+        ids = sorted(result.tool_report_ids)[:5]
+        if result.saw_tool_payload and ids:
+            return (
+                "죄송합니다. 조회는 완료했지만 답변 생성에 실패했습니다. "
+                "조회된 보고서를 다시 요청해 주시면 이어서 안내해 드리겠습니다."
+            )
+        return (
+            "죄송합니다. 지금은 답변을 만들지 못했습니다. "
+            "질의를 조금 다른 표현으로 다시 시도해 주세요."
+        )
+    lines = ["검색 결과를 정리하면 다음과 같습니다:"]
     for i, doc in enumerate(docs[:6]):
         snippet = (doc.snippet or "")[:400].strip()
         lines.append(f"[{i + 1}] {doc.title} — {snippet}")
