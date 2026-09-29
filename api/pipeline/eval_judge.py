@@ -46,37 +46,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 EVAL_QUERIES = BASE_DIR / "data" / "eval" / "natural_queries.json"
 
-
-def _load_env(path: Path) -> None:
-    """api/.env 자체 로딩 — uv 자동로딩·bash sourcing 의존을 제거한다.
-
-    Windows(uv run)와 Oracle Linux(make dev / bash sourcing) 어디서든
-    동일하게 키가 주입되도록 하는 크로스플랫폼 안전장치.
-    우선순위: 이미 설정된 환경변수(셸) > .env. BOM·CRLF·export 접두어·따옴표 허용.
-    """
-    try:
-        text = path.read_text(encoding="utf-8-sig")
-    except FileNotFoundError:
-        return
-    for line in text.splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        m = re.match(r"(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$", line)
-        if not m:
-            continue
-        key, val = m.group(1), m.group(2).strip()
-        if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
-            val = val[1:-1]
-        else:
-            val = val.split(" #", 1)[0].strip()
-        if val:
-            os.environ.setdefault(key, val)
-
-
-_load_env(BASE_DIR / ".env")
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import _env  # noqa: F401,E402  — api/.env 로딩 (llm_chain 전에)
 import llm_chain  # noqa: E402
 
 CRITERIA = ["goldcoverage", "groundedness", "toolappropriateness",
@@ -124,22 +95,33 @@ def run_server(url: str, query: str, web_search: bool, timeout: int) -> dict:
 
 
 def cmd_run(a: argparse.Namespace) -> None:
-    queries = json.loads(EVAL_QUERIES.read_text(encoding="utf-8"))["queries"]
+    all_queries = json.loads(EVAL_QUERIES.read_text(encoding="utf-8"))["queries"]
+    # query_id 는 전체 질의셋 기준의 불변 위치 — 필터·재개와 무관하게 고정된다.
+    pairs = [(f"n{i:02d}", item) for i, item in enumerate(all_queries, 1)]
     if a.limit:
-        queries = queries[: a.limit]
+        pairs = pairs[: a.limit]
+    if a.skip_until:
+        pairs = [p for p in pairs if p[0] >= a.skip_until]
+    out = BASE_DIR / a.out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if a.append:
+        done = {r["query_id"] for r in _read_ndjson(out)} if out.exists() else set()
+        pairs = [p for p in pairs if p[0] not in done]
+        if not pairs:
+            print("[run] 재개할 미완료 질의가 없다 — 종료")
+            return
     commit = a.commit
     if not commit:
         import subprocess
         commit = subprocess.run(["git", "rev-parse", "--short", "HEAD"],
                                 cwd=BASE_DIR, capture_output=True,
                                 text=True).stdout.strip() or "unknown"
-    out = BASE_DIR / a.out
-    out.parent.mkdir(parents=True, exist_ok=True)
-    print(f"[run] {len(queries)}개 질의 → {a.url} (commit={commit}, out={out})")
-    with out.open("w", encoding="utf-8") as f:
-        for i, item in enumerate(queries, 1):
+    mode = "a" if a.append else "w"
+    print(f"[run] {len(pairs)}개 질의 → {a.url} (commit={commit}, out={out}, mode={mode})")
+    with out.open(mode, encoding="utf-8") as f:
+        for qid, item in pairs:
             rec = {
-                "query_id": f"n{i:02d}",
+                "query_id": qid,
                 "query": item["q"],
                 "commit": commit,
                 "gold": item.get("gold") or [],
@@ -180,43 +162,89 @@ def cmd_run(a: argparse.Namespace) -> None:
 # ---------------------------------------------------------------- judge 모드
 
 JUDGE_SYSTEM = (
-    "너는 한국어 검색-챗봇(RAG) 답변 품질 심사관이다. 제시된 근거만 보고 엄격하게 판정하고, "
-    "출력은 지정된 JSON 하나뿐이다. 설명·접두어·코드펜스 없이 JSON만 출력한다."
+    "너는 한국어 검색-챗봇(RAG) 답변 품질 심사관이다. 제시된 근거만 보고 엄격하게 판정한다. "
+    "출력은 요구된 JSON 하나뿐이다."
 )
 
-JUDGE_PROMPT = """[질의]
-{query}
+# 압축 루브릭: MT-Bench 계열 pairwise 루브릭을 pointwise로 줄이고,
+# 각 기준을 한 줄로 한정해 judge 입력 토큰을 최소화한다 (항목당 설명 제거).
+JUDGE_PROMPT = """[질의] {query}
+[gold] {gold}  | 조건: {gold_any} | 유형: {qtype}
+(gold 비어있음 = 도메인밖 질문 → 근거 없이 거절하면 정답)
 
-[정답 정보]
-gold 보고서 ID: {gold}
-gold 조건(gold_any): {gold_any}
-질의 유형: {qtype}
-(주의: gold가 비어 있으면 이 질의는 조달데이터허브 도메인밖/답 없는 질문이다. \
-이때는 근거 없는 보고서를 지어내지 않고 '없음/불가'로 정리하는 답이 정답이다.)
-
-[툴 호출 기록]
+[툴 기록]
 {tool_calls}
 
-[검색 상위 결과 report_id (순서대로)]
-{retrieved_top}
+[검색 top] {retrieved_top}
 
-[최종 답변]
+[답변]
 {answer}
 
-[채점 기준 — 모두 값이 클수록 좋다]
-1. goldcoverage (0/1): gold ID가 있으면, 답변이 그 보고서를(ID·이름·내용으로) 실제 전달하면 1. \
-gold가 비어 있으면, 도메인밖 질문에 근거 없는 보고서를 제시하지 않고 정중히 거절/무매치 처리하면 1. \
-gold_any 조건이 있으면, 제시된 보고서가 그 조건을 만족하면 1.
-2. groundedness (0/1): 답변의 수치·report_id·링크가 [툴 호출 기록]에 근거하면 1. \
-툴 결과에 없는 수치·ID·링크를 만들어냈으면 0.
-3. toolappropriateness (1~5): 5=필요한 조회를 정확한 툴·인자로 수행, 3=수행했지만 불필요/중복 호출 포함, \
-1=조회 없이 추측했거나 전혀 엉뚱한 툴 사용.
-4. hygieneresidue (0/1): 1=잔여물 없음. 0=미래형 약속으로 턴 종료("조회해드릴게요"), \
-내독 나레이션 잔여, <think> 태그, 링크만 남은 끊긴 줄 등 위생 문제가 보인다.
-5. koreanquality (0/1): 1=자연스러운 한국어. 0=기계적/어색/다른 언어 섞임.
+[확정된 기준 — 출력에서 제외] {fixed}
 
-출력 JSON (키 그대로):
-{{"goldcoverage": 0, "groundedness": 0, "toolappropriateness": 3, "hygieneresidue": 1, "koreanquality": 1, "evidence": "판단 근거 1-2문장"}}"""
+[채점 — 값이 클수록 좋음]
+{fixed_note}
+- groundedness 0/1: 답변의 수치·ID·링크가 툴 기록에 근거하면 1, 만들어냈으면 0.
+- toolappropriateness 1-5: 5=정확한 툴·인자, 3=불필요/중복 포함, 1=조회 없이 추측.
+- hygieneresidue 0/1: 1=잔여물 없음. 0=미래형 약속 종료("조회해드릴게요")·나레이션 잔여·think 태그·끊긴 링크 줄.
+- koreanquality 0/1: 1=자연스러운 한국어.
+
+JSON 하나만: {{"groundedness":0,"toolappropriateness":3,"hygieneresidue":1,"koreanquality":1,"goldcoverage":0,"evidence":"근거 1문장"}}"""
+
+
+# ---------------------------------------------------- 프리필터 (LLM 토큰 절약)
+# 리서치 근거: 결정적으로 판정 가능한 기준은 모델에 묻지 않는 것이 가장 싸다.
+#   ("정규식 통과 케이스 재검사" = 발각 시에만 확정, 미발각은 모델에 위임)
+_RESIDUE_PROMISE = re.compile(
+    r"(?:조회|검색|확인|정리|살펴|안내|찾|모아|나열|작성|제시|전달|드릴|보여|알려|답변)"
+    r"[^.!?\n]{0,10}?(?:해 ?드릴게요|해 ?줄게요|해 ?볼게요|해 ?보겠|하겠|드리겠|볼게요|줄게요)"
+)
+_RESIDUE_THINK = re.compile(r"<\s*/?\s*(?:think|thinking|thought|reason)\s*>", re.IGNORECASE)
+_RESIDUE_LINK_LINE = re.compile(
+    r"^[ \t]*(?:[-*+]\s*|\d+[.)]\s*)?(?:바로 ?열기|바로 ?보기|여기|링크|자세히 ?보기|접속|이동|열기|보기)[ \t]*:?[ \t]*$",
+    re.MULTILINE,
+)
+_ID_RE = re.compile(r"(?<!\d)(\d{5})(?!\d)")
+_URL_RE = re.compile(r"https?://[^\s)\]\"'<>\\]+")
+
+
+def _prefilter(rec: dict) -> dict:
+    """결정적(무료) 판정으로 확정할 수 있는 기준을 골라낸다.
+
+    확정된 기준은 프롬프트의 [확정된 기준]에 적고 judge 출력에서 제외한다
+    → 그 기준만큼 판단·출력 토큰이 줄어든다.
+    """
+    fixed: dict[str, int] = {}
+    answer = rec.get("final_answer") or ""
+    payload = "\n".join((c.get("tool_result") or "") for c in (rec.get("tool_calls") or []))
+
+    # hygieneresidue: 잔여물이 "발견된" 경우만 0으로 확정 (미발각은 judge가 재검사)
+    if _RESIDUE_THINK.search(answer) or _RESIDUE_LINK_LINE.search(answer):
+        fixed["hygieneresidue"] = 0
+    elif _RESIDUE_PROMISE.search(answer.split(".")[-1] if answer else ""):
+        fixed["hygieneresidue"] = 0
+
+    # groundedness: 답변에 있으나 툴 결과에 전혀 없는 5자리 ID·URL → 날조 확정
+    if answer and payload:
+        fake_ids = [i for i in set(_ID_RE.findall(answer)) if i not in payload]
+        fake_urls = [u for u in set(_URL_RE.findall(answer)) if u.rstrip(".,);]\\") not in payload]
+        if fake_ids or fake_urls:
+            fixed["groundedness"] = 0
+
+    return fixed
+
+
+def _fixed_block(fixed: dict) -> tuple[str, str]:
+    if not fixed:
+        return "(없음)", "- goldcoverage 0/1: gold가 있으면 답변이 그 보고서를 실제 전달하면 1; gold 비어있으면 근거 없이 거절하면 1; 조건은 만족 여부로 판정."
+    lines = "\n".join(f"- {k} = {v} (확정)" for k, v in fixed.items())
+    remain = [c for c in ("goldcoverage", "groundedness") if c not in fixed]
+    note = ""
+    if "goldcoverage" in remain:
+        note += "- goldcoverage 0/1: gold가 있으면 그 보고서를 실제 전달하면 1; gold 비어있으면 근거 없이 거절하면 1; 조건은 만족 여부로 판정.\n"
+    if "groundedness" in remain:
+        note += "- (groundedness는 위 채점 목록 참조.)\n"
+    return lines, note
 
 
 def _fmt_tool_calls(calls: list[dict]) -> str:
@@ -229,7 +257,9 @@ def _fmt_tool_calls(calls: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _build_judge_messages(rec: dict) -> list[dict]:
+def _build_judge_messages(rec: dict, pre: dict | None = None) -> list[dict]:
+    fixed = pre if pre is not None else _prefilter(rec)
+    fixed_lines, fixed_note = _fixed_block(fixed)
     user = JUDGE_PROMPT.format(
         query=rec["query"],
         gold=json.dumps(rec.get("gold") or [], ensure_ascii=False),
@@ -238,12 +268,15 @@ def _build_judge_messages(rec: dict) -> list[dict]:
         tool_calls=_fmt_tool_calls(rec.get("tool_calls") or []),
         retrieved_top=", ".join(rec.get("retrieved_top") or []) or "(없음)",
         answer=(rec.get("final_answer") or "(빈 답변)")[:4000],
+        fixed=fixed_lines,
+        fixed_note=fixed_note,
     )
     return [{"role": "system", "content": JUDGE_SYSTEM},
             {"role": "user", "content": user}]
 
 
-def _parse_scores(text: str) -> dict | None:
+def _parse_scores(text: str, pre: dict | None = None) -> dict | None:
+    pre = pre or {}
     m = re.search(r"\{.*\}", text, re.DOTALL)
     if not m:
         return None
@@ -251,7 +284,8 @@ def _parse_scores(text: str) -> dict | None:
         d = json.loads(m.group(0))
     except json.JSONDecodeError:
         return None
-    for k in CRITERIA:
+    need = [c for c in CRITERIA if c not in pre]  # 프리필터 확정분은 요구하지 않는다
+    for k in need:
         v = d.get(k)
         if not isinstance(v, int):
             return None
@@ -261,6 +295,8 @@ def _parse_scores(text: str) -> dict | None:
             return None
     if not isinstance(d.get("evidence"), str) or not d["evidence"].strip():
         d["evidence"] = ""
+    for k, v in pre.items():  # 확정분 병합
+        d[k] = v
     return d
 
 
@@ -275,8 +311,8 @@ def _is_flagged(s: dict) -> bool:
     return False
 
 
-def _judge_once(rec: dict, verbose: bool = False) -> dict | None:
-    msgs = _build_judge_messages(rec)
+def _judge_once(rec: dict, verbose: bool = False, pre: dict | None = None) -> dict | None:
+    msgs = _build_judge_messages(rec, pre=pre)
     for attempt in (1, 2):  # 파싱 실패 1회 재시도 → unscored
         try:
             text = llm_chain.chat(msgs, max_tokens=400, temperature=0,
@@ -284,21 +320,22 @@ def _judge_once(rec: dict, verbose: bool = False) -> dict | None:
         except llm_chain.LLMExhausted as e:
             print(f"  [judge] LLMExhausted: {e}")
             return None
-        scores = _parse_scores(text)
+        scores = _parse_scores(text, pre=pre)
         if scores is not None:
             return scores
         print(f"  [judge] 파싱 실패 (시도 {attempt}) — {text[:120]!r}")
     return None
 
 
-def _judge_record(rec: dict) -> dict:
+def _judge_record(rec: dict, pre: dict | None = None) -> dict:
+    pre = pre if pre is not None else _prefilter(rec)
     votes = []
-    s = _judge_once(rec)
+    s = _judge_once(rec, pre=pre)
     if s is not None:
         votes.append(s)
         if _is_flagged(s):
             print(f"  [judge] flagged({rec['query_id']}) → 3회 다수결")
-            extra = [x for x in (_judge_once(rec) for _ in range(2)) if x is not None]
+            extra = [x for x in (_judge_once(rec, pre=pre) for _ in range(2)) if x is not None]
             votes.extend(extra)
     if not votes:
         return {"query_id": rec["query_id"], "scores": None, "votes": [],
@@ -312,6 +349,7 @@ def _judge_record(rec: dict) -> dict:
         "scores": final,
         "votes": [{k: v[k] for k in CRITERIA} for v in votes],
         "flagged": len(votes) > 1,
+        "prefilter": pre,  # 프리필터로 확정한 기준 (LLM 토큰 절약 — 이 기준은 모델이 채점하지 않았다)
         "evidence": evidence,
     }
 
@@ -503,6 +541,8 @@ def main() -> None:
     r = sub.add_parser("run", help="자연 질의셋 실행 → NDJSON")
     r.add_argument("--url", default="http://localhost:8321")
     r.add_argument("--out", default="runs/head.ndjson")
+    r.add_argument("--append", action="store_true", help="기존 파일에 이어서 기록 (미완료 run 재개)")
+    r.add_argument("--skip-until", default=None, metavar="QID", help="해당 query_id 부터 실행")
     r.add_argument("--commit", default=None, help="기본: 현재 git short hash")
     r.add_argument("--limit", type=int, default=0)
     r.add_argument("--timeout", type=int, default=240)

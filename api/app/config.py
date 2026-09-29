@@ -128,7 +128,11 @@ OPEN_URL_MAX_CHARS_TOTAL = _int("OPEN_URL_MAX_CHARS_TOTAL", 150000)
 
 # MCP 툴별 호출 정책 (tool_name -> max_calls_per_turn). 툴의 도메인 정책은
 # 루프 코어가 아니라 설정 계층이 소유한다. 없는 툴은 무제한.
-MCP_TOOL_MAX_CALLS = {"resolve_items": 2}
+# eval 근거(runs/head.ndjson 20턴 집계): search_reports 가 턴당 최대 3회까지
+# 반복 호출됐고 3회째부터는 후보가 거의 변하지 않았다 — 2회 상한으로 절약하고
+# 초과분은 exhausted_reminder 로 "가진 후보로 답하라"고 유도한다.
+# value_lookup/get_report_detail 은 서로 다른 후보를 파는 정당한 재호출이라 무제한 유지.
+MCP_TOOL_MAX_CALLS = {"resolve_items": 2, "search_reports": 2}
 
 # In-memory session history cap (session_id -> messages). v0 only.
 MAX_SESSIONS = _int("MAX_SESSIONS", 200)
