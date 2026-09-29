@@ -1,0 +1,7 @@
+{
+  "n": 107,
+  "recall@5": 0.832,
+  "family_confusion": 0.243,
+  "dims_miss": 0.214,
+  "dims_questions": 28
+}

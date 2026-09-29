@@ -1,0 +1,44 @@
+# 줄바꿈 정규화 — Windows 개발이 깨지지 않게 하는 최상위 방어선.
+#
+# 문제: Git-for-Windows 의 기본값은 core.autocrlf=true 다. 이 값이 켜져 있으면
+# clone 할 때 저장소의 LF 가 CRLF 로 변환돼서 체크아웃된다. 그 결과
+#   - api/run.sh, ui/.husky/pre-commit  →  shebang 이 깨져서 실행 불가
+#   - Makefile                          →  레시피 줄 끝의 CR 이 셸에서 이상 동작
+#   - uv.lock / pnpm-lock.yaml          →  포맷 차이로 불필요한 diff
+# 가 된다. 여기서 eol=lf 를 명시하면 플랫폼과 무관하게 항상 LF 로 체크아웃된다.
+* text=auto eol=lf
+
+# ---- 바이너리 (변환 금지) ----
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary
+*.mp4   binary
+*.webm  binary
+*.onnx  binary
+*.npy   binary
+*.npz   binary
+*.pt    binary
+*.bin   binary
+
+# ---- 셸 스크립트: LF 강제 + 실행 비트 유지 ----
+# Windows 는 실행 비트를 저장하지 않으므로, clone 후 chmod 이 필요한 스크립트다.
+*.sh    text eol=lf
+Makefile text eol=lf
+
+# ---- 데이터/락파일: 줄바꿈 변환이 내용 훼손을 유발할 수 있는 파일들 ----
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.lock  text eol=lf
+pnpm-lock.yaml text eol=lf
+uv.lock         text eol=lf

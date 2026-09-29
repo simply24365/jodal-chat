@@ -1,0 +1,571 @@
+{
+  "sweep_recall": {
+    "0.5": 0.0,
+    "0.7": 0.0,
+    "0.85": 0.0
+  },
+  "best_w": 0.5,
+  "chosen_w": 0.7,
+  "keep_07": true,
+  "n_gold": 107,
+  "top_k": 5,
+  "garbage": [
+    {
+      "q": "어제 우리 동네 강아지 산책로 알려줘",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "오늘 점심 뭐 먹지",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "asdkfj qwerty zzzz",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "로또 번호 추천해줘",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "날씨 어때",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "details": [
+    {
+      "q": "수요기관별 계약방법별 계약납품요구 실적통계 보여줘",
+      "gold": "00260",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관 계약방법별 합계 알려줘",
+      "gold": "00260",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "월별 기업형태별 계약납품요구 실적통계 보여줘",
+      "gold": "00249",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "월 기업형태별 합계 알려줘",
+      "gold": "00249",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 물품분류별 계약납품요구 실적통계 보여줘",
+      "gold": "00265",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "물품분류별 계약납품요구 물품 실적통계 보여줘",
+      "gold": "00277",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "물품분류별 합계 알려줘",
+      "gold": "00277",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "물품분류별 수요기관별 계약납품요구 물품 실적통계 보여줘",
+      "gold": "00280",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "물품분류별 월별 계약납품요구 물품 실적통계 보여줘",
+      "gold": "00279",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "물품분류 월별 합계 알려줘",
+      "gold": "00279",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "공공역량개발원 교육일정 내역 보여줘",
+      "gold": "00098",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "공사용자재 직접구매 대상 조달 내역 보여줘",
+      "gold": "00105",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "구매규격 사전공개 내역 보여줘",
+      "gold": "00033",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "국유화 완료 내역 보여줘",
+      "gold": "00090",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터 계약실적 시각화 보여줘",
+      "gold": "00170",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 나라장터 계약실적 시각화 보여줘",
+      "gold": "00176",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 녹색제품 실적통계 보여줘",
+      "gold": "00200",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 녹색제품 실적통계 보여줘",
+      "gold": "00193",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 전년도 알려줘",
+      "gold": "00193",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "벤처나라 물품 주문거래 내역 보여줘",
+      "gold": "00086",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터 발주계획 내역 보여줘",
+      "gold": "00027",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터 부정당제재 내역 보여줘",
+      "gold": "00017",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "비축물자 판매공고 내역 보여줘",
+      "gold": "00065",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 사회적약자기업 계약납품요구 실적통계 보여줘",
+      "gold": "00289",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 사회적약자기업건수 알려줘",
+      "gold": "00289",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "사회적약자기업 계약납품요구 실적통계 보여줘",
+      "gold": "00216",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 사회적약자기업 계약납품요구 실적통계 보여줘",
+      "gold": "00287",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "혁신장터 상품등록 내역 보여줘",
+      "gold": "00088",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "상품정보시스템 등록 물품 내역 보여줘",
+      "gold": "00078",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "상품정보 품목변경이력 내역 보여줘",
+      "gold": "00100",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "상품정보 분류변경이력 내역 보여줘",
+      "gold": "00099",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터쇼핑몰 납품요구 물품 내역 보여줘",
+      "gold": "00118",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터쇼핑몰 품목 등록 내역 보여줘",
+      "gold": "00579",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 수요기관 등록 실적통계 보여줘",
+      "gold": "00001",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 합계 알려줘",
+      "gold": "00001",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수의계약 수요기관별 발주 순위 &#40;전체 품명&#41; 보여줘",
+      "gold": "00618",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수의계약 조달기업별 수주 순위 &#40;전체 품명&#41; 보여줘",
+      "gold": "00617",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "최상위기관별 품목별 수의계약 실적 시각화 보여줘",
+      "gold": "00113",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "시설공통자재 가격정보 내역 보여줘",
+      "gold": "00079",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "업무별 구성원별 계약 내역 보여줘",
+      "gold": "00604",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "업무 구성원별 계약수량 알려줘",
+      "gold": "00604",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "업종 및 근거법규 내역 보여줘",
+      "gold": "00024",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 에너지이용합리화법관련제품 실적통계 보여줘",
+      "gold": "00194",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 전년도 알려줘",
+      "gold": "00194",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 에너지이용합리화법관련제품 실적통계 보여줘",
+      "gold": "00201",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전년도(동기) 알려줘",
+      "gold": "00201",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "외자규격 공개모집 내역 보여줘",
+      "gold": "00028",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "우수제품 중앙조달 종결 내역 보여줘",
+      "gold": "00343",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "우수제품 지정 내역 보여줘",
+      "gold": "00081",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "나라장터 입찰공고 실적 시각화 보여줘",
+      "gold": "00035",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "입찰공고 내역 보여줘",
+      "gold": "00607",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "자체전자조달시스템 입찰공고 내역 보여줘",
+      "gold": "00609",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "자율화 시범운영 대상 중소,여성,장애인 구매내역 &#40;전체 품명&#4",
+      "gold": "00616",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "자율화 시범운영 대상 기업구분별 구매실적 &#40;전체 품명&#41; 보",
+      "gold": "00622",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "기업구분별 합계 알려줘",
+      "gold": "00622",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "자율화 시범운영 대상 세부품명 구매실적 순위 &#40;118개 품명&#4",
+      "gold": "00600",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 장애인표준사업장 계약납품요구 실적통계 보여줘",
+      "gold": "00288",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전체실적 알려줘",
+      "gold": "00288",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 장애인표준사업장 계약납품요구 실적통계 보여줘",
+      "gold": "00284",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 증감 알려줘",
+      "gold": "00284",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 조달업체 계약납품요구 실적통계 시각화 보여줘",
+      "gold": "00225",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 해당지역업체실적 알려줘",
+      "gold": "00225",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "조달업체 등록 내역 보여줘",
+      "gold": "00008",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "조달업체 물품 내역 보여줘",
+      "gold": "00011",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "조달요청 내역 보여줘",
+      "gold": "00030",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "중소,여성,장애인기업 의무 우선구매실적 보여줘",
+      "gold": "00590",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "중소기업 우선구매대상 기술개발제품 계약납품요구 내역 보여줘",
+      "gold": "00112",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "중소기업 업체 인증정보 내역 보여줘",
+      "gold": "00376",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "중소기업 경쟁제품 및 공사용자재 내역 보여줘",
+      "gold": "00082",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 중소기업기술개발제품 실적통계 보여줘",
+      "gold": "00195",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 전년도 알려줘",
+      "gold": "00195",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 중소기업기술개발제품 실적통계 보여줘",
+      "gold": "00204",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전년도(동기) 알려줘",
+      "gold": "00204",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 중소기업자간경쟁제품 실적통계 보여줘",
+      "gold": "00205",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전년도(동기) 알려줘",
+      "gold": "00205",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 중소기업자간경쟁제품 실적통계 보여줘",
+      "gold": "00196",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 전년도 알려줘",
+      "gold": "00196",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "중앙조달 물품 순번별 계약 내역 보여줘",
+      "gold": "00606",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "순번별 단가 알려줘",
+      "gold": "00606",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 중증장애인생산품 실적통계 보여줘",
+      "gold": "00206",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전년도(동기) 알려줘",
+      "gold": "00206",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 중증장애인생산품 실적통계 보여줘",
+      "gold": "00197",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 전년도 알려줘",
+      "gold": "00197",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지방기업 구매실적 &#40;118개 품명&#41; 보여줘",
+      "gold": "00598",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지방기업 구매실적 &#40;전체 품명&#41; 보여줘",
+      "gold": "00619",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역의무공동 공사 계약 실적통계 시각화 보여줘",
+      "gold": "00182",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역의무 공동계약 실적 알려줘",
+      "gold": "00182",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역의무공동 공사 계약 실적통계 보여줘",
+      "gold": "00273",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역제한 실적통계 시각화 보여줘",
+      "gold": "00183",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역제한실적 알려줘",
+      "gold": "00183",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역제한 계약납품요구 실적통계 보여줘",
+      "gold": "00274",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역제한 입찰 실적통계 시각화 보여줘",
+      "gold": "00040",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 지역제한 건수 알려줘",
+      "gold": "00040",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 창업기업 계약 실적통계 보여줘",
+      "gold": "00219",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 금년도 알려줘",
+      "gold": "00219",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 창업기업수 통계 시각화 보여줘",
+      "gold": "00230",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "지역별 창업기업 현황 알려줘",
+      "gold": "00230",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 창업기업 계약납품요구 실적통계 보여줘",
+      "gold": "00285",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전체실적 알려줘",
+      "gold": "00285",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "친환경 인증 물품 내역 보여줘",
+      "gold": "00083",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "특정품목 조달 내역 보여줘",
+      "gold": "00605",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "품질보증물품 지정 내역 보여줘",
+      "gold": "00071",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 한국산업표준인증제품 실적통계 보여줘",
+      "gold": "00207",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "수요기관별 전년도(동기) 알려줘",
+      "gold": "00207",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "소관구분별 한국산업표준인증제품 실적통계 보여줘",
+      "gold": "00198",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "혁신제품 계약납품요구 내역 보여줘",
+      "gold": "00612",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "q": "혁신 물품 구매 내역 보여줘",
+      "gold": "00087",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

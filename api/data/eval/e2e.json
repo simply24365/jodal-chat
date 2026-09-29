@@ -1,0 +1,901 @@
+{
+  "n_gold": 107,
+  "top1_acc": 0.766,
+  "family_confusion_e2e": 0.012,
+  "nomatch_on_answerable": 0.0,
+  "clarify_rate": 0.206,
+  "garbage_no_match": 1.0,
+  "latency_p50": 0.4,
+  "latency_p95": 0.4,
+  "paths": {
+    "stage_explicit": 85,
+    "clarify": 22
+  },
+  "details": {
+    "gold": [
+      {
+        "q": "수요기관별 계약방법별 계약납품요구 실적통계 보여줘",
+        "gold": "00260",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00260",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관 계약방법별 합계 알려줘",
+        "gold": "00260",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "월별 기업형태별 계약납품요구 실적통계 보여줘",
+        "gold": "00249",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00249",
+        "fam_ok": true
+      },
+      {
+        "q": "월 기업형태별 합계 알려줘",
+        "gold": "00249",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수요기관별 물품분류별 계약납품요구 실적통계 보여줘",
+        "gold": "00265",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00265",
+        "fam_ok": true
+      },
+      {
+        "q": "물품분류별 계약납품요구 물품 실적통계 보여줘",
+        "gold": "00277",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00277",
+        "fam_ok": true
+      },
+      {
+        "q": "물품분류별 합계 알려줘",
+        "gold": "00277",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "물품분류별 수요기관별 계약납품요구 물품 실적통계 보여줘",
+        "gold": "00280",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00280",
+        "fam_ok": true
+      },
+      {
+        "q": "물품분류별 월별 계약납품요구 물품 실적통계 보여줘",
+        "gold": "00279",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00279",
+        "fam_ok": true
+      },
+      {
+        "q": "물품분류 월별 합계 알려줘",
+        "gold": "00279",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "공공역량개발원 교육일정 내역 보여줘",
+        "gold": "00098",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00098",
+        "fam_ok": true
+      },
+      {
+        "q": "공사용자재 직접구매 대상 조달 내역 보여줘",
+        "gold": "00105",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00105",
+        "fam_ok": true
+      },
+      {
+        "q": "구매규격 사전공개 내역 보여줘",
+        "gold": "00033",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00033",
+        "fam_ok": true
+      },
+      {
+        "q": "국유화 완료 내역 보여줘",
+        "gold": "00090",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00090",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터 계약실적 시각화 보여줘",
+        "gold": "00170",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00170",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 나라장터 계약실적 시각화 보여줘",
+        "gold": "00176",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00176",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 녹색제품 실적통계 보여줘",
+        "gold": "00200",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00200",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 녹색제품 실적통계 보여줘",
+        "gold": "00193",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00193",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 전년도 알려줘",
+        "gold": "00193",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "벤처나라 물품 주문거래 내역 보여줘",
+        "gold": "00086",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00086",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터 발주계획 내역 보여줘",
+        "gold": "00027",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00027",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터 부정당제재 내역 보여줘",
+        "gold": "00017",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00017",
+        "fam_ok": true
+      },
+      {
+        "q": "비축물자 판매공고 내역 보여줘",
+        "gold": "00065",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00065",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 사회적약자기업 계약납품요구 실적통계 보여줘",
+        "gold": "00289",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00289",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 사회적약자기업건수 알려줘",
+        "gold": "00289",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00289",
+        "fam_ok": true
+      },
+      {
+        "q": "사회적약자기업 계약납품요구 실적통계 보여줘",
+        "gold": "00216",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수요기관별 사회적약자기업 계약납품요구 실적통계 보여줘",
+        "gold": "00287",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00287",
+        "fam_ok": true
+      },
+      {
+        "q": "혁신장터 상품등록 내역 보여줘",
+        "gold": "00088",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00088",
+        "fam_ok": true
+      },
+      {
+        "q": "상품정보시스템 등록 물품 내역 보여줘",
+        "gold": "00078",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00078",
+        "fam_ok": true
+      },
+      {
+        "q": "상품정보 품목변경이력 내역 보여줘",
+        "gold": "00100",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00100",
+        "fam_ok": true
+      },
+      {
+        "q": "상품정보 분류변경이력 내역 보여줘",
+        "gold": "00099",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00099",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터쇼핑몰 납품요구 물품 내역 보여줘",
+        "gold": "00118",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00118",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터쇼핑몰 품목 등록 내역 보여줘",
+        "gold": "00579",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00579",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 수요기관 등록 실적통계 보여줘",
+        "gold": "00001",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00001",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 합계 알려줘",
+        "gold": "00001",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수의계약 수요기관별 발주 순위 &#40;전체 품명&#41; 보여줘",
+        "gold": "00618",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00618",
+        "fam_ok": true
+      },
+      {
+        "q": "수의계약 조달기업별 수주 순위 &#40;전체 품명&#41; 보여줘",
+        "gold": "00617",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00617",
+        "fam_ok": true
+      },
+      {
+        "q": "최상위기관별 품목별 수의계약 실적 시각화 보여줘",
+        "gold": "00113",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00113",
+        "fam_ok": true
+      },
+      {
+        "q": "시설공통자재 가격정보 내역 보여줘",
+        "gold": "00079",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00079",
+        "fam_ok": true
+      },
+      {
+        "q": "업무별 구성원별 계약 내역 보여줘",
+        "gold": "00604",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00604",
+        "fam_ok": true
+      },
+      {
+        "q": "업무 구성원별 계약수량 알려줘",
+        "gold": "00604",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00604",
+        "fam_ok": true
+      },
+      {
+        "q": "업종 및 근거법규 내역 보여줘",
+        "gold": "00024",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00024",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 에너지이용합리화법관련제품 실적통계 보여줘",
+        "gold": "00194",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00194",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 전년도 알려줘",
+        "gold": "00194",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수요기관별 에너지이용합리화법관련제품 실적통계 보여줘",
+        "gold": "00201",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00201",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전년도(동기) 알려줘",
+        "gold": "00201",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "외자규격 공개모집 내역 보여줘",
+        "gold": "00028",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00028",
+        "fam_ok": true
+      },
+      {
+        "q": "우수제품 중앙조달 종결 내역 보여줘",
+        "gold": "00343",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00343",
+        "fam_ok": true
+      },
+      {
+        "q": "우수제품 지정 내역 보여줘",
+        "gold": "00081",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00081",
+        "fam_ok": true
+      },
+      {
+        "q": "나라장터 입찰공고 실적 시각화 보여줘",
+        "gold": "00035",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00035",
+        "fam_ok": true
+      },
+      {
+        "q": "입찰공고 내역 보여줘",
+        "gold": "00607",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "자체전자조달시스템 입찰공고 내역 보여줘",
+        "gold": "00609",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "자율화 시범운영 대상 중소,여성,장애인 구매내역 &#40;전체 품명&#4",
+        "gold": "00616",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00616",
+        "fam_ok": true
+      },
+      {
+        "q": "자율화 시범운영 대상 기업구분별 구매실적 &#40;전체 품명&#41; 보",
+        "gold": "00622",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00622",
+        "fam_ok": true
+      },
+      {
+        "q": "기업구분별 합계 알려줘",
+        "gold": "00622",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00601",
+        "fam_ok": true
+      },
+      {
+        "q": "자율화 시범운영 대상 세부품명 구매실적 순위 &#40;118개 품명&#4",
+        "gold": "00600",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00600",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 장애인표준사업장 계약납품요구 실적통계 보여줘",
+        "gold": "00288",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00288",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전체실적 알려줘",
+        "gold": "00288",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "소관구분별 장애인표준사업장 계약납품요구 실적통계 보여줘",
+        "gold": "00284",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00284",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 증감 알려줘",
+        "gold": "00284",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "지역별 조달업체 계약납품요구 실적통계 시각화 보여줘",
+        "gold": "00225",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00225",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 해당지역업체실적 알려줘",
+        "gold": "00225",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00227",
+        "fam_ok": false
+      },
+      {
+        "q": "조달업체 등록 내역 보여줘",
+        "gold": "00008",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00008",
+        "fam_ok": true
+      },
+      {
+        "q": "조달업체 물품 내역 보여줘",
+        "gold": "00011",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00011",
+        "fam_ok": true
+      },
+      {
+        "q": "조달요청 내역 보여줘",
+        "gold": "00030",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00030",
+        "fam_ok": true
+      },
+      {
+        "q": "중소,여성,장애인기업 의무 우선구매실적 보여줘",
+        "gold": "00590",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00590",
+        "fam_ok": true
+      },
+      {
+        "q": "중소기업 우선구매대상 기술개발제품 계약납품요구 내역 보여줘",
+        "gold": "00112",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00112",
+        "fam_ok": true
+      },
+      {
+        "q": "중소기업 업체 인증정보 내역 보여줘",
+        "gold": "00376",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00376",
+        "fam_ok": true
+      },
+      {
+        "q": "중소기업 경쟁제품 및 공사용자재 내역 보여줘",
+        "gold": "00082",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00082",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 중소기업기술개발제품 실적통계 보여줘",
+        "gold": "00195",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00195",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 전년도 알려줘",
+        "gold": "00195",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수요기관별 중소기업기술개발제품 실적통계 보여줘",
+        "gold": "00204",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00204",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전년도(동기) 알려줘",
+        "gold": "00204",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "수요기관별 중소기업자간경쟁제품 실적통계 보여줘",
+        "gold": "00205",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00205",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전년도(동기) 알려줘",
+        "gold": "00205",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "소관구분별 중소기업자간경쟁제품 실적통계 보여줘",
+        "gold": "00196",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00196",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 전년도 알려줘",
+        "gold": "00196",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "중앙조달 물품 순번별 계약 내역 보여줘",
+        "gold": "00606",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00606",
+        "fam_ok": true
+      },
+      {
+        "q": "순번별 단가 알려줘",
+        "gold": "00606",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00606",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 중증장애인생산품 실적통계 보여줘",
+        "gold": "00206",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00206",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전년도(동기) 알려줘",
+        "gold": "00206",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "소관구분별 중증장애인생산품 실적통계 보여줘",
+        "gold": "00197",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00197",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 전년도 알려줘",
+        "gold": "00197",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "지방기업 구매실적 &#40;118개 품명&#41; 보여줘",
+        "gold": "00598",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00598",
+        "fam_ok": true
+      },
+      {
+        "q": "지방기업 구매실적 &#40;전체 품명&#41; 보여줘",
+        "gold": "00619",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00619",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역의무공동 공사 계약 실적통계 시각화 보여줘",
+        "gold": "00182",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00182",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역의무 공동계약 실적 알려줘",
+        "gold": "00182",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00182",
+        "fam_ok": true
+      },
+      {
+        "q": "지역의무공동 공사 계약 실적통계 보여줘",
+        "gold": "00273",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00182",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역제한 실적통계 시각화 보여줘",
+        "gold": "00183",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00183",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역제한실적 알려줘",
+        "gold": "00183",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00183",
+        "fam_ok": true
+      },
+      {
+        "q": "지역제한 계약납품요구 실적통계 보여줘",
+        "gold": "00274",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00274",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역제한 입찰 실적통계 시각화 보여줘",
+        "gold": "00040",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00040",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 지역제한 건수 알려줘",
+        "gold": "00040",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00040",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 창업기업 계약 실적통계 보여줘",
+        "gold": "00219",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00219",
+        "fam_ok": true
+      },
+      {
+        "q": "소관구분별 금년도 알려줘",
+        "gold": "00219",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "지역별 창업기업수 통계 시각화 보여줘",
+        "gold": "00230",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00230",
+        "fam_ok": true
+      },
+      {
+        "q": "지역별 창업기업 현황 알려줘",
+        "gold": "00230",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00230",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 창업기업 계약납품요구 실적통계 보여줘",
+        "gold": "00285",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00285",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전체실적 알려줘",
+        "gold": "00285",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "친환경 인증 물품 내역 보여줘",
+        "gold": "00083",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00083",
+        "fam_ok": true
+      },
+      {
+        "q": "특정품목 조달 내역 보여줘",
+        "gold": "00605",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00605",
+        "fam_ok": true
+      },
+      {
+        "q": "품질보증물품 지정 내역 보여줘",
+        "gold": "00071",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00071",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 한국산업표준인증제품 실적통계 보여줘",
+        "gold": "00207",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00207",
+        "fam_ok": true
+      },
+      {
+        "q": "수요기관별 전년도(동기) 알려줘",
+        "gold": "00207",
+        "kind": "clarify",
+        "path": "clarify",
+        "top1": null,
+        "fam_ok": null
+      },
+      {
+        "q": "소관구분별 한국산업표준인증제품 실적통계 보여줘",
+        "gold": "00198",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00198",
+        "fam_ok": true
+      },
+      {
+        "q": "혁신제품 계약납품요구 내역 보여줘",
+        "gold": "00612",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00612",
+        "fam_ok": true
+      },
+      {
+        "q": "혁신 물품 구매 내역 보여줘",
+        "gold": "00087",
+        "kind": "reports",
+        "path": "stage_explicit",
+        "top1": "00087",
+        "fam_ok": true
+      }
+    ],
+    "garbage": [
+      {
+        "q": "어제 우리 동네 강아지 산책로 알려줘",
+        "kind": "no_match",
+        "path": "no_match_no_signal"
+      },
+      {
+        "q": "오늘 점심 뭐 먹지",
+        "kind": "no_match",
+        "path": "no_match_no_signal"
+      },
+      {
+        "q": "asdkfj qwerty zzzz",
+        "kind": "no_match",
+        "path": "no_match_no_signal"
+      },
+      {
+        "q": "로또 번호 추천해줘",
+        "kind": "no_match",
+        "path": "no_match_no_signal"
+      },
+      {
+        "q": "날씨 어때",
+        "kind": "no_match",
+        "path": "no_match_no_signal"
+      }
+    ]
+  }
+}

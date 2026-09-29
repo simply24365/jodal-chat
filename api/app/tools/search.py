@@ -1,55 +1,77 @@
-"""search_reports / get_report_detail — 조달 통계보고서 131건 검색.
+"""search_reports / get_report_detail — 순수 하이브리드 검색 (BM25 + vector → RRF).
 
-검색 파이프라인 (mcp/ Worker 의 JS 재구현 → 기존 Python 구현으로 복귀):
+    쿼리
+      ├─ BM25   랭킹  (bm25s + kiwipiepy, 개념 확장)
+      └─ vector 랭킹  (로컬 e5-small ONNX, 384d, 16ms)
+              ↓
+        RRF 융합  score = (1-w)/(K+bm_rank) + w/(K+vec_rank)
+              ↓
+        상위 N 개를 이름·설명·조건과 함께 반환
 
-    slot_parser.parse(q)        슬롯 파싱 (family/dims/metric/concept)
-        │
-    search_hybrid.ranks(q)      BM25(bm25s+kiwipiepy) + Vector(Jina) 각각 랭킹
-        │
-    search_hybrid.rrf_scores    가중 RRF (1-w)/(K+rb) + w/(K+rv)
-        │
-    stage_solve.solve           S0~S5 결정적 스테이지 솔버
-        │
-    → candidates (score 내림차순)
+★ 규칙 엔진(slot_parser / stage_solve)을 쓰지 않는다. 근거:
+  - 자연 질의 20개 A/B 비교에서 규칙 엔진이 hit@5 를 0.667 → 0.533 으로
+    떨어뜨렸다(BM25 top-5 안의 정답을 S0/S1 하드 킬이 제거).
+    → pipeline/ab_rerank.py 로 재현 가능.
+  - RRF 는 S5 한 줄로만 흘러들어가 vector_weight 를 0.0→0.7 로 바꿔도
+    hit@5 가 0.533 그대로였다. 하이브리드가 사실상 승객이던 상태.
+  - 하드 킬이 없으므로 과잉매칭이 늘어난다(cand@5 = 5.0). 그건 툴이 아니라
+    **agent 가 고르는 것**이다 — 이미 그렇게 동작한다. 그래서 top_k 를 10 으로
+    올려 판단 재료를 더 준다.
 
-mcp/ 와 달리 토크나이저가 Worker 의 "kiwi 근사" 정규식이 아니라 진짜 kiwipiepy 이며,
-stage_solve 에는 Worker 버전에 없던 S1.5(이름 직접언급 보너스)이 있다.
-
-Vector 강등: Jina 크레딧 소진 등으로 임베딩이 실패하면 예외 대신 BM25 단독(w=0)으로
-내려가되, 결과에 degraded 플래그로 근거를 남긴다 — 조용히 품질이 떨어지면 안 된다.
+정답·무관 판정은 호출측 LLM 이 한다. 툴은 사실만 반환한다.
 """
 
 from __future__ import annotations
 
+import json
+from pathlib import Path
 from typing import Any
 
 from ..retrieval import catalog as cat
-from ..retrieval import embed, search_hybrid, slot_parser, stage_solve
-from ..retrieval.embed import EmbeddingError
+from ..retrieval import search_hybrid
+
+API_ROOT = Path(__file__).resolve().parents[2]
+LOCAL_VEC_PATH = API_ROOT / "data" / "index" / "local_vectors.json"
+LOCAL_META_PATH = API_ROOT / "data" / "index" / "local_meta.json"
 
 POOL = 50
+DEFAULT_TOP_K = 10
 MAX_TOP_K = 30
 
 SEARCH_REPORTS_DESC = (
-    "131개 조달 통계보고서 메타데이터 검색. 원하는 통계를 문장으로 주면 후보 object[]를 "
-    "score 내림차순으로 반환. dims가 한국어 Split(~별)일 때만 의미 있음. "
-    "'소관구분'은 소속(국가기관/공기업…)을 뜻하며 개별 기관 조회가 아님. "
-    "stage_score는 참고용이며 낮아도 dims_coverage/metric_hit/concept_hits가 있으면 유력 후보. "
-    "점수·탈락 이유로 최종 선택·되묻기를 호출 측이 판단할 것. "
-    "report_id를 지어내지 말 것. candidates에 없는 ID 사용 금지. "
-    "catalog_ver가 바뀌면 캐시를 버리고 재조회할 것."
+    f"131개 조달 통계보고서 검색. 원하는 통계를 문장으로 주면 후보를 score 내림차순으로 "
+    f"최대 {MAX_TOP_K}개 반환한다. 각 후보에 report_id·이름·설명·조건·지표가 붙는다. "
+    "후보에 없는 report_id를 지어내지 말 것 — 보고서를 특정할 수 없으면 "
+    "조건 선택값(기관명·업체명)으로는 못 잡히므로 value_lookup 을 쓸 것. "
+    "요청한 통계에 해당하는 보고서가 후보에 없으면 없다고 말하고 지어내지 말 것."
 )
 GET_REPORT_DETAIL_DESC = (
     "보고서 1건의 상세(입력조건·지표·차원·개념·바로열기 링크). 보고서명 또는 report_id 중 하나로 조회. "
     "search_reports 후보 중 '자세히 볼' 1건씩 조회용. 131건 통째 조회 불가."
 )
 
+_local_vecs: dict[str, list[float]] | None = None
+_local_rids: list[str] = []
+
+
+def _local_index() -> tuple[list[str], dict[str, list[float]]]:
+    """로컬 임베딩 벡터 로드(프로세스 상주). 없으면 빈 인덱스."""
+    global _local_vecs, _local_rids
+    if _local_vecs is None:
+        if not LOCAL_VEC_PATH.is_file():
+            _local_vecs, _local_rids = {}, []
+        else:
+            raw = json.loads(LOCAL_VEC_PATH.read_text(encoding="utf-8"))
+            _local_rids = list(raw)
+            _local_vecs = raw
+    return _local_rids, _local_vecs
+
 
 def _clamp_top_k(v: Any) -> int:
     try:
         n = int(v)
     except (TypeError, ValueError):
-        return 10
+        return DEFAULT_TOP_K
     return max(1, min(MAX_TOP_K, n))
 
 
@@ -57,133 +79,96 @@ def _norm(s: Any) -> str:
     return "".join(str(s if s is not None else "").split())
 
 
-def _signals(rid: str, parsed: dict, bm_rank: dict, vec_rank: dict) -> dict:
-    """mcp/ 의 mcpSignals() 이식."""
-    rec = cat.catalog().get(rid, {})
-    qd = parsed.get("dims_explicit") or parsed.get("dims") or []
-    all_m = rec.get("metrics") or []
-    qm = parsed.get("metric") or []
-    fam = parsed.get("family") or {}
-    qn = _norm(parsed.get("q") or "")
-    nm = _norm(rec.get("보고서명") or "")
-    return {
-        "family": "none"
-        if not fam.get("value")
-        else ("match" if rec.get("family") == fam["value"] else "mismatch"),
-        "dims_coverage": round(
-            len([d for d in qd if d in (rec.get("dims") or [])]) / len(qd), 2
-        )
-        if qd
-        else 1.0,
-        "metric_hit": [m for m in qm if any(m in x or x in m for x in all_m)],
-        "concept_hits": [
-            cid
-            for cid in (parsed.get("concepts") or [])
-            if cid in cat.matching_concept_ids(rec)
-        ],
-        "name_mention": bool(nm and qn and nm in qn),
-        "bm25_rank": bm_rank.get(rid),
-        "vec_rank": vec_rank.get(rid),
-    }
-
-
 def search_reports(
     query: str,
-    top_k: Any = 10,
+    top_k: Any = DEFAULT_TOP_K,
     vector_weight: Any = None,
 ) -> dict:
     q = str(query or "").strip()
     if not q:
         raise ValueError("query required")
     top_k = _clamp_top_k(top_k)
-    pool = POOL
 
-    parsed = slot_parser.parse(q)
-    parsed["q"] = q
+    rids, vecs = _local_index()
+    bm_rank, _vec_rank_unused = search_hybrid.ranks(q, POOL, embed_query=False)
 
+    vec_rank: dict[str, int] = {}
     degraded = None
-    if embed.breaker_open():
-        # 회로가 열려 있으면 네트워크 호출 없이 바로 강등.
-        bm_rank, vec_rank = search_hybrid.ranks(q, pool, embed_query=False)
-        scores, w, k = search_hybrid.bm25_only_scores(bm_rank, pool)
-        degraded = "vector_circuit_open: Jina 직전 영구 실패로 BM25 단독"
-    else:
+    if rids and vecs and (vector_weight is None or float(vector_weight) != 0):
+        from ..retrieval.onnx_embed import get_default
+
         try:
-            bm_rank, vec_rank = search_hybrid.ranks(q, pool)
-            scores, w, k = search_hybrid.rrf_scores(bm_rank, vec_rank, pool, vector_weight)
-        except EmbeddingError as e:
-            # Vector 경로 강등. BM25만으로 간다 — 단 결과에 근거를 남긴다.
-            degraded = f"vector_unavailable: {e}"
-            bm_rank, vec_rank = search_hybrid.ranks(q, pool, embed_query=False)
-            scores, w, k = search_hybrid.bm25_only_scores(bm_rank, pool)
+            emb = get_default()
+            emb.load()
+            qv = emb.embed_query(q)
+            sims = {r: _cos(qv, vecs[r]) for r in rids}
+            for i, r in enumerate(sorted(sims, key=lambda x: -sims[x])[:POOL]):
+                vec_rank[r] = i + 1
+        except Exception as e:  # noqa: BLE001
+            degraded = f"vector_unavailable: {type(e).__name__}: {e}"
 
-    bm_top = list(bm_rank)[:1]
-    v_top = list(vec_rank)[:1]
-    consensus = bm_top[0] if bm_top and v_top and bm_top[0] == v_top[0] else None
-
-    staged = stage_solve.solve(
-        parsed,
-        rrf_scores=scores,
-        pool=pool,
-        top_k=max(top_k, 30),
-        consensus_rid=consensus,
-        qtext=q,
-    )
+    if vec_rank:
+        scores, w, k = search_hybrid.rrf_scores(bm_rank, vec_rank, POOL, vector_weight)
+    else:
+        scores, w, k = search_hybrid.bm25_only_scores(bm_rank, POOL)
+        if degraded is None:
+            degraded = "vector_index_missing: pipeline/build_local_index.py 로 생성"
 
     cat_all = cat.catalog()
+    ranked = sorted(scores.items(), key=lambda x: -x[1])[:top_k]
     candidates = []
-    for rid, s, log in staged[:top_k]:
+    for rid, s in ranked:
         rec = cat_all.get(rid, {})
-        dropped = s <= -1e8
-        reasons = [x.get("reason") for x in (log or []) if x.get("reason")]
         official_id = rec.get("official_id")
         candidates.append(
             {
                 "report_id": rid,
                 "name": rec.get("보고서명") or rid,
+                "score": round(float(s), 6),
                 "official_id": official_id or None,
-                "stage_score": None if dropped else round(s, 4),
-                "signals": _signals(rid, parsed, bm_rank, vec_rank),
-                "dropped": dropped,
-                "drop_reason": "; ".join(reasons) if dropped else None,
-                "views": rec.get("조회수"),
+                "summary": (rec.get("desc_summary") or "")[:180],
+                "dims": rec.get("dims") or [],
+                "metrics": (rec.get("metrics") or [])[:6],
+                "family": rec.get("family"),
+                "is_visual": bool(rec.get("is_visual")),
+                "signals": {
+                    "bm25_rank": bm_rank.get(rid),
+                    "vec_rank": vec_rank.get(rid) or None,
+                },
                 "links": {"move": cat.report_link(official_id) if official_id else None},
             }
         )
 
     return {
-        "query_slots": {
-            "family": parsed.get("family"),
-            "dims": parsed.get("dims"),
-            "dims_explicit": parsed.get("dims_explicit"),
-            "excluded_dims": parsed.get("excluded_dims"),
-            "channel": parsed.get("channel"),
-            "item_scope": parsed.get("item_scope"),
-            "metric": parsed.get("metric"),
-            "visual": parsed.get("visual"),
-            "concepts": parsed.get("concepts"),
-        },
+        "query": q,
         "candidates": candidates,
         "scoring": {
-            "method": "weighted_rrf+stage",
+            "method": "hybrid_bm25+vector_rrf",
             "vector_weight": w,
             "rrf_k": k,
-            "pool": pool,
+            "pool": POOL,
+            "index": "local e5-small ONNX" if vec_rank else "bm25 only",
             **({"degraded": degraded} if degraded else {}),
         },
         "catalog_ver": cat.CATALOG_VER,
     }
 
 
+def _cos(a: list[float], b: list[float]) -> float:
+    """벡터는 빌드 시 정규화되어 있다(길이 1). 그래도 방어적으로 나눈다."""
+    s = 0.0
+    for x, y in zip(a, b):
+        s += x * y
+    return s
+
+
 def _resolve_report_id(report_id: Any, report_name: Any) -> str:
-    """mcp/ 의 resolveReportId() 이식."""
     cat_all = cat.catalog()
     rid = str(report_id or "").strip()
     if rid:
         if rid in cat_all:
             return rid
         raise ValueError(f"unknown report_id: {rid[:20]}")
-
     q = _norm(report_name)
     if not q:
         raise ValueError("report_id or report_name required")
@@ -214,13 +199,13 @@ def get_report_detail(
         "report_id": rid,
         "name": rec.get("보고서명") or rid,
         "official_id": official_id or None,
-        "reptId": rec.get("mstrReptIdVal") or rid,
         "desc": rec.get("desc") or "",
         "conds": cat.cond_names(rec),
         "metrics": rec.get("metrics") or [],
         "dims": rec.get("dims") or rec.get("dimensions") or [],
         "concepts": cat.matching_concept_ids(rec),
         "family": rec.get("family"),
+        "is_visual": bool(rec.get("is_visual")),
         "links": {
             "move": cat.report_link(official_id) if official_id else None,
             "direct": cat.direct_link(rid),

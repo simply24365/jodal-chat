@@ -107,6 +107,7 @@ cd api && uv run python pipeline/<script>.py
 - agent loop 는 `onyx/custom_chat_webservice` 포트(구 Onyx `backend/onyx/`).
   무엇을 가져왔고 뺐는지는 `docs/ONYX_GAP_ANALYSIS.md` 가 항목별로 추적한다.
 - 제외: `data/raw_excel/`, `data/raw_mstr_json/`, `data/raw/` (37M 원본, jodal 에만 존재).
-- `ui/` 는 upstream `vercel/ai-chatbot` clone 이고 로컬 커밋 2개가 얹혀 있다
-  (FastAPI 어댑터 + citation 수정). 이 repo 는 `ui/` 를 **추적하지 않는다**
-  (`.gitignore`) — 옮기려면 upstream base 커밋을 기록한 채 통합이 필요하다.
+- `ui/` 는 upstream `vercel/ai-chatbot` clone 이고 로컬 커밋이 얹혀 있다
+  (FastAPI 어댑터 + citation 수정). **`ui/` 는 이 repo 에서 그대로 추적한다**
+  (182 파일). 서브모듈이 아니라 평범한 디렉터리라 `git clone` 한 번으로
+  api·ui 가 같이 온다. `ui/UPSTREAM.md` 에 upstream base 커밋을 기록했다.
