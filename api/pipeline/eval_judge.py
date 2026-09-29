@@ -165,13 +165,12 @@ def cmd_run(a: argparse.Namespace) -> None:
                     rec["retrieved_top"] = _extract_report_ids(c.get("tool_result") or "")
                     if rec["retrieved_top"]:
                         break
-                rec["retrieved_top"] = rec["retrieved_top"][:NDJSON_TOP]
                 # 채널 정직화: value_lookup/get_report_detail 이 확정한 보고서를
-                # 뒤에 붙인다 (hit@k 계산에서 검색 채널과 동등하게 인정).
-                for i in _channel_rich_ids(calls):
-                    if i not in rec["retrieved_top"]:
-                        rec["retrieved_top"].append(i)
-                rec["retrieved_top"] = rec["retrieved_top"][:NDJSON_TOP]
+                # 앞에 붙인다 (hit@k 계산에서 검색 채널과 동등하게 인정).
+                # 검색 결과를 버리지 않고 뒤에 이어 붙여 NDJSON_TOP 개를 유지한다.
+                rich = _channel_rich_ids(calls)
+                merged = rich + [i for i in rec["retrieved_top"] if i not in rich]
+                rec["retrieved_top"] = merged[:NDJSON_TOP]
             except Exception as e:  # 서버 다운·타임아웃도 레코드로 남긴다
                 rec["error"] = str(e)[:200]
                 print(f"  [{rec['query_id']}] ERROR {rec['error']}")
