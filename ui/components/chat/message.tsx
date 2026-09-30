@@ -211,6 +211,16 @@ const PurePreviewMessage = ({
     { isStreaming: false, rendered: false, text: "" }
   ) ?? { isStreaming: false, rendered: false, text: "" };
 
+  // 한 턴에 MCP 툴이 10회 넘게 불리는 게 정상이라(탐색이 많으면 그 이상),
+  // 툴 호출을 개별 카드로 전부 그리면 답 아래가 범람한다. 메시지당 한 줄로
+  // 접어 담고 펼칠 때만 전부 보여준다. 인용 카드는 근거이므로 그대로 둔다.
+  const toolActivityParts = (message.parts ?? []).filter(
+    (part) => part.type === "data-tool-activity"
+  );
+  const firstToolActivityAt = toolActivityParts.length
+    ? message.parts?.findIndex((part) => part.type === "data-tool-activity") ?? -1
+    : -1;
+
   const parts = message.parts?.map((part, index) => {
     const { type } = part;
     const key = `message-${message.id}-part-${index}`;
@@ -394,14 +404,37 @@ const PurePreviewMessage = ({
       );
     }
 
-    if (type === "data-tool-activity" || type === "data-citation") {
+    if (type === "data-tool-activity") {
+      if (index !== firstToolActivityAt) return null;
+      return (
+        <div className="w-[min(100%,450px)]" key={key}>
+          <Tool className="w-full" defaultOpen={false}>
+            <ToolHeader
+              state="output-available"
+              toolName={`조회 ${toolActivityParts.length}건`}
+              type="dynamic-tool"
+            />
+            <ToolContent>
+              <div className="space-y-2">
+                {toolActivityParts.map((activityPart, activityIndex) => (
+                  <ToolOutput
+                    errorText={undefined}
+                    key={`tool-activity-${activityIndex}`}
+                    output={<FastApiPartView part={activityPart} />}
+                  />
+                ))}
+              </div>
+            </ToolContent>
+          </Tool>
+        </div>
+      );
+    }
+
+    if (type === "data-citation") {
       const data = "data" in part && part.data && typeof part.data === "object" ? part.data : {};
       const title = "title" in data && typeof data.title === "string" ? data.title : "";
       const num = "number" in data && typeof data.number === "number" ? data.number : 0;
-      const label =
-        type === "data-citation"
-          ? (num > 0 ? `citation ${num}` : title || "report")
-          : `tool ${"name" in data && typeof data.name === "string" ? data.name : ""}`.trim();
+      const label = num > 0 ? `citation ${num}` : title || "report";
       return (
         <div className="w-[min(100%,450px)]" key={key}>
           <Tool className="w-full" defaultOpen={false}>
