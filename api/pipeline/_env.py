@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import os
 import re
+import sys
 from pathlib import Path
 
 
@@ -34,3 +35,14 @@ def load_env(path: Path) -> None:
 
 API_DIR = Path(__file__).resolve().parent.parent
 load_env(API_DIR / ".env")
+
+
+def safe_console() -> None:
+    """Windows 콘솔(cp949/cp1252)에서 '—' 같은 문자가 UnicodeEncodeError로
+    튕겨 스크립트가 죽는 것을 막는다. Oracle Linux(UTF-8)에서는 무해."""
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):  # 이미 리디렉션됐거나 재설정 불가
+            pass
+

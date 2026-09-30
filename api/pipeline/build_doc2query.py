@@ -33,6 +33,7 @@ from pathlib import Path
 API = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _env  # noqa: F401,E402
+_env.safe_console()  # Windows 콘솔 인코딩 (cp949) 크래시 방지
 import llm_chain  # noqa: E402
 
 CATALOG = API / "data" / "catalog" / "report_catalog_w2d.json"

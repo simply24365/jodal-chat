@@ -49,6 +49,7 @@ EVAL_QUERIES = BASE_DIR / "data" / "eval" / "natural_queries.json"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _env  # noqa: F401,E402  — api/.env 로딩 (llm_chain 전에)
+_env.safe_console()  # Windows 콘솔 인코딩 (cp949) 크래시 방지
 import llm_chain  # noqa: E402
 
 # judge가 근거 시트를 만들 때 카탈로그 공식 보고서명·synopsis를 대조한다
@@ -547,8 +548,11 @@ def _ensure_judged(path: Path) -> dict:
 
 def cmd_compare(a: argparse.Namespace) -> None:
     head_path, prev_path = BASE_DIR / a.head, BASE_DIR / a.prev
-    head_rec = _read_ndjson(head_path)
-    prev_rec = _read_ndjson(prev_path)
+    for p in (head_path, prev_path):
+        if not p.exists():
+            print(f"[compare] 오류: {p} 없음 — compare 인자는 .ndjson 경로여야 한다 "
+                  f"(judged.json 직접 비교는 지원하지 않음).")
+            return
     head = _ensure_judged(head_path)
     prev = _ensure_judged(prev_path)
     if head["meta"]["judge_model"] != prev["meta"]["judge_model"]:

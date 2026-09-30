@@ -33,6 +33,7 @@ OUT_DEFAULT = BASE_DIR / "data" / "eval" / "synthetic_queries.json"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _env  # noqa: F401,E402  — api/.env 로딩 (llm_chain 전에)
+_env.safe_console()  # Windows 콘솔 인코딩 (cp949) 크래시 방지
 import llm_chain  # noqa: E402
 
 # 시나리오 유형 × 비중 (RAGAS "evolution" 아이디어를 조달 도메인에 맞게 조정).

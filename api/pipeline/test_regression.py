@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import _env  # noqa: F401,E402  — api/.env 로딩
+_env.safe_console()  # Windows 콘솔 인코딩 (cp949) 크래시 방지
 
 CHECKS: list[tuple[str, object]] = []
 
