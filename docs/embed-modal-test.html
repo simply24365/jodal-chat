@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>임베드 검증 — 조달데이터허브 흉내</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; padding: 24px; background: #f6f7f9; }
+  .page { background: #fff; border: 1px solid #d9dde3; border-radius: 8px; padding: 16px; }
+  #open { padding: 8px 16px; font: inherit; cursor: pointer; }
+  .ov { position: fixed; inset: 0; background: rgba(15,20,28,.45); display: none; z-index: 9999; }
+  .ov.on { display: flex; align-items: center; justify-content: center; }
+  .dlg { background: #fff; border-radius: 10px; width: min(880px, 92vw); height: min(680px, 88vh);
+         display: flex; flex-direction: column; overflow: hidden; }
+  .hd { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid #e5e8ec; }
+  #frame { flex: 1; border: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h2>조달데이터허브 (운영 페이지 흉내)</h2>
+  <p>원래 페이지 내용은 여기 있다. 아래 버튼을 누르면 chat 모달이 열린다.</p>
+  <button id="open">AI 조회 열기</button>
+</div>
+
+<div class="ov" id="ov">
+  <div class="dlg">
+    <div class="hd"><strong>조달데이터허브 AI</strong><button id="close">닫기</button></div>
+    <iframe id="frame" src="https://jodal.orla.cc/" title="조달데이터허브 AI" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+  const ov = document.getElementById("ov");
+  const frame = document.getElementById("frame");
+  document.getElementById("open").onclick = () => { ov.classList.add("on"); };
+  document.getElementById("close").onclick = () => { ov.classList.remove("on"); };
+  ov.onclick = (e) => { if (e.target === ov) ov.classList.remove("on"); };
+  // 크로스오리진이라 부모가 높이를 못 읽는다 → 자식 postMessage 계약이 있을 때만 조정.
+  window.addEventListener("message", (e) => {
+    if (e.origin !== "https://jodal.orla.cc") return;
+    if (e.data?.type !== "jodal:height") return;
+    const h = Math.max(320, Math.min(Number(e.data.height) || 680, 1600));
+    frame.style.height = h + "px";
+  });
+</script>
+</body>
+</html>
