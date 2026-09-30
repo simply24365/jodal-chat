@@ -114,6 +114,9 @@ class LLM:
         tool_choice: str | None = None,
         max_tokens: int | None = None,
     ) -> Iterator[ModelResponseStream]:
+        # 호출자가 예산을 안 주면 config 기본값을 쓴다. 미지정 시 provider
+        # 기본값으로 가면 작은 게이트웨이에서 reasoning 모델이 빈 답으로 잘린다.
+        max_tokens = max_tokens or config.LLM_MAX_TOKENS
         if not self._endpoints:
             raise RuntimeError("LLM 키 없음 (XKIRO_API_KEY/AGNES_API_KEY/GROQ_API_KEY/GEMINI_API_KEY)")
         last_err: Exception | None = None

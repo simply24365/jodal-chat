@@ -68,6 +68,12 @@ GROQ_MODEL = os.environ.get("GROQ_MODEL") or "openai/gpt-oss-120b"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.1-flash-lite")
 LLM_TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE") or 0.7)
+# 응답 토큰 예산. 생략하면 provider 기본값을 쓰는데, 그 기본값이 작은 게이트웨이
+# (xkiro가 특히 그렇다)에서는 reasoning 모델이 content 를 내기 전에 잘려 **빈 답**
+# 이 된다(2026-09-30 실측: meta/muse-spark-1.3-contributor:free → finish=length,
+# content 0자 → 사용자에게 "죄송합니다"만 뜬다). 모델이 스스로 멈추면 무관하므로
+# 넉넉하게 주는 게 비용 낭비 없다.
+LLM_MAX_TOKENS = _int("LLM_MAX_TOKENS", 4096)
 
 # Loop
 MAX_LLM_CYCLES = _int("MAX_LLM_CYCLES", 6)
