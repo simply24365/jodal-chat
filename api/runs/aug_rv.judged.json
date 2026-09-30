@@ -1,0 +1,395 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\aug_fixed.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric": {
+   "goldcoverage": "binary",
+   "groundedness": "binary",
+   "toolappropriateness": "1-5",
+   "hygieneresidue": "binary",
+   "koreanquality": "binary"
+  },
+  "rubric_version": "705acf3886",
+  "votes_target": 1,
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T19:13:14.239234+00:00"
+ },
+ "summary": {
+  "n": 20,
+  "unscored": 6,
+  "flagged": 0,
+  "goldcoverage": 0.286,
+  "groundedness": 0.286,
+  "toolappropriateness": 0.714,
+  "hygieneresidue": 0.857,
+  "koreanquality": 1.0,
+  "total": 0.629,
+  "hit@1": 0.111,
+  "hit@5": 0.222,
+  "crosstab_hit1_x_coverage": {
+   "hit1=0,cov=0": 6,
+   "hit1=0,cov=1": 2,
+   "hit1=1,cov=0": 1
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "답변에 언급된 '수요기관별 계약납품요구 증감실적통계'라는 보고서명과 두 번째 보고서는 툴 기록에 존재하지 않아 환각이다."
+  },
+  {
+   "query_id": "n02",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "Gold가 비어있어 도메인 밖 질문으로 근거 없이 거절해야 정답이나, 답변은 툴 결과에 없는 보고서 명칭과 조회 방법을 제시하여 환각을 포함함."
+  },
+  {
+   "query_id": "n03",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "툴 기록에 2개 보고서만 is_visual=true로 확인되나 답변은 근거 없는 13개를 제시하여 환각 발생"
+  },
+  {
+   "query_id": "n04",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "제시된 gold 데이터는 00590이나, 답변은 해당 보고서가 아닌 다른 보고서들을 나열하고 있으며, 답변의 마지막 문장이 '어떤'에서 끊겨 있어 불완전한 답변입니다."
+  },
+  {
+   "query_id": "n05",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "제시된 툴 결과에는 중소기업의 전체 입찰 참여 건수와 낙찰 건수를 직접적으로 집계하는 보고서가 존재하지 않으므로, 해당 정보를 제공할 수 없음을 명시한 답변은 근거에 기반하고 있습니다."
+  },
+  {
+   "query_id": "n06",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "제시된 툴 기록의 보고서 ID(00181, 00175)와 해당 보고서의 상세 정보(조건, 링크, 특징)를 정확히 인용하여 사용자가 직접 비교할 수 있는 방법을 안내함."
+  },
+  {
+   "query_id": "n07",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "제시된 툴 결과 내에서 전국 단위의 지방자치단체 조달 물품 금액을 확인할 수 있는 보고서가 없음을 정확히 파악하고, 한정된 범위의 보고서만 존재함을 근거에 기반하여 설명함."
+  },
+  {
+   "query_id": "n08",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "제시된 툴 결과에는 '지역별 계약납품요구 실적통계 시각화'나 '조달업체별 소재지별 계약납품요구 실적통계'와 같은 보고서가 존재한다는 근거가 없으며, 답변자가 임의로 보고서 목록을 생성하여 답변함."
+  },
+  {
+   "query_id": "n09",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "제시된 툴 결과에서 '유지보수'라는 별도의 업무구분 항목이 존재하지 않음을 확인하고, 일반용역 및 기술용역으로 분류됨을 근거로 답변을 구성함."
+  },
+  {
+   "query_id": "n10",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "질의에 대한 정답(gold)이 비어있음에도 불구하고, 답변자가 직접 데이터를 조회하여 답변을 제공하지 않고 보고서 목록을 안내하는 방식으로 대응하여 정답을 맞히지 못함."
+  },
+  {
+   "query_id": "n11",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "제시된 툴 결과에는 '물품분류별 수요기관별 계약납품요구 물품 실적통계'라는 보고서가 존재하지 않으며, 답변에서 언급한 보고서명과 분석 방법은 툴 기록에 근거하지 않은 추측입니다."
+  },
+  {
+   "query_id": "n12",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "제시된 툴 기록의 보고서 ID 00112와 00083을 활용하여 녹색제품 및 친환경 인증 물품 관련 정보를 정확하게 안내하였습니다."
+  },
+  {
+   "query_id": "n13",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "검색 결과에 '지방기업 구매실적' 보고서(00598 등)가 존재함에도 불구하고, 답변자가 이를 활용하지 않고 답변을 거절하여 goldcoverage가 0으로 판정됨."
+  },
+  {
+   "query_id": "n14",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  },
+  {
+   "query_id": "n15",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  },
+  {
+   "query_id": "n16",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  },
+  {
+   "query_id": "n17",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 1,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": ""
+  },
+  {
+   "query_id": "n18",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  },
+  {
+   "query_id": "n19",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  },
+  {
+   "query_id": "n20",
+   "scores": null,
+   "votes": [],
+   "flagged": false,
+   "evidence": "unscored"
+  }
+ ]
+}

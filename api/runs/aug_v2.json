@@ -1,0 +1,169 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\aug_fixed.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric": {
+   "goldcoverage": "binary",
+   "groundedness": "binary",
+   "toolappropriateness": "1-5",
+   "hygieneresidue": "binary",
+   "koreanquality": "binary"
+  },
+  "votes_target": 1,
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T18:58:23.080013+00:00"
+ },
+ "summary": {
+  "n": 6,
+  "unscored": 0,
+  "flagged": 0,
+  "goldcoverage": 0.333,
+  "groundedness": 0.167,
+  "toolappropriateness": 0.667,
+  "hygieneresidue": 0.667,
+  "koreanquality": 0.667,
+  "total": 0.5,
+  "hit@1": 0.0,
+  "hit@5": 0.0,
+  "crosstab_hit1_x_coverage": {
+   "hit1=0,cov=1": 1,
+   "hit1=0,cov=0": 3
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 4,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 4,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "툴 기록에서 00262 보고서를 조회하여 gold와 일치하는 링크를 답변에 포함하였으며, 근거 없는 두 번째 보고서명('수요기관별 계약납품요구 증감실적통계')을 임의로 생성한 점이 감점 요인이다."
+  },
+  {
+   "query_id": "n02",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 2,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 2,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "gold 보고서 00262를 전혀 언급하지 않고 툴 결과에 없는 수요기관별 보고서를 임의로 추천했으며 미래형 약속으로 답변을 종료함."
+  },
+  {
+   "query_id": "n03",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "툴 결과에 2개 보고서만 제공되었으나 답변은 13개를 나열하여 대부분을 환각 생성하였고, gold가 비어있으므로 도메인 밖 거절이 정답이나 조건에 맞게 검색 결과를 전달하여 오답이다."
+  },
+  {
+   "query_id": "n04",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 4,
+    "hygieneresidue": 0,
+    "koreanquality": 0
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "툴 결과에 00284, 00289만 존재하나 답변은 00590 등 다수 ID와 링크를 임의로 생성했고 문장이 끊겨 있어 근거 없음."
+  },
+  {
+   "query_id": "n05",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 0
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "답변이 툴 결과에 없는 보고서(입찰공고 기업별 투찰 및 계약내역)를 언급하고 번호 4.에서 문장이 끊겨 생성되었으며, gold 보고서 00608을 찾지 못함."
+  },
+  {
+   "query_id": "n06",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 4,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "gold가 비어 있으므로 도메인 밖 질문이며, 답변이 툴 결과에 근거한 관련 보고서를 안내하여 조건(dims_contains: 지역)을 충족하므로 정답으로 판정한다."
+  }
+ ]
+}

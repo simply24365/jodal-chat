@@ -1,0 +1,125 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\aug_fixed.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric": {
+   "goldcoverage": "binary",
+   "groundedness": "binary",
+   "toolappropriateness": "1-5",
+   "hygieneresidue": "binary",
+   "koreanquality": "binary"
+  },
+  "rubric_version": "29ef35af51",
+  "votes_target": 1,
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T19:18:36.020088+00:00"
+ },
+ "summary": {
+  "n": 4,
+  "unscored": 0,
+  "flagged": 0,
+  "goldcoverage": 0.0,
+  "groundedness": 0.25,
+  "toolappropriateness": 0.35,
+  "hygieneresidue": 1.0,
+  "koreanquality": 1.0,
+  "total": 0.52,
+  "hit@1": 0.0,
+  "hit@5": 0.0,
+  "crosstab_hit1_x_coverage": {
+   "hit1=0,cov=0": 3
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 2,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 2,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "수요기관별 계약납품요구 실적통계(보고서 ID 00262)"
+  },
+  {
+   "query_id": "n02",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 1,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "답변에 실제 계약금액이나 보고서 ID가 제시되지 않아 근거가 없음"
+  },
+  {
+   "query_id": "n03",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 2,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 2,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "툴 결과에 00179와 00178이 is_visual:true 로 표시되어 시각화 보고서임을 확인함"
+  },
+  {
+   "query_id": "n04",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 2,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 2,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "소관구분별 장애인표준사업장 계약납품요구 실적통계"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\smoke.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric": {
+   "goldcoverage": "binary",
+   "groundedness": "binary",
+   "toolappropriateness": "1-5",
+   "hygieneresidue": "binary",
+   "koreanquality": "binary"
+  },
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T14:57:10.647733+00:00"
+ },
+ "summary": {
+  "n": 1,
+  "unscored": 0,
+  "flagged": 1,
+  "goldcoverage": 1.0,
+  "groundedness": 0.0,
+  "toolappropriateness": 1.0,
+  "hygieneresidue": 1.0,
+  "koreanquality": 1.0,
+  "total": 0.8,
+  "hit@1": 1.0,
+  "hit@5": 1.0,
+  "crosstab_hit1_x_coverage": {
+   "hit1=1,cov=1": 1
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "정답 보고서 00262를 올바르게 인용하여 goldcoverage는 충족하나, 툴 호출 결과에 '12건'이라는 수치가 포함되어 있지 않아 근거 없는 수치 생성으로 groundedness는 0점이다."
+  }
+ ]
+}

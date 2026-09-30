@@ -1,0 +1,142 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\head2.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric_version": "29ef35af51",
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T22:33:00.148699+00:00"
+ },
+ "summary": {
+  "n": 5,
+  "unscored": 0,
+  "flagged": 0,
+  "goldcoverage": 0.2,
+  "groundedness": 0.2,
+  "toolappropriateness": 0.56,
+  "hygieneresidue": 0.8,
+  "koreanquality": 1.0,
+  "total": 0.552,
+  "hit@1": 0.0,
+  "hit@5": 0.25,
+  "crosstab_hit1_x_coverage": {
+   "hit1=0,cov=0": 3,
+   "hit1=0,cov=1": 1
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "답변이 제시한 '수요기관별 계약납품요구 실적통계' 등의 보고서명은 툴 기록에 존재하지 않는 환각이며, gold ID 00262를 전혀 언급하지 않아 오답이다."
+  },
+  {
+   "query_id": "n02",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 4,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "gold 보고서 00262의 링크와 조건(수요기관, 마감년월)을 툴 기록에 근거하여 정확히 안내함."
+  },
+  {
+   "query_id": "n03",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 2,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 2,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {},
+   "evidence": "툴 기록에는 is_visual:true인 보고서가 00170 하나만 반환되었으나, 답변은 근거 없는 20개라는 수치와 존재하지 않는 보고서 목록을 대량으로 환각 생성하였으며, gold 비어있음(도메인밖) 조건에 따라 거절해야 하나 오히려 허위 정보를 제공하여 goldcoverage 0이다."
+  },
+  {
+   "query_id": "n04",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "골드 정답(00590)이 검색 결과에 포함되었으나 답변에서 해당 보고서를 제시하지 않고 다른 보고서만 안내하여 goldcoverage를 충족하지 못함"
+  },
+  {
+   "query_id": "n05",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 2,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 2,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "prefilter": {
+    "groundedness": 0
+   },
+   "evidence": "답변이 gold 보고서 00608을 누락하고 근거 시트에 없는 보고서명과 링크를 임의로 생성하여 groundedness와 goldcoverage 모두 0이다."
+  }
+ ]
+}

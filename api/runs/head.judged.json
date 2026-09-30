@@ -1,0 +1,567 @@
+{
+ "meta": {
+  "source": "C:\\Users\\simpl\\proj\\dev\\jodal-chat\\api\\runs\\head.ndjson",
+  "judge_model": "xkiro:qwen/qwen3.8-max:free, agnes:agnes-3.0-flash",
+  "rubric": {
+   "goldcoverage": "binary",
+   "groundedness": "binary",
+   "toolappropriateness": "1-5",
+   "hygieneresidue": "binary",
+   "koreanquality": "binary"
+  },
+  "note": "judge=xkiro 재사용 (self-preference 편향 감수)",
+  "ts": "2026-09-29T15:29:08.294435+00:00"
+ },
+ "summary": {
+  "n": 20,
+  "unscored": 0,
+  "flagged": 8,
+  "goldcoverage": 0.5,
+  "groundedness": 0.6,
+  "toolappropriateness": 0.65,
+  "hygieneresidue": 0.55,
+  "koreanquality": 0.85,
+  "total": 0.63,
+  "hit@1": 0.091,
+  "hit@5": 0.182,
+  "crosstab_hit1_x_coverage": {
+   "hit1=0,cov=1": 3,
+   "hit1=0,cov=0": 7,
+   "hit1=1,cov=1": 1
+  }
+ },
+ "records": [
+  {
+   "query_id": "n01",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 4,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "툴 호출로 gold 보고서 00262의 상세 정보를 조회하여 이름, 링크, 집계 기준을 정확히 전달했고, 실제 수치는 조건(기간)이 필요함을 안내한 점이 적절함."
+  },
+  {
+   "query_id": "n02",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold 보고서 00262를 정확히 식별하여 이름, 링크, 집계 기준을 툴 호출 결과에 근거해 설명하였고, 직접 수치를 지어내지 않아 모든 기준을 충족한다."
+  },
+  {
+   "query_id": "n03",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "gold가 비어 있어 정답은 '없음/불가'인데, 답변이 시각화 보고서 수를 제시하지 않고 툴 타임아웃 사실을 근거로 추가 확인을 제안하여 도메인 밖 질문에 대한 적절한 무매치 처리로 판단됨. 다만 '진행하면 알려드립니다'라는 미래형 약속으로 턴을 종료하여 hygieneresidue 위생 문제가 있음."
+  },
+  {
+   "query_id": "n04",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "툴 호출이 ClosedResourceError로 실패하여 gold 보고서(00590)를 전달하지 못했고, 최종 답변이 '(아래 검색을 진행합니다)'라는 미래형 약속으로 종료되어 hygieneresidue가 0이다. 근거 없는 수치를 생성하지 않아 groundedness는 1이지만, 실질적 정보 제공에는 실패했다."
+  },
+  {
+   "query_id": "n05",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 1,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 1,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold 보고서 00608를 전혀 언급하지 않아 goldcoverage는 0이며, 툴 호출 없이 역질문만 하여 toolappropriateness는 1이다. 근거 없는 수치나 ID를 지어내지 않아 groundedness는 1로 판정한다."
+  },
+  {
+   "query_id": "n06",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold가 비어 있고 툴 호출이 모두 실패했으므로 보고서를 지어내지 않고 정중히 불가 처리한 점은 적절하나, gold_any 조건(dims_contains: 지역)을 만족하는 보고서를 제시하지 못해 goldcoverage는 0이다."
+  },
+  {
+   "query_id": "n07",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 4,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "툴 호출이 ClosedResourceError로 실패하여 gold 보고서 00262를 전달하지 못했으나, 근거 없는 수치를 지어내지 않고 조회 실패를 정확히 안내하여 groundedness와 hygiene는 양호함."
+  },
+  {
+   "query_id": "n08",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "gold가 비어 있어 도메인 밖/답 없음 질문에 해당하므로, 근거 없는 보고서를 제시하지 않고 시스템 오류를 설명하며 대안을 안내한 점은 goldcoverage 기준을 만족한다. 그러나 답변에 포함된 '131종 보고서'라는 수치는 툴 호출 기록(ClosedResourceError)에 전혀 근거하지 않은 환각이므로 groundedness는 0이다."
+  },
+  {
+   "query_id": "n09",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold가 비어 있으므로 도메인 밖 질문이나, 툴 호출 실패 후 근거 없는 수치(연간 1조원, 5000~6000건 등)를 외부 지식으로 지어내어 groundedness 0. gold가 없으므로 허위 보고서를 제시하지 않은 점은 적절하나 gold ID 전달이 없어 goldcoverage 0."
+  },
+  {
+   "query_id": "n10",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 1,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 1,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold 보고서 00604를 전혀 언급하지 않아 goldcoverage 0이며, 답변에 제시된 보고서(00268, 00281)와 링크는 툴 호출 결과에 근거하므로 groundedness 1이다. 검색 상위 결과와 실제 상세 조회 대상이 불일치하고 중복 호출이 있어 toolappropriateness 3으로 평가한다."
+  },
+  {
+   "query_id": "n11",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold 보고서 00118을 전혀 언급하지 않았으며, 답변에 제시된 링크의 reptNm(UI-ADOXFA-120R, UI-ADOXFA-108R)과 보고서명은 툴 호출 결과에 존재하지 않는 환각이다."
+  },
+  {
+   "query_id": "n12",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 0,
+    "koreanquality": 0
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    }
+   ],
+   "flagged": false,
+   "evidence": "gold 보고서 00193, 00083을 전혀 언급하지 못했고, 답변 내 report_id가 모두 빈 백틱(``)으로 렌더링되어 내용이 유실되었으며, '바로 열어볼게요' 등 미완료 약속 문구가 남아 있어 위생 및 한국어 품질이 심각하게 불량하다."
+  },
+  {
+   "query_id": "n13",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "답변이 gold 보고서 ID 00598을 정확히 포함하여 소개했고, 툴 호출 결과의 요약·지표·링크 정보만을 사용하여 근거에 충실함."
+  },
+  {
+   "query_id": "n14",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 3,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 3,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "Gold 보고서 ID 00616이 답변에 포함되지 않아 goldcoverage 0이며, 툴 결과에 없는 report_id(00622, 00595 등)와 링크가 답변에 등장하여 groundedness 0이다."
+  },
+  {
+   "query_id": "n15",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 5,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 5,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "gold 보고서 00617을 답변에 포함하여 goldcoverage는 1이나, 툴 결과에 없는 UI-ADOXFZ-018R 링크와 '전체 품명' 보고서를 지어냈으므로 groundedness는 0이다."
+  },
+  {
+   "query_id": "n16",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 0,
+    "koreanquality": 0
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    }
+   ],
+   "flagged": true,
+   "evidence": "도메인 밖 질의에 대해 전용 보고서가 없음을 안내하고 툴 결과에 근거한 후보를 제시하여 goldcoverage와 groundedness는 충족하나, 답변이 용역 관련 문장 중간에서 끊겨 hygieneresidue 0, koreanquality 0으로 판정함."
+  },
+  {
+   "query_id": "n17",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 5,
+    "hygieneresidue": 0,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 5,
+     "hygieneresidue": 0,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "도메인 밖 질의에 대해 근거 없는 보고서를 제시하지 않고 일반 상식 기반 추천으로 적절히 응답하였으며, 툴 호출 없이 처리한 것이 적합하고 위생 문제나 어색한 한국어 표현이 없음."
+  },
+  {
+   "query_id": "n18",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 1,
+    "toolappropriateness": 4,
+    "hygieneresidue": 0,
+    "koreanquality": 0
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 1,
+     "toolappropriateness": 4,
+     "hygieneresidue": 0,
+     "koreanquality": 0
+    }
+   ],
+   "flagged": true,
+   "evidence": "도메인 밖 질의에 대해 보고서를 지어내지 않고 없음을 정확히 안내하여 goldcoverage 1, 툴 결과 요약은 근거에 부합하나 답변 말미에 중국어 '收录'이 혼입되어 koreanquality 0, 항목 3이 끊긴 채 종료되어 hygieneresidue 0."
+  },
+  {
+   "query_id": "n19",
+   "scores": {
+    "goldcoverage": 0,
+    "groundedness": 0,
+    "toolappropriateness": 1,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 0,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": false,
+   "evidence": "도메인 밖 질의로 gold가 비어 있음에도 답변이 근거 없는 수치(2025년 12월 기준 약 38%)를 지어냈으며, 툴 호출 없이 추측으로 응답하여 groundedness 0, toolappropriateness 1이다."
+  },
+  {
+   "query_id": "n20",
+   "scores": {
+    "goldcoverage": 1,
+    "groundedness": 0,
+    "toolappropriateness": 1,
+    "hygieneresidue": 1,
+    "koreanquality": 1
+   },
+   "votes": [
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    },
+    {
+     "goldcoverage": 1,
+     "groundedness": 0,
+     "toolappropriateness": 1,
+     "hygieneresidue": 1,
+     "koreanquality": 1
+    }
+   ],
+   "flagged": true,
+   "evidence": "gold가 비어 있어 도메인 밖 질문에 대해 근거 없는 보고서를 제시하지 않고 불가를 안내한 점은 적절하나, 툴 호출 기록이 전무함에도 답변에 구체적인 수치와 절차가 포함되어 있어 groundedness는 0점이며 toolappropriateness도 조회 없이 추측한 것으로 판단되어 1점임."
+  }
+ ]
+}
