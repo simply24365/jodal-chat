@@ -1,9 +1,12 @@
 export const DEFAULT_CHAT_MODEL = "custom-chat/fastapi";
+// 표시 이름은 제품명. id("custom-chat/fastapi")는 프로토콜 식별자라 그대로 둔다 —
+// DEFAULT_CHAT_MODEL 과 전송 payload 가 이 값을 참조한다.
+export const CHAT_MODEL_DISPLAY_NAME = "조달데이터허브 AI";
 
 export const titleModel = {
   description: "Unused: FastAPI owns titles",
   id: "custom-chat/fastapi",
-  name: "FastAPI",
+  name: CHAT_MODEL_DISPLAY_NAME,
   provider: "custom-chat",
 };
 
@@ -26,7 +29,7 @@ export const chatModels: ChatModel[] = [
   {
     description: "FastAPI agent loop (custom_chat backend)",
     id: "custom-chat/fastapi",
-    name: "FastAPI",
+    name: CHAT_MODEL_DISPLAY_NAME,
     provider: "custom-chat",
   },
 ];

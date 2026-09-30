@@ -7,9 +7,9 @@ import "./globals.css";
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
-  description: "Next.js chatbot template using the AI SDK.",
-  metadataBase: new URL("https://chat.vercel.ai"),
-  title: "Next.js Chatbot Template",
+  description: "조달데이터허브 등록 통계 보고서 검색 AI (131건).",
+  metadataBase: new URL("https://jodal.orla.cc"),
+  title: "조달데이터허브 AI",
 };
 
 export const viewport = {
